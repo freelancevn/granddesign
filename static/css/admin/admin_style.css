@@ -1,0 +1,159 @@
+/* CSS Document */
+.login {
+	font-family		: Tahoma;
+	font-size		: 12px;
+	background-color: #ECE9D8;
+	height			:30px;
+	width			:100px;
+	color			: black;
+}
+.errorLogin{
+ 	clear:both;
+	color:#FF0000;
+	margin:2px 0;
+}
+
+.errorMessage {
+ 	clear:both;
+	float:left;
+	color:#FF0000;
+	margin:5px 0;
+}
+.input {
+	float:left;
+	font-family	: Tahoma;
+	font-size	: 12px;
+	width		:300px;
+	height:22px;
+	color		: black;
+}
+.button {
+	font-family	: Tahoma;
+	font-size	: 11px;
+	height		: 35px;
+	font-weight	: bold;
+	color		: #333333;
+}
+.alert {
+	font-family	: Tahoma;
+	font-size	: 12px;	
+	height		:30px;
+	width		:100px;
+	color		: #FF0000;
+}
+.notify {
+	font-family	: Tahoma;
+	font-size	: 12px;	
+	color		: #666666;
+}
+.ahref {
+	font-family		: Tahoma;
+	font-size		: 12px;	
+	color			: #000000;
+	font-weight		: bold;
+	text-decoration	: none;
+	
+}
+.lable_list {
+	font-family	: Tahoma;	
+	font-size	: 20px;
+	color		: #003300;	
+	text-align	: center;
+}
+.label_menu {
+	font-family	: Tahoma;
+	background	: #ECE9D8;
+	font-size	: 14px;
+	color		: #003300;
+	font-weight	: bold;
+	text-align	:center;
+}
+.label_sub_menu {
+	font-family		: Tahoma;
+	font-size		: 12px;
+	background-color: #E0E0E0;
+	color			: black;
+	text-decoration	: none;
+}
+.label_sub_menu_off {
+	font-family		: Tahoma;
+	font-size		: 12px;
+	background-color: #E0E0E0;
+	text-decoration	: none;
+	color			: gray;
+	
+}
+.label_title {
+	font-family		: Tahoma;
+	background-color: #000066;
+	font-weight		: bold;
+	font-size		: 12px;
+	color			: #FFFFFF;		
+	height:30px;
+}
+.content_odd {
+	font-family		: Tahoma;
+	background-color: #DEDDDD;
+	font-size		: 12px;
+	text-decoration : none;	
+}
+.content_even {
+	font-family		: Tahoma;
+	background-color: #EFEEEE;
+	font-size		: 12px;
+	text-decoration : none;	
+}
+.content_button {
+	font-family		: Tahoma;
+	background-color: #BC7878;
+	font-size		: 12px;
+	text-decoration : none;	
+}
+.textfield {
+	font-family		: Tahoma;
+	font-size		: 12px;
+	width			: 250px;
+}
+.combobox {
+	font-weight     : 100;
+	font-family		: Tahoma;
+	font-size		: 12px;
+	width			: 180px;
+}
+.checktext {
+	font-family		: Tahoma;	
+	font-size		: 12px;
+	text-decoration : none;	
+	font-weight		: bold;
+}
+.searchform {
+	font-family		: Tahoma;
+	background-color: #F1E4A7;
+	font-size		: 12px;
+	text-decoration : none;	
+	border			: dashed 1px #CCCCCC; 
+}
+.searchbutton {
+	font-family		: Tahoma;	
+	font-size		: 11px;
+	font-weight		: 900;
+	background-color: #DEDDDD;
+}
+.button_img
+{
+background:none;
+border:none;
+color:#FF0000;}
+/*
+ * paging
+ */
+.paging {list-style:none;} 
+.paging li { float:left; margin-left:5px;}
+.paging li a {display:block; float:left; border:#e3e3e3 1px solid; padding:0 5px; color:#333; font-weight:bold}
+.paging li a:hover, .paging li a.current {background:#e3e3e3; text-decoration:none}
+
+/*Number Pages*/
+.md_pt{ float:left; font-size:12px;}
+.md_pt li{ display:inline;}
+.md_pt li a{ font-weight:bold; padding:0 6px; color:#0459a2}
+.md_pt li strong{ background:#fff; padding:0 6px; color:#11B0F1;}
