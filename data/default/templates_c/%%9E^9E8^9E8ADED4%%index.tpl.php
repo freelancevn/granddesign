@@ -1,105 +1,99 @@
-<?php /* Smarty version 2.6.20, created on 2013-09-11 20:05:37
+<?php /* Smarty version 2.6.20, created on 2014-03-09 16:00:32
          compiled from public/index.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => 'common/header.tpl', 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => 'common/header1.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<!--slideshow-->
-  <div id="slideshow" class="wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="carousel-example-generic" class="carousel slide"> 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-				<?php $_from = $this->_tpl_vars['arrImage']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['i'] => $this->_tpl_vars['rRows']):
-?>
-				<div class="item<?php if ($this->_tpl_vars['i'] == 0): ?> active<?php endif; ?>"><img src="<?php echo @HOST; ?>
-/data/upload/<?php echo $this->_tpl_vars['rRows']['imgname']; ?>
-" width="1170" height="276" alt="" /> </div>
-				<?php endforeach; endif; unset($_from); ?>
-            </div>
-            
-            <!-- Controls --> 
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span> </a> </div>
-        </div>
-      </div>
+<div id="art-main">
+<div class="art-sheet clearfix">
+    <div class="art-layout-wrapper">
+        <div class="art-content-layout">
+            <div class="art-content-layout-row">
+                <div class="art-layout-cell art-content"><article class="art-post art-article">
+                            <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in1.jpg" class=""></p>
+        <p><span style="font-weight: bold;">Chung cư 1</span></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante.</p>
+        <p><a href="#" class="art-button">More</a></p>
+    </div><div class="art-layout-cell layout-item-1" style="width: 34%" >
+        <p><img width="207" height="153" alt="" src="images/in3-2-2-2.jpg" class=""></p>
+        <p><a href="http://www.photos8.com"></a></p>
+        <p><span style="font-weight: bold;">Chung cư 2</span></p><p>Cras elit nisl, rhoncus nec iaculis ultricies, feugiat eget sapien. Pellentesque ac felis tellus. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</p>
+        <p><a href="#" class="art-button">More</a></p>
+    </div><div class="art-layout-cell layout-item-2" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in4-2-2-2-2.jpg" class=""></p>
+        <p><a href="http://www.photos8.com"></a></p>
+        <p><span style="font-weight: bold;">Chung cư 3</span></p><p>Duis placerat justo eu nunc interdum ultrices. Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna dolor sit amet, consectetur adipiscing elit.</p>
+        <p><a href="#" class="art-button">More</a></p>
     </div>
-  </div>
-  <!--end slideshow-->
-<div id="highlight" class="wrapper">
-    <div class="container">
-     
-        <div class="row">
-          <div class="col-lg-3">
-          	<div class="cate">
-				<?php $_from = $this->_tpl_vars['arrMenu']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['i'] => $this->_tpl_vars['rRows']):
-?>
-					<?php if ($this->_tpl_vars['i'] <= 5): ?>
-            		<a href="<?php echo @HOST; ?>
-?category=<?php echo $this->_tpl_vars['rRows']['id']; ?>
-" title="<?php echo $this->_tpl_vars['rRows']['category_name']; ?>
-"><?php echo $this->_tpl_vars['rRows']['category_name']; ?>
-</a>
-					<?php endif; ?>
-				<?php endforeach; endif; unset($_from); ?>
-            </div>
-          
-          </div>
-          <div class="col-lg-9">
-          	<div class="product-gallery">
-            		<div id="product-gallery" class="carousel slide"> 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#product-gallery" data-slide-to="0" class="active"></li>
-              <li data-target="#product-gallery" data-slide-to="1"></li>
-              <li data-target="#product-gallery" data-slide-to="2"></li>
-            </ol>
-            
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-				<div class="item active">
-				<?php $_from = $this->_tpl_vars['arrProduct']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['i'] => $this->_tpl_vars['rRows']):
-?>
-				<?php if ($this->_tpl_vars['i'] > 0 && $this->_tpl_vars['i']%6 == 0): ?>
-					</div><div class="item">
-				<?php endif; ?>
-					<a href="<?php echo @HOST; ?>
-/public/viewproduct?id=<?php echo $this->_tpl_vars['rRows']['id']; ?>
-&category=<?php echo $this->_tpl_vars['rRows']['fk_category']; ?>
-" title="Photo">
-						<img src="<?php echo @HOST; ?>
-/upload_thumb/product/<?php echo $this->_tpl_vars['rRows']['file_name']; ?>
-" width="195" height="110" alt="" />
-						<span><?php echo $this->_tpl_vars['rRows']['product_name']; ?>
-</span>
-					</a>
-				<?php endforeach; endif; unset($_from); ?>
-				</div>
-            </div>
-			<!-- Controls --> 
-            <a class="left carousel-control" href="#product-gallery" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#product-gallery" data-slide="next"> <span class="icon-next"></span> </a> </div>
-            
-            </div>
-          </div>
-        </div>
-      
     </div>
-  </div>
+</div>
+</div>
+<div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in1.jpg" class=""></p><p><span style="font-weight: bold;">Biệt thự 1</span></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div><div class="art-layout-cell layout-item-1" style="width: 34%" >
+        <p><img width="207" height="153" alt="" src="images/in3-2-2-2.jpg" class=""></p><p><span style="font-weight: bold;">Biệt thự 2</span></p><p>Cras elit nisl, rhoncus nec iaculis ultricies, feugiat eget sapien. Pellentesque ac felis tellus. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div><div class="art-layout-cell layout-item-2" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in4-2-2-2-2.jpg" class="art-preview-selected"></p><p><span style="font-weight: bold;">Biệt thự 3</span></p><p>Duis placerat justo eu nunc interdum ultrices. Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna dolor sit amet, consectetur adipiscing elit.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+                                
+                
 
+</article></div>
+                        <div class="art-layout-cell art-sidebar1"><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">What's New</h3>
+        </div>
+        <div class="art-blockcontent"><div class="newsdate">
+<h6>17</h6>
+<p>Apr</p>
+</div>
+Lorem ipsum dolor sit amet aenean id sollicitudin arcu.<br clear="all">
+<div class="newsdate">
+<h6>27</h6>
+<p>Mar</p>
+</div>
+Etiam pharetra, tellus sit amet congue vulputate.<br clear="all">
+<div class="newsdate">
+<h6>05</h6>
+<p>Mar</p>
+</div>
+Curabitur ullamcorper gravida felis, sit amet scelerisque.<br clear="all">
+<div class="newsdate">
+<h6>19</h6>
+<p>Feb</p>
+</div>
+Donec vel neque in neque porta venenatis sed sit amet lectus.<br clear="all">
+<div class="newsdate">
+<h6>24</h6>
+<p>Jan</p>
+</div>
+Morbi tristique posuere consequat vel neque in neque.</div>
+</div><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">Highlights</h3>
+        </div>
+        <div class="art-blockcontent"><p><img width="221" height="163" alt="" src="images/in2.jpg" style="margin:0;" class=""></p>
+<p>Photo by <a href="http://www.photos8.com">www.photos8.com</a></p>
+<p>Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna.</p>
+<p><a href="#" class="art-button">More</a></p></div>
+</div></div>
+                    </div>
+                </div>
+            </div>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => 'common/footer.tpl', 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => 'common/footer1.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>

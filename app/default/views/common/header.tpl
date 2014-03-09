@@ -36,7 +36,8 @@
   ga('create', 'UA-32593755-2', 'granddesign.com.vn');
   ga('send', 'pageview');
 
-</script>{/literal}
+ </script>
+ {/literal}
 </head>
 <body>
 <div id="page">

@@ -1,77 +1,89 @@
-{include file='common/header.tpl'}
-<!--slideshow-->
-  <div id="slideshow" class="wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="carousel-example-generic" class="carousel slide"> 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-				{foreach key=i item=rRows from=$arrImage}
-				<div class="item{if $i==0} active{/if}"><img src="{$smarty.const.HOST}/data/upload/{$rRows.imgname}" width="1170" height="276" alt="" /> </div>
-				{/foreach}
-            </div>
-            
-            <!-- Controls --> 
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span> </a> </div>
-        </div>
-      </div>
+{include file='common/header1.tpl'}
+<div id="art-main">
+<div class="art-sheet clearfix">
+    <div class="art-layout-wrapper">
+        <div class="art-content-layout">
+            <div class="art-content-layout-row">
+                <div class="art-layout-cell art-content"><article class="art-post art-article">
+                            <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in1.jpg" class=""></p>
+        <p><span style="font-weight: bold;">Chung cư 1</span></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante.</p>
+        <p><a href="#" class="art-button">More</a></p>
+    </div><div class="art-layout-cell layout-item-1" style="width: 34%" >
+        <p><img width="207" height="153" alt="" src="images/in3-2-2-2.jpg" class=""></p>
+        <p><a href="http://www.photos8.com"></a></p>
+        <p><span style="font-weight: bold;">Chung cư 2</span></p><p>Cras elit nisl, rhoncus nec iaculis ultricies, feugiat eget sapien. Pellentesque ac felis tellus. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</p>
+        <p><a href="#" class="art-button">More</a></p>
+    </div><div class="art-layout-cell layout-item-2" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in4-2-2-2-2.jpg" class=""></p>
+        <p><a href="http://www.photos8.com"></a></p>
+        <p><span style="font-weight: bold;">Chung cư 3</span></p><p>Duis placerat justo eu nunc interdum ultrices. Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna dolor sit amet, consectetur adipiscing elit.</p>
+        <p><a href="#" class="art-button">More</a></p>
     </div>
-  </div>
-  <!--end slideshow-->
-<div id="highlight" class="wrapper">
-    <div class="container">
-     
-        <div class="row">
-          <div class="col-lg-3">
-          	<div class="cate">
-				{foreach key=i item=rRows from=$arrMenu}
-					{if $i<=5}
-            		<a href="{$smarty.const.HOST}?category={$rRows.id}" title="{$rRows.category_name}">{$rRows.category_name}</a>
-					{/if}
-				{/foreach}
-            </div>
-          
-          </div>
-          <div class="col-lg-9">
-          	<div class="product-gallery">
-            		<div id="product-gallery" class="carousel slide"> 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#product-gallery" data-slide-to="0" class="active"></li>
-              <li data-target="#product-gallery" data-slide-to="1"></li>
-              <li data-target="#product-gallery" data-slide-to="2"></li>
-            </ol>
-            
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-				<div class="item active">
-				{foreach key=i item=rRows from=$arrProduct}
-				{if $i>0 && $i%6==0}
-					</div><div class="item">
-				{/if}
-					<a href="{$smarty.const.HOST}/public/viewproduct?id={$rRows.id}&category={$rRows.fk_category}" title="Photo">
-						<img src="{$smarty.const.HOST}/upload_thumb/product/{$rRows.file_name}" width="195" height="110" alt="" />
-						<span>{$rRows.product_name}</span>
-					</a>
-				{/foreach}
-				</div>
-            </div>
-			<!-- Controls --> 
-            <a class="left carousel-control" href="#product-gallery" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#product-gallery" data-slide="next"> <span class="icon-next"></span> </a> </div>
-            
-            </div>
-          </div>
-        </div>
-      
     </div>
-  </div>
+</div>
+</div>
+<div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in1.jpg" class=""></p><p><span style="font-weight: bold;">Biệt thự 1</span></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div><div class="art-layout-cell layout-item-1" style="width: 34%" >
+        <p><img width="207" height="153" alt="" src="images/in3-2-2-2.jpg" class=""></p><p><span style="font-weight: bold;">Biệt thự 2</span></p><p>Cras elit nisl, rhoncus nec iaculis ultricies, feugiat eget sapien. Pellentesque ac felis tellus. Aenean sollicitudin imperdiet arcu, vitae dignissim est posuere id.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div><div class="art-layout-cell layout-item-2" style="width: 33%" >
+        <p><img width="207" height="153" alt="" src="images/in4-2-2-2-2.jpg" class="art-preview-selected"></p><p><span style="font-weight: bold;">Biệt thự 3</span></p><p>Duis placerat justo eu nunc interdum ultrices. Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna dolor sit amet, consectetur adipiscing elit.</p><p><a href="#" class="art-button">More</a></p><p><br></p>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+                                
+                
 
-{include file='common/footer.tpl'}
+</article></div>
+                        <div class="art-layout-cell art-sidebar1"><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">What's New</h3>
+        </div>
+        <div class="art-blockcontent"><div class="newsdate">
+<h6>17</h6>
+<p>Apr</p>
+</div>
+Lorem ipsum dolor sit amet aenean id sollicitudin arcu.<br clear="all">
+<div class="newsdate">
+<h6>27</h6>
+<p>Mar</p>
+</div>
+Etiam pharetra, tellus sit amet congue vulputate.<br clear="all">
+<div class="newsdate">
+<h6>05</h6>
+<p>Mar</p>
+</div>
+Curabitur ullamcorper gravida felis, sit amet scelerisque.<br clear="all">
+<div class="newsdate">
+<h6>19</h6>
+<p>Feb</p>
+</div>
+Donec vel neque in neque porta venenatis sed sit amet lectus.<br clear="all">
+<div class="newsdate">
+<h6>24</h6>
+<p>Jan</p>
+</div>
+Morbi tristique posuere consequat vel neque in neque.</div>
+</div><div class="art-block clearfix">
+        <div class="art-blockheader">
+            <h3 class="t">Highlights</h3>
+        </div>
+        <div class="art-blockcontent"><p><img width="221" height="163" alt="" src="images/in2.jpg" style="margin:0;" class=""></p>
+<p>Photo by <a href="http://www.photos8.com">www.photos8.com</a></p>
+<p>Phasellus elit dolor, porttitor id consectetur sit amet, posuere id magna.</p>
+<p><a href="#" class="art-button">More</a></p></div>
+</div></div>
+                    </div>
+                </div>
+            </div>
+{include file='common/footer1.tpl'}
