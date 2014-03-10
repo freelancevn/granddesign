@@ -2762,3 +2762,12 @@ margin-bottom: 10px;
 
 .art-blockheader .t, .art-vmenublockheader .t {white-space: nowrap;}
 /* End Additional CSS Styles */
+
+
+
+/* slideshow */
+.carousel-control.right { background: url(../images/nexy.png) 0 0 no-repeat; right: 0px}
+
+.container{
+    width:82%;
+}

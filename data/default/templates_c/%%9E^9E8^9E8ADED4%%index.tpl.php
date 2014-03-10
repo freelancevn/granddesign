@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-09 16:00:32
+<?php /* Smarty version 2.6.20, created on 2014-03-10 20:54:30
          compiled from public/index.tpl */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => 'common/header1.tpl', 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => 'common/header.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
@@ -93,7 +93,7 @@ Morbi tristique posuere consequat vel neque in neque.</div>
                 </div>
             </div>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
-$this->_smarty_include(array('smarty_include_tpl_file' => 'common/footer1.tpl', 'smarty_include_vars' => array()));
+$this->_smarty_include(array('smarty_include_tpl_file' => 'common/footer.tpl', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>

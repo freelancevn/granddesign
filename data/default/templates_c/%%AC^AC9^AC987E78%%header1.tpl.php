@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-09 16:30:09
+<?php /* Smarty version 2.6.20, created on 2014-03-09 19:58:48
          compiled from common/header1.tpl */ ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <title><?php echo $this->_tpl_vars['arrConfigSite']['TITLE']; ?>
 </title>
+    <meta name="description" content="<?php echo $this->_tpl_vars['arrConfigSite']['DESCRIPTION']; ?>
+">
+    <meta name="keywords" content="<?php echo $this->_tpl_vars['arrConfigSite']['KEYWORDS']; ?>
+">
     <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
     <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -15,17 +19,22 @@ style1.css"" media="screen">
     <link rel="stylesheetstylesheet" href="<?php echo @CSS; ?>
 style.responsive1.css" media="all">
 
-
+    <link href="<?php echo @CSS; ?>
+bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="<?php echo @JS; ?>
 jquery1.js"></script>
     <script src="<?php echo @JS; ?>
 script1.js"></script>
     <script src="<?php echo @JS; ?>
 script.responsive1.js"></script>
-    <meta name="description" content="<?php echo $this->_tpl_vars['arrConfigSite']['DESCRIPTION']; ?>
-">
-    <meta name="keywords" content="<?php echo $this->_tpl_vars['arrConfigSite']['KEYWORDS']; ?>
-">
+    <script src="<?php echo @JS; ?>
+jquery-min.js"></script> 
+    <script src="<?php echo @JS; ?>
+bootstrap.min.js"></script> 
+    <script src="<?php echo @JS; ?>
+commonindex.js"></script>
+    <script src="<?php echo @JS; ?>
+jquery.animate-shadow.js"></script>
 
 </head>
 <body>
@@ -64,6 +73,39 @@ script.responsive1.js"></script>
                 
                     
 </header>
+
+<!--slideshow-->
+  <div id="slideshow" class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="carousel-example-generic" class="carousel slide"> 
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <?php $_from = $this->_tpl_vars['arrImage']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['i'] => $this->_tpl_vars['rRows']):
+?>
+                <div class="item<?php if ($this->_tpl_vars['i'] == 0): ?> active<?php endif; ?>"><img src="<?php echo @HOST; ?>
+/data/upload/<?php echo $this->_tpl_vars['rRows']['imgname']; ?>
+" width="1170" height="276" alt="" /> </div>
+                <?php endforeach; endif; unset($_from); ?>
+            </div>
+            
+            <!-- Controls --> 
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="icon-prev"></span> </a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="icon-next"></span> </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end slideshow-->
+
 <nav class="art-nav">
         <ul class="art-hmenu">
             <li><a href="#" class="active">Công Trình</a>

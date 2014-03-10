@@ -189,7 +189,7 @@ window.onload = function() {
 	upload_success_handler : uploadSuccess,
 	upload_complete_handler : uploadComplete,	
 	// Button Settings
-	button_image_url : "http://granddesign.com.vn/XPButtonUploadText.png",
+	button_image_url : "http://granddesign.local/XPButtonUploadText.png",
 	button_placeholder_id : "spanButtonPlaceholder",
 	button_width: 145,
 	button_height: 22,	

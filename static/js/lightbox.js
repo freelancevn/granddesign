@@ -46,8 +46,8 @@
 //  Configurationl
 //
 LightboxOptions = Object.extend({
-    fileLoadingImage:        'http://granddesign.com.vn/images/loading.gif',     
-    fileBottomNavCloseImage: 'http://granddesign.com.vn/images/closelabel.gif',
+    fileLoadingImage:        'http://granddesign.local/images/loading.gif',     
+    fileBottomNavCloseImage: 'http://granddesign.local/images/closelabel.gif',
 
     overlayOpacity: 0.8,   // controls transparency of shadow overlay
 

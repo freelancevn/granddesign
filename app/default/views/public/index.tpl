@@ -1,4 +1,4 @@
-{include file='common/header1.tpl'}
+{include file='common/header.tpl'}
 <div id="art-main">
 <div class="art-sheet clearfix">
     <div class="art-layout-wrapper">
@@ -86,4 +86,4 @@ Morbi tristique posuere consequat vel neque in neque.</div>
                     </div>
                 </div>
             </div>
-{include file='common/footer1.tpl'}
+{include file='common/footer.tpl'}
