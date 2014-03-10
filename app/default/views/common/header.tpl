@@ -90,8 +90,9 @@
         <ul class="art-hmenu">
             <li><a href="#">Công Trình</a>
                 <ul>
-                    <li><a href="#">Chung cư</a></li>
-                    <li><a href="#">Biệt thự, Nhà phố</a></li>
+                    {foreach key=i item=rRows from=$arrMenu}
+                        <li><a href="{$smarty.const.HOST}?category={$rRows.id}" title="{$rRows.category_name}">{$rRows.category_name}</a></li>
+                    {/foreach}
                 </ul>
              </li>
              <li><a href="#">Thiết Kế</a>

@@ -713,7 +713,7 @@ ul.art-hmenu li
    z-index: 5;
    display: block;
    float: left;
-   background: none;
+   background-color: #89ABCD;
    margin: 0;
    padding: 0;
    border: 0;
@@ -772,6 +772,7 @@ ul.art-hmenu
    width: auto;
    height: auto;
    background-position: center;
+
 }
 
 .art-hmenu-extra2
@@ -959,7 +960,6 @@ ul.art-hmenu li li:after
 
 ul.art-hmenu ul li a:hover, .desktop ul.art-hmenu ul li:hover>a
 {
-   background: #949494;
    background: transparent;
    margin:0 auto;
 }
@@ -975,7 +975,7 @@ ul.art-hmenu ul li a:hover, .desktop ul.art-hmenu ul li:hover>a
 
 ul.art-hmenu ul:before
 {
-   background: #FFFFFF;
+   background: #89ABCD;
    margin:0 auto;
    display: block;
    position: absolute;
