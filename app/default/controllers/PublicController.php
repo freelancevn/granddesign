@@ -134,6 +134,10 @@ class PublicController extends Zend_Controller_Action
 		$arrDetail		= $objService->getServiceAdmin($iDetailID);
 		$this->view->arrDetail	= $arrDetail;
 	}
+	
+	public function projectsAction()
+	{
+	}
 
 }
 

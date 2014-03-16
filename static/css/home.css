@@ -1,0 +1,677 @@
+#main {
+	font: 15px/16px 'DINHabitatBold', sans-serif;
+	color: #000
+}
+
+#main label h2 {
+	top: 10px;
+	font: 19px/19px 'DINHabitatMed', sans-serif
+}
+
+#main label a {
+	top: 13px;
+	font: 15px/18px 'DINHabitatReg', sans-serif
+}
+
+#main .slideshow h2 {
+	top: -4px;
+	font: 24px/24px 'DINHabitatMed', sans-serif
+}
+
+#main .slideshow a {
+	top: 2px;
+	font: 16px/22px 'DINHabitatReg', sans-serif
+}
+
+#main .carousel h2 {
+	text-align: center
+}
+
+#main .carousel h2 a {
+	top: 10px;
+	font-size: 19px;
+	color: #000
+}
+
+.product_collection {
+	color: #000;
+	text-transform: capitalize
+}
+
+.products .one_price {
+	color: #333
+}
+
+.products .was {
+	font-size: 13px
+}
+
+.products .now {
+	color: #cc1d1a
+}
+
+#main .product,#main .products li {
+	text-align: center
+}
+
+#main .product h2 {
+	top: 15px;
+	font-size: 16px
+}
+
+#main .products .product_info {
+	top: 7px
+}
+
+#main .large h2 {
+	font-size: 21px
+}
+
+#main .large .product_info {
+	top: 10px;
+	font: 21px/21px 'DINHabitatMed', sans-serif
+}
+
+#main .feature {
+	font-family: 'DINHabitatReg', sans-serif;
+	text-align: center;
+	text-transform: uppercase
+}
+
+#main strong {
+	font-family: 'DINHabitatBold', sans-serif
+}
+
+#main img {
+	display: block
+}
+
+#main {
+	width: 924px;
+	margin: 0 0 20px;
+	overflow: hidden
+}
+
+#main>div {
+	position: relative;
+	float: left;
+	width: 227px;
+	height: 230px;
+	margin: 0 4px 4px 0
+}
+
+#main>div * {
+	position: relative
+}
+
+#main div label {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	padding: 0 10px;
+	cursor: inherit
+}
+
+#main div a {
+	display: block
+}
+
+#main .feature {
+	position: relative;
+	float: left;
+	width: 880px;
+	margin: 0 4px 4px 0;
+	height: auto;
+	padding: 20px
+}
+
+#main .slideshow {
+	overflow: hidden
+}
+
+#main .slideshow,#main .slideshow ul li {
+	float: left;
+	height: 600px
+}
+
+#main .slideshow ul {
+	width: 9999px
+}
+
+#main .slideshow label {
+	height: 44px;
+	padding: 18px
+}
+
+#main .slideshow label a {
+	width: 400px
+}
+
+#main .slideshow img {
+	width: 920px;
+	height: 600px
+}
+
+#main .slideshow label+img {
+	height: 556px
+}
+
+#main .slideshow .arrow {
+	position: absolute;
+	top: 50%;
+	width: 60px;
+	height: 36px;
+	margin-top: -18px;
+	text-indent: -999em;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	overflow: hidden
+}
+
+#main .slideshow .left {
+	left: 0;
+	background-image: url('../images/arrow-left-trans.png')
+}
+
+#main .slideshow .right {
+	right: 0;
+	background-image: url('../images/arrow-right-trans.png')
+}
+
+#main .slideshow ol {
+	position: absolute;
+	bottom: 18px;
+	right: 13px
+}
+
+#main .slideshow ol li {
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	text-indent: -999em;
+	background: #FFF;
+	cursor: pointer;
+	overflow: hidden;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px
+}
+
+#main .slideshow li.selected {
+	background-color: #999
+}
+
+#main .product {
+	background: #f6f6f6
+}
+
+#main .product h2 {
+	height: 30px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #000
+}
+
+#main .product h2.empty {
+	margin-bottom: 0;
+	border-color: transparent
+}
+
+#main .large h2 {
+	margin-bottom: 40px
+}
+
+.large .products li {
+	width: 420px;
+	height: 380px;
+	background-position: center 160px
+}
+
+#main .large .wrapper {
+	width: 440px
+}
+
+.carousel {
+	background: #f6f6f6;
+	overflow: hidden
+}
+
+#main .carousel>h2 {
+	height: 50px
+}
+
+#main .carousel .arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+	width: 40px;
+	height: 52px;
+	margin-top: -26px;
+	opacity: .3;
+	cursor: pointer;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+	-o-transition: opacity .5s
+}
+
+#main .carousel .arrow.left {
+	left: 0
+}
+
+#main .carousel .arrow.right {
+	right: 0
+}
+
+#main .carousel:hover .arrow {
+	opacity: .6
+}
+
+#main .carousel .arrow:hover {
+	opacity: 1
+}
+
+.wrapper {
+	width: 200px;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+.products {
+	float: left;
+	width: 9999px
+}
+
+.products li {
+	float: left;
+	width: 179px;
+	height: 168px;
+	margin: 0 10px 12px;
+	background: url('../client/home/loader.gif') no-repeat center 60px
+}
+
+.products .page {
+	width: 199px;
+	margin: 0
+}
+
+.products .page li {
+	margin-bottom: 42px;
+	background: url('../client/home/loader.gif') no-repeat center 60px
+}
+
+.products img {
+	margin: 0 auto
+}
+
+.products a {
+	display: block
+}
+
+#main .products li .promo_image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1
+}
+
+#main .carousel.w4 {
+	margin-bottom: 30px;
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000
+}
+
+#main .twitter {
+	background: #e8e8e8
+}
+
+.carousel,.twitter,[data-video],[data-product] {
+	display: none
+}
+
+.js .carousel,.js .twitter,.js [data-video],.js [data-product] {
+	display: block
+}
+
+#main div>img {
+	width: 227px;
+	height: 230px
+}
+
+#main div label+img {
+	height: 180px
+}
+
+#main .w2,#main .twitter {
+	width: 458px
+}
+
+#main .w2>img {
+	width: 458px
+}
+
+.w2 .wrapper {
+	width: 398px
+}
+
+#main .w3 {
+	width: 689px
+}
+
+#main .w3>img {
+	width: 689px
+}
+
+.w3 .wrapper {
+	width: 598px
+}
+
+#main .w4,#main .slideshow,#main .slideshow ul li {
+	width: 920px
+}
+
+#main .w4>img {
+	width: 920px
+}
+
+.w4 .wrapper {
+	width: 796px
+}
+
+#main .h2,#main .twitter {
+	height: 464px
+}
+
+#main .h2>img {
+	height: 464px
+}
+
+#main .h2 label+img {
+	height: 414px
+}
+
+#main .h3 {
+	height: 698px
+}
+
+#main .h3>img {
+	height: 698px
+}
+
+#main .h3 label+img {
+	height: 648px
+}
+
+#main .t1 {
+	margin-top: 235px
+}
+
+#main .r1 {
+	margin-right: 235px
+}
+
+#main .b1 {
+	margin-bottom: 235px
+}
+
+#main .l1 {
+	margin-left: 235px
+}
+
+#main div.feature.banana,.banana label {
+	color: #000;
+	background: #f9d22e
+}
+
+.banana label a {
+	color: #000
+}
+
+#main div.feature.beetroot,.beetroot label {
+	color: #FFF;
+	background: #573747
+}
+
+.beetroot label a {
+	color: #FFF
+}
+
+#main div.feature.black,div label {
+	color: #FFF;
+	background: #000
+}
+
+div label a {
+	color: #FFF
+}
+
+#main div.feature.blueberry,.blueberry label {
+	color: #FFF;
+	background: #5e5e83
+}
+
+.blueberry label a {
+	color: #FFF
+}
+
+#main div.feature.canvas,.canvas label {
+	color: #000;
+	background: #efeee2
+}
+
+.canvas label a {
+	color: #000
+}
+
+#main div.feature.cloud,.cloud label {
+	color: #000;
+	background: #bebfba
+}
+
+.cloud label a {
+	color: #000
+}
+
+#main div.feature.cumin,.cumin label {
+	color: #000;
+	background: #b4a24e
+}
+
+.cumin label a {
+	color: #000
+}
+
+#main div.feature.dust,.dust label {
+	color: #000;
+	background: #ddd7d6
+}
+
+.dust label a {
+	color: #000
+}
+
+#main div.feature.hibiscus,.hibiscus label {
+	color: #FFF;
+	background: #d73c8a
+}
+
+.hibiscus label a {
+	color: #FFF
+}
+
+#main div.feature.kingfisher,.kingfisher label {
+	color: #FFF;
+	background: #008490
+}
+
+.kingfisher label a {
+	color: #FFF
+}
+
+#main div.feature.leaf,.leaf label {
+	color: #FFF;
+	background: #79ab54
+}
+
+.leaf label a {
+	color: #FFF
+}
+
+#main div.feature.loam,.loam label {
+	color: #FFF;
+	background: #897e76
+}
+
+.loam label a {
+	color: #FFF
+}
+
+#main div.feature.mediterranean,.mediterranean label {
+	color: #FFF;
+	background: #5e6eb4
+}
+
+.mediterranean label a {
+	color: #FFF
+}
+
+#main div.feature.mink,.mink label {
+	color: #FFF;
+	background: #9e9d87
+}
+
+.mink label a {
+	color: #FFF
+}
+
+#main div.feature.mist,.mist label {
+	color: #000;
+	background: #e1e2e4
+}
+
+.mist label a {
+	color: #000
+}
+
+#main div.feature.mushroom,.mushroom label {
+	color: #000;
+	background: #e7e0d4
+}
+
+.mushroom label a {
+	color: #000
+}
+
+#main div.feature.mustard,.mustard label {
+	color: #000;
+	background: #e3d052
+}
+
+.mustard label a {
+	color: #000
+}
+
+#main div.feature.olive,.olive label {
+	color: #000;
+	background: #d9d3a3
+}
+
+,
+.olive label a {
+	color: #000
+}
+
+#main div.feature.orange,.orange label {
+	color: #FFF;
+	background: #f47920
+}
+
+,
+.orange label a {
+	color: #FFF
+}
+
+#main div.feature.pimento,.pimento label {
+	color: #FFF;
+	background: #d72b35
+}
+
+.pimento label a {
+	color: #FFF
+}
+
+#main div.feature.prune,.prune label {
+	color: #FFF;
+	background: #7a262e
+}
+
+.prune label a {
+	color: #FFF
+}
+
+#main div.feature.rose,.rose label {
+	color: #000;
+	background: #ceb0b6
+}
+
+.rose label a {
+	color: #000
+}
+
+#main div.feature.sky,.sky label {
+	color: #000;
+	background: #b7d1ed
+}
+
+.sky label a {
+	color: #000
+}
+
+#main div.feature.slate,.slate label {
+	color: #FFF;
+	background: #717c84
+}
+
+.slate label a {
+	color: #FFF
+}
+
+#main div.feature.sprout,.sprout label {
+	color: #000;
+	background: #b0ba73
+}
+
+.sprout label a {
+	color: #000
+}
+
+#main div.feature.tomato,.tomato label {
+	color: #FFF;
+	background: #e12e21
+}
+
+.tomato label a {
+	color: #FFF
+}
+
+#main div.feature.white,.white label {
+	color: #000;
+	background: #FFF
+}
+
+.white label a {
+	color: #000
+}
+
+#main div.feature.wine,.wine label {
+	color: #FFF;
+	background: #b12a5b
+}
+
+.wine label a {
+	color: #FFF
+}

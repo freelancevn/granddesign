@@ -25,7 +25,7 @@ class Bootstrap
 		$objView = new Smarty_View(SITE_NAME);
 		$vrender = new Zend_Controller_Action_Helper_ViewRenderer();
 		$vrender->setView($objView);
-		$vrender->setViewSuffix('tpl');
+		$vrender->setViewSuffix('phtml');
 		Zend_Controller_Action_HelperBroker::addHelper($vrender);
 		Zend_Registry::set('objView', $objView);			
 		/** Db **/

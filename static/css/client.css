@@ -1,0 +1,1085 @@
+.main_navigation_level_3 li#main_navigation_sofas_exclusive {padding-bottom: 15px;} 
+.main_navigation_level_3 li#main_navigation_accessories_paint {padding-top: 15px;} 
+.main_navigation_level_3 li#main_navigation_accessories_wallpaper {padding-bottom: 6px;} 
+.main_navigation_level_3 li#main_navigation_accessories_paint {padding-bottom: 6px;} 
+.main_navigation_level_3 li#main_navigation_accessories_gifts {padding-bottom: 6px;} 
+
+
+#main_navigation_christmas-sale_all .level_1 {
+     color: #FF0000 !important;
+}
+
+
+.cms-banner span { 
+
+bottom: 5px; 
+font-size: 30px;
+
+}
+
+
+
+/* top banner for store finder */
+#banner {
+height: 75px;
+background: black no-repeat;
+position: relative;
+}
+
+/* top banner for delivery page */
+.delivery h1#banner-1 {
+height: 55px !important;
+background: black no-repeat !important;
+position: relative;
+}
+
+
+/* top banner for all static pages */
+h1#banner-1 {
+height: 55px;
+background: black no-repeat;
+position: relative;
+}
+
+
+
+h1#account_general_heading { 
+background: none repeat scroll 0 0 black; 
+display: block;
+height: 75px; 
+margin-bottom: 15px; 
+width: 100%; 
+font-size: 1em;
+font-weight: normal;
+font-family: 'DINHabitatReg'  !important;
+
+}
+
+h1#account_general_heading span { color: #FFFFFF; float: left; font-size: 2em; padding: 21px 0 0 50px; }
+
+
+/* for store locator banner */
+.ly_storefinder div#banner { 
+    display: none;
+}
+
+
+
+/* Sofas subcategory styling */
+
+.subcategory-MAINimage-holder {
+    background: none repeat scroll 0 0 #70b0b7;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder {
+    background: none repeat scroll 0 0 #70b0b7;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder {
+    background: none repeat scroll 0 0 #70b0b7;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Sofas subcategory styling */
+
+
+
+/* Furniture Catgory subcategory styling */
+
+.subcategory-MAINimage-holder2 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder2 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder2 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder2 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder2 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Furniture Catgory subcategory styling */
+
+
+
+
+/* Furniture Room subcategory styling */
+
+.subcategory-MAINimage-holder3 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder3 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder3 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder3 {
+    background: none repeat scroll 0 0 #6dafb7;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder3 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Furniture Room subcategory styling */
+
+
+
+
+/* Accessories subcategory styling */
+
+.subcategory-MAINimage-holder4 {
+    background: none repeat scroll 0 0 #54534a;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder4 {
+    background: none repeat scroll 0 0 #54534a;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder4 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder4 {
+    background: none repeat scroll 0 0 #54534a;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder4 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Accessories subcategory styling */
+
+
+
+/* Lighting subcategory styling */
+
+.subcategory-MAINimage-holder5 {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder5 {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder5 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #FFFFFF;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder5 {
+    background: none repeat scroll 0 0 #000000;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder5 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #FFFFFF;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Lighting subcategory styling */
+
+
+
+/* Kitchen subcategory styling */
+
+.subcategory-MAINimage-holder6 {
+    background: none repeat scroll 0 0 #88746a;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder6 {
+    background: none repeat scroll 0 0 #88746a;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder6 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #FFFFFF;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder6 {
+    background: none repeat scroll 0 0 #88746a;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder6 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #FFFFFF;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Kitchen subcategory styling */
+
+
+/* Outdoor subcategory styling */
+
+.subcategory-MAINimage-holder7 {
+    background: none repeat scroll 0 0 #f5866c;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder7 {
+    background: none repeat scroll 0 0 #f5866c;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder7 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder7 {
+    background: none repeat scroll 0 0 #f5866c;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder7 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Outdoor subcategory styling */
+
+
+
+
+/* Christmas subcategory styling */
+
+.subcategory-MAINimage-holder8 {
+    background: none repeat scroll 0 0 #d72b35;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder8 {
+    background: none repeat scroll 0 0 #d72b35;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder8 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder8 {
+    background: none repeat scroll 0 0 #d72b35;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder8 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Christmas subcategory styling */
+
+
+
+
+
+
+
+/* Clearance subcategory styling */
+
+.subcategory-MAINimage-holder9 {
+    background: none repeat scroll 0 0 #EE2719;
+    border: 0 none;
+    float: left;
+	width:750px;
+    height: 121px;
+	margin-bottom:10px;
+}
+
+.subcategory-Headline-holder9 {
+    background: none repeat scroll 0 0 #EE2719;
+    border: 0 none;
+    float: left;
+	width:240px;
+    height: 96px;
+}
+
+.subcategory-Headline-holder9 h1 {
+
+	font-family: 'DINHabitatBold';
+	font-size: 28px;
+	line-height: 30px;
+	color: #ffffff;
+	padding-left:20px;
+	padding-top:15px;
+
+}
+
+.subcategory-Copy-holder9 {
+    background: none repeat scroll 0 0 #EE2719;
+    border: 0 none;
+    float: left;
+	width:480px;
+    height: 96px;
+}
+
+.subcategory-Copy-holder9 p {
+
+	font-family: 'DINHabitatReg';
+	font-size: 16px;
+	line-height: 18px;
+	color: #ffffff;
+	padding-left:10px;
+	padding-top:15px;
+
+}
+
+/* end - Clearance subcategory styling */
+
+
+
+
+
+
+.js div#product_relations_tabs_content div.tab {height: 1% !important;} 
+
+#store_finder_search {
+	display: none;
+}
+
+#address3_element.element { 
+display: none; 
+} 
+
+.js div#store_finder_search {
+	display: none;
+}
+
+div#store_finder_select {
+	border-top: 1px solid #CCCCCC
+}
+
+.ie7 ul#apply_filter li.filter_group ul li 
+{
+	clear:left;
+}
+
+.ie7 ul#apply_filter li.filter_group ul li a
+{
+	padding-left:10px;
+	float:left;
+}
+
+#productsList p.product_price span.was_price {line-height:23px;}
+
+/* hide newsletter sign up in my account */
+.account #footerSectionRight #footer_enews_form, 
+.account #footerSectionRight .header {
+	display:none;
+}
+
+.heritage h1#banner-1 { background:#000 url(../images/banners/heritage_920x150.jpg) no-repeat; height:496px;}
+.delivery h1#banner-1 { background:#000 url(../images/banners/delivery_920x150.jpg) no-repeat; height:295px;}
+
+div#product_info p#dimensions {margin-bottom:8px;} 
+/* end */
+
+
+.bestsellerProductInfo strong {
+font-size: 1.20em;
+} 
+
+ul#category_grid li{height:185px}
+
+
+div#product_info p#dimensions {margin-bottom:8px;} 
+
+
+
+
+/* hfor check out banner */
+.checkout div#banner { 
+    display: none;
+} 
+
+
+
+
+.product_dims {display:none;} 
+
+/* remove dimenion from goes with */
+div#goes_with p.dimensions {display:none;} 
+div#goes_with div.product_info {height:40px !important;} 
+
+
+
+div#cms_content {margin-top: 0px;}
+
+
+/*** Temporary CSS Fix for HABUK-419 ***/
+
+#gridBoxFour img {
+	height:226px;
+}
+
+
+#main_navigation_sofas_type .main_navigation_level_3 .counter_3 {
+    padding-top: 0;
+}
+
+
+
+
+/* Homepage CSS for grey boxes and auto-numbering
+.Home #main {counter-reset:counter;}
+.Home #main > div {background:#CCC; counter-increment:counter;}
+.Home #main > div:before {content:counter(counter); position:absolute; top:50%; left:50%; width:100px; margin:-13px 0 0 -50px; color:#FFF; text-align:center; text-transform:uppercase;}
+*/
+
+.main_navigation_level_2 {
+	border-left:none;
+}
+
+#main_navigation_level_1 li:hover .main_navigation_level_2 {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Homepage font tweaks */
+
+
+.Home #main .slideshow h2 {
+ font: 25px/25px 'DINHabitatMed',sans-serif;
+}
+
+
+.Home #main label h2 {
+	font: 20px/20px 'DINHabitatMed',sans-serif;
+}
+
+.Home #main .feature {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+
+/* fix for product desc overlap price  */
+h3.product_title {font-size: 0.997em;} 
+
+/* fix to remove text  */
+.be-social, .be-social-sub {display:none;} 
+.addthis_toolbox {float:left;}
+.be-social, .be-social-sub {display: none !important;}
+
+/* adding padding to social icons  */
+.addthis_toolbox.addthis_default_style {
+    padding-top: 20px;
+}
+
+
+
+/* darkred - class="darkred" */
+#main div.feature.darkred,
+.darkred label {color:#FFF; background:#b5131E;}
+.darkred label a {color:#FFF;}
+
+/* darkgreen - class="darkgreen" */
+#main div.feature.darkgreen,
+.darkgreen label {color:#FFF; background:#038034;}
+.darkgreen label a {color:#FFF;}
+
+/* redd - class="redd" */
+#main div.feature.redd,
+.redd label {color:#FFF; background:#B5131E;}
+.redd label a {color:#FFF;}
+
+
+/* darkblue - class="darkblue" */
+#main div.feature.darkblue,
+.darkblue label {color:#FFF; background:#10416c;}
+.darkblue label a {color:#FFF;}
+
+/* mint - class="mint" */
+#main div.feature.mint,
+.mint label {color:#FFF; background:#70A03f;}
+.mint label a {color:#FFF;}
+
+/* greyland - class="greyland" */
+#main div.feature.greyland,
+.greyland label {color:#FFF; background:#7D7F81;}
+.greyland label a {color:#FFF;}
+
+/* grey1 - class="grey1" */
+#main div.feature.grey1,
+.grey1 label {color:#FFF; background:#514E45;}
+.grey1 label a {color:#FFF;}
+
+/* grey2 - class="grey2" */
+#main div.feature.grey2,
+.grey2 label {color:#FFF; background:#666677;}
+.grey2 label a {color:#FFF;}
+
+/* catalog - class="catalog" */
+#main div.feature.catalog,
+.catalog label {color:#FFF; background:#64676f			 ;}
+.catalog label a {color:#FFF;}
+
+
+/* lightp - class="lightp" */
+#main div.feature.lightp,
+.lightp label {color:#FFF; background:#5f4b61							 ;}
+.lightp label a {color:#FFF;}
+
+/* lightb - class="lightb" */
+#main div.feature.lightb,
+.lightb label {color:#FFF; background:#51362f					 ;}
+.lightb label a {color:#FFF;}
+
+
+/* lightg - class="lightg" */
+#main div.feature.lightg,
+.lightg label {color:#FFF; background:#198945				 ;}
+.lightg label a {color:#FFF;}
+
+/* lightbb - class="lightbb" */
+#main div.feature.lightbb,
+.lightbb label {color:#FFF; background:#559abd;}
+.lightbb label a {color:#FFF;}
+
+/* rreedd - class="rreedd" */
+#main div.feature.rreedd,
+.rreedd label {color:#FFF; background:#aa0c0b;}
+.rreedd label a {color:#FFF;}
+
+/* greyblack - class="greyblack" */
+#main div.feature.greyblack,
+.greyblack label {color:#FFF; background:#262e38;}
+.greyblack label a {color:#FFF;}
+
+/* lightgg - class="lightgg" */
+#main div.feature.lightgg,
+.lightgg label {color:#FFF; background:#535d1c;}
+.lightgg label a {color:#FFF;}
+
+/* lightgreyy - class="lightgreyy" */
+#main div.feature.lightgreyy,
+.lightgreyy label {color:#FFF; background:#636363;}
+.lightgreyy label a {color:#FFF;}
+
+/* bluee - class="bluee" */
+#main div.feature.bluee,
+.bluee label {color:#FFF; background:#295182;}
+.bluee label a {color:#FFF;}
+
+/* pinkk - class="pinkk" */
+#main div.feature.pinkk,
+.pinkk label {color:#FFF; background:# 559abd;}
+.pinkk label a {color:#FFF;}
+
+/* greeen - class="greeen" */
+#main div.feature.greeen,
+.greeen label {color:#FFF; background:#535d1c;}
+.greeen label a {color:#FFF;}
+
+/* sky - class="sky" */
+#main div.feature.sky,
+.sky label {color:#FFF; background:#b7d1ed;}
+.sky label a {color:#FFF;}
+
+/* cloud - class="cloud" */
+#main div.feature.cloud,
+.cloud label {color:#FFF; background:#bebfba;}
+.cloud label a {color:#FFF;}
+
+
+/* Pimento - class="pimento" */
+#main div.feature.pimento,
+.pimento label {color:#FFF; background:#d72b35;}
+.pimento label a {color:#FFF;}
+
+
+
+/* blueberry  - class="blueberry_" */
+#main div.feature.blueberry_,
+.blueberry_ label {color:#FFF; background:#5e5e83;}
+.blueberry_ label a {color:#FFF;}
+
+
+/* kingfisher - class="kingfisher" */
+#main div.feature.kingfisher,
+.kingfisher label {color:#FFF; background:#008490;}
+.kingfisher label a {color:#FFF;}
+
+
+/* wine - class="wine" */
+#main div.feature.wine,
+.wine label {color:#FFF; background:#b12a5b;}
+.wine label a {color:#FFF;}
+
+/* leaf - class="leaf" */
+#main div.feature.leaf,
+.leaf label {color:#FFF; background:#79ab54;}
+.leaf label a {color:#FFF;}
+
+/* beetroot - class="beetroot" */
+#main div.feature.beetroot,
+.beetroot label {color:#FFF; background:#573747;}
+.beetroot label a {color:#FFF;}
+
+
+/* Pillar Box - class="pillar_box" */
+#main div.feature.pillar_box,
+.pillar_box label {color:#FFF; background:#d31245;}
+.pillar_box label a {color:#FFF;}
+
+
+/* Smoke grey - class="smoke_grey" */
+#main div.feature.smoke_grey,
+.smoke_grey label {color:#000; background:#cfd4d8;}
+.smoke_grey label a {color:#000;}
+
+
+/* Midnight Blue - class="midnight_blue" */
+#main div.feature.midnight_blue,
+.midnight_blue label {color:#FFF; background:#002d62;}
+.midnight_blue label a {color:#FFF;}
+
+
+/* Leaf - class="leaf" */
+#main div.feature.leaf,
+.leaf label {color:#FFF; background:#66b360;}
+.leaf label a {color:#FFF;}
+
+
+/* Jasper - class="jasper" */
+#main div.feature.jasper,
+.jasper label {color:#000; background:#cadad1;}
+.jasper label a {color:#000;}
+
+
+/* Jade - class="jade" */
+#main div.feature.jade,
+.jade label {color:#FFF; background:#9ed8d2;}
+.jade label a {color:#FFF;}
+
+
+/* Persimmon - class="persimmon" */
+#main div.feature.persimmon,
+.persimmon label {color:#FFF; background:#f58025;}
+.persimmon label a {color:#FFF;}
+
+
+/* Coral - class="coral" */
+#main div.feature.coral,
+.coral label {color:#FFF; background:#f5866c;}
+.coral label a {color:#FFF;}
+
+
+/* Dark Taupe - class="dark_taupe" */
+#main div.feature.dark_taupe,
+.dark_taupe label {color:#FFF; background:#88746a;}
+.dark_taupe label a {color:#FFF;}
+
+
+/* Warm Gray - class="warm_gray" */
+#main div.feature.warm_gray,
+.warm_gray label {color:#000; background:#bbb0a6;}
+.warm_gray label a {color:#000;}
+
+
+/* Citrus - class="citrus" */
+#main div.feature.citrus,
+.citrus label {color:#000; background:#ffc222;}
+.citrus label a {color:#000;}
+
+/* Sky - class="sky" */
+#main div.feature.sky,
+.sky label {color:#FFF; background:#95a9cb;}
+.sky label a {color:#FFF;}
+
+
+/* Stone - class="stone" */
+#main div.feature.stone,
+.stone label {color:#FFF; background:#adafb2;}
+.stone label a {color:#FFF;}
+
+
+/* Slate - class="slate" */
+#main div.feature.slate,
+.slate label {color:#FFF; background:#807f83;}
+.slate label a {color:#FFF;}
+
+
+/* Cobalt - class="cobalt" */
+#main div.feature.cobalt,
+.cobalt label {color:#FFF; background:#036cb6;}
+.cobalt label a {color:#FFF;}
+
+
+/* Mustard - class="mustard" */
+#main div.feature.mustard,
+.mustard label {color:#000; background:#f1cb00;}
+.mustard label a {color:#000;}
+
+
+/* Swatch 43 - class="swatch_43" */
+#main div.feature.swatch_43,
+.swatch_43 label {color:#FFF; background:#f15d22;}
+.swatch_43 label a {color:#FFF;}
+
+
+/* Anthracite - class="anthracite" */
+#main div.feature.anthracite,
+.anthracite label {color:#FFF; background:#262e38;}
+.anthracite label a {color:#FFF;}
+
+
+/* Swatch 44 - class="swatch_44" */
+#main div.feature.swatch_44,
+.swatch_44 label {color:#FFF; background:#7399c6;}
+.swatch_44 label a {color:#FFF;}
+
+
+/* Peach - class="peach" */
+#main div.feature.peach,
+.peach label {color:#FFF; background:#e3675e;}
+.peach label a {color:#FFF;}
+
+
+
+/* Crimson - class="crimson" */
+#main div.feature.crimson,
+.crimson label {color:#FFF; background:#aa0c0b;}
+.crimson label a {color:#FFF;}
+
+
+/* Sale Red - class="sale_red */
+#main div.feature.summersale,
+.sale_red label {color:#FFF; background:#dc291e;}
+.sale_red label a {color:#FFF;}
+
+
+/* Sale Purple - class="sale_purple" */
+#main div.feature.sale_purple,
+.sale_purple label {color:#FFF; background:#ae208e;}
+.sale_purple label a {color:#FFF;}
+
+
+/* Cust Event - class="cust_event" */
+#main div.feature.cust_event,
+.cust_event label {color:#FFF; background:#00b5ad;}
+.cust_event label a {color:#FFF;}
+
+
+/* Sale Green - class="sale_green" */
+#main div.feature.sale_green,
+.sale_green label {color:#FFF; background:#198945;}
+.sale_green label a {color:#FFF;}
+
+/* Swatch 45 - class="swatch_45" */
+#main div.feature.swatch_45,
+.swatch_45 label {color:#000; background:#ffdd00;}
+.swatch_45 label a {color:#000;}
+
+
+/* Easter Promo 13 - class="easter_promo" */
+#main div.feature.easter_promo,
+.easter_promo label {color:#FFF; background:#fb652a;}
+.easter_promo label a {color:#FFF;}
+
+/* BluePromo - class="bluepromo" */
+#main div.feature.bluepromo,
+.bluepromo label {color:#FFF; background:#016BB5;}
+.bluepromo label a {color:#FFF;}
+
+/* Black - class="black" */
+#main div.feature.black,
+.black label {color:#FFF; background:##000000;}
+.black label a {color:#FFF;}
+
+/* Yell - class="yell" */
+#main div.feature.yell,
+.yell label {color:#000; background:#E3CF5C;}
+.yell label a {color:#000;}
+
+
+/* Grey - class="grey" */
+#main div.feature.grey,
+.grey label {color:#000; background:#C3B7B2;}
+.grey label a {color:#000;}
+
+/* Blueish - class="blueish" */
+#main div.feature.blueish,
+.blueish label {color:#000; background:#B8D1EC;}
+.blueish label a {color:#000;}
+
+
+/* Grayish blue - class="grayish_blue" */
+#main div.feature.grayish_blue,
+.grayish_blue label {color:#FFF; background:#445766;}
+.grayish_blue label a {color:#FFF;}
+
+
+/* OrangeOffice - class="orangeoffice" */
+#main div.feature.orangeoffice,
+.orangeoffice label {color:#FFF; background:#F58025;}
+.orangeoffice label a {color:#FFF;}
+
+
+/* amy-yellow - class="amy-yellow" */
+#main div.feature.amy-yellow,
+.amy-yellow label {color:#FFF; background:#D5BB00;}
+.amy-yellow label a {color:#FFF;}
+
+
+/* amy-blue - class="amy-blue" */
+#main div.feature.amy-blue,
+.amy-blue label {color:#000; background:#B7D1ED;}
+.amy-blue label a {color:#000;}
+
+/* amy-darkblue - class="amy-darkblue" */
+#main div.feature.amy-darkblue,
+.amy-darkblue label {color:#FFF; background:#1D4264;}
+.amy-darkblue label a {color:#FFF;}
+
+/* xmas-red - class="xmas-red" */
+#main div.feature.xmas-red,
+.xmas-red label {color:#FFF; background:#b21c18;}
+.xmas-red label a {color:#FFF;}
+
+/* year - class="year" */
+#main div.feature.year,
+.year label {color:#000; background:#ffd13a;}
+.year label a {color:#000;}
+
+/* brightorange - class="brightorange" */
+#main div.feature.brightorange,
+.brightorange label {color:#FFF; background:#EA7226;}
+.brightorange label a {color:#FFF;}
+
+/* xmas-sale - class="xmas-sale" */
+#main div.feature.xmas-sale,
+.xmas-sale label {color:#FFF; background:#EE2719;}
+.xmas-sale label a {color:#FFF;}
+
+/* GreySS - class="greyss" */
+#main div.feature.greyss,
+.greyss label {color:#FFF; background:#363636;}
+.greyss label a {color:#FFF;}round:#363636;}
+.grey label a {color:#FFF;}
+
+/* White - class="white" */
+#main div.feature.white,
+.white label {color:#000; background:#FFFFFF;}
+.white label a {color:#000;}
