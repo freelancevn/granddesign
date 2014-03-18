@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-16 20:56:24
+<?php /* Smarty version 2.6.20, created on 2014-03-19 00:04:45
          compiled from common/header.phtml */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--[if IE 6 ]><html class="ie ie6" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
@@ -137,7 +137,8 @@ buttons/en/btn_magnify_search.gif"
 							<li id="nav_introduce_overview_" class="level_2 last"><a
 								class="level_2" href="#">Bảng Giá</a></li>
 						</ul></li>
-					<li id="nav_news" class="level_1"><a class="level_1" href="#">Tin
+					<li id="nav_news" class="level_1"><a class="level_1" href="<?php echo @HOST; ?>
+news">Tin
 							Tức</a></li>
 					<li id="nav_project" class="level_1"><a class="level_1" href="#">Dự
 							Án</a>
