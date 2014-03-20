@@ -99,10 +99,19 @@
 	height: 230px;
 	margin: 0 4px 4px 0
 }
+/* 
+#newMain{
+	
+	position: relative;
+	float: left;
+	width: 800px;
+	height: 230px;
+	margin: 0 4px 4px 0
+} */
 
-#main>div * {
+/* #main>div * {
 	position: relative
-}
+} */
 
 #main div label {
 	position: absolute;
@@ -432,6 +441,18 @@
 	height: 414px
 }
 
+#main .nh2 {	
+	height:180px;
+}
+
+#main .nh3 {	
+	height:145px;
+}
+
+#main .nh2>img {	
+	height:180px;
+}
+
 #main .nh1 {	
 	height:35px;
 }
@@ -440,9 +461,7 @@
 	width:1000px;
 }
 
-#main .nh2 {	
-	height:180px;
-}
+
 
 #main .h3 {
 	height: 698px
