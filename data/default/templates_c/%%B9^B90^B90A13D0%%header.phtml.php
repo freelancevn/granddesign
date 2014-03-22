@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-19 23:34:20
+<?php /* Smarty version 2.6.20, created on 2014-03-22 17:10:20
          compiled from common/header.phtml */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--[if IE 6 ]><html class="ie ie6" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
@@ -29,6 +29,9 @@ home.css"
 	type="text/css" />
 <link rel="stylesheet" href="<?php echo @CSS; ?>
 client.css"
+	type="text/css" />
+<link rel="stylesheet" href="<?php echo @CSS; ?>
+news.css"
 	type="text/css" />
 
 <!-- <script type="text/javascript" src="<?php echo @JS; ?>
