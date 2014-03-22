@@ -45,6 +45,11 @@ caption,th {
 	padding: 0 20px
 }
 
+.container1 {
+    display: inline;
+    padding: 0 20px
+}
+
 .clear {
 	clear: both;
 	display: block;

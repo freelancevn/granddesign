@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-19 23:34:20
+<?php /* Smarty version 2.6.20, created on 2014-03-22 16:01:58
          compiled from common/header.phtml */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--[if IE 6 ]><html class="ie ie6" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
@@ -15,21 +15,17 @@ favicon.ico" />
 <title>Professional Interior Design Consult and Assitant - GrandDesign
 	SaiGoin</title>
 <link rel="stylesheet" href="<?php echo @CSS; ?>
-default.css"
-	type="text/css" />
+default.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo @CSS; ?>
-global.css"
-	type="text/css" id="global_sheet" />
+global.css" type="text/css" id="global_sheet" />
 <link rel="stylesheet" href="<?php echo @CSS; ?>
-buttons.css"
-	type="text/css" id="buttons_sheet" />
-
+buttons.css" type="text/css" id="buttons_sheet" />
 <link rel="stylesheet" href="<?php echo @CSS; ?>
-home.css"
-	type="text/css" />
+home.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo @CSS; ?>
-client.css"
-	type="text/css" />
+client.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo @CSS; ?>
+projectDesignSlide.css" type="text/css" />
 
 <!-- <script type="text/javascript" src="<?php echo @JS; ?>
 jquery-1.3.2.min.js"></script> -->
@@ -37,15 +33,13 @@ jquery-1.3.2.min.js"></script> -->
 jquery-1.11.0.js"></script>
 <script type="text/javascript" src="<?php echo @JS; ?>
 jquery-migrate.js"></script>
-<script type="text/javascript"
-	src="<?php echo @JS; ?>
+<script type="text/javascript" src="<?php echo @JS; ?>
 jquery.ba-tinypubsub.min.js"></script>
 <script type="text/javascript" src="<?php echo @JS; ?>
 global.js"></script>
 <script type="text/javascript" src="<?php echo @JS; ?>
 jquery-form.js"></script>
-<script type="text/javascript"
-	src="<?php echo @JS; ?>
+<script type="text/javascript" src="<?php echo @JS; ?>
 newsletterSubscription.js"></script>
 <script type="text/javascript" src="<?php echo @JS; ?>
 track.js"></script>
@@ -55,6 +49,8 @@ cufon.js"></script>
 home.js"></script>
 <script type="text/javascript" src="<?php echo @JS; ?>
 client.js"></script>
+<script type="text/javascript" src="<?php echo @JS; ?>
+projectDesignSlide.js"></script>
 
 
 <meta name="keywords"
@@ -80,7 +76,7 @@ client.js"></script>
 
 				<h1 id="companyLogo">
 					<img src="<?php echo @IMAGES; ?>
-logo.png" alt="Granddesig" />
+logo.png" alt="Grand Design" />
 				</h1>
 				<ul id="header_actions">
 
@@ -137,8 +133,7 @@ buttons/en/btn_magnify_search.gif"
 							<li id="nav_introduce_overview_" class="level_2 last"><a
 								class="level_2" href="#">Bảng Giá</a></li>
 						</ul></li>
-					<li id="nav_news" class="level_1"><a class="level_1" href="<?php echo @HOST; ?>
-news">Tin
+					<li id="nav_news" class="level_1"><a class="level_1" href="#">Tin
 							Tức</a></li>
 					<li id="nav_project" class="level_1"><a class="level_1" href="#">Dự
 							Án</a>
@@ -208,8 +203,8 @@ projects">Nhà Hàng, Khách Sạn, Spa</a></li>
 							<li id="nav_recruitment_policies" class="level_2 last"><a
 								class="level_2" href="#">Chính Sách Đào Tạo</a></li>
 						</ul></li>
-					<li id="nav_contact" class="level_1"><a class="level_1" href="#">Liên
-							Hệ</a></li> <?php echo '
+					<li id="nav_contact" class="level_1"><a class="level_1" href="#">Liên Hệ</a></li>
+				 <?php echo '
 					<script type="text/javascript">
 				//creates the SUB2 script include Asynchronously 
 					var _sub2_JSCODE = document.createElement(\'script\');

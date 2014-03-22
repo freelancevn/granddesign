@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-16 20:54:08
+<?php /* Smarty version 2.6.20, created on 2014-03-22 16:00:50
          compiled from public/projects.phtml */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'common/header.phtml', 'smarty_include_vars' => array()));
@@ -11,7 +11,8 @@ unset($_smarty_tpl_vars);
 homepage/merch_2x2_outdoor-insp.jpg" />
 		<label>
 			<h2>Outdoor inspiration</h2> <a
-			href="categories/outdoorpromo/fcp-category/home.html"
+			href="<?php echo @HOST; ?>
+projectdesign"
 			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot a 2x2']); WaitForSeconds(0.25);"
 			title="Outdoor inspiration">detail &raquo;</a>
 		</label>

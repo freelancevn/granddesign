@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-16 16:02:31
+<?php /* Smarty version 2.6.20, created on 2014-03-22 16:01:58
          compiled from common/footer.phtml */ ?>
 <div id="footer" class="container">
 	<div id="footer_section_left">
