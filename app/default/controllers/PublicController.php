@@ -139,6 +139,10 @@ class PublicController extends Zend_Controller_Action
 	{
 	}
 	
+	public function projectdesignAction()
+	{
+	}
+	
 	public function newsAction() {
 		
 	}
