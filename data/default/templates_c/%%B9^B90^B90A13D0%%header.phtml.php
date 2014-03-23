@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-22 16:01:58
+<?php /* Smarty version 2.6.20, created on 2014-03-22 17:08:28
          compiled from common/header.phtml */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--[if IE 6 ]><html class="ie ie6" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><![endif]-->
@@ -79,38 +79,6 @@ projectDesignSlide.js"></script>
 logo.png" alt="Grand Design" />
 				</h1>
 				<ul id="header_actions">
-
-					<li id="header_links">
-						<div id="mini_basket">
-							<div id="mini_basket_heading">
-								<a href="pws/ShippingOptions.html"> <span
-									class="mini_basket_title">My basket</span> <span
-									class="mini_basket_qty jsshow">&nbsp;</span> <span
-									class="mini_basket_total jsshow">&nbsp;</span>
-								</a>
-							</div>
-						</div>
-						<ul id="header_content_links" class="content_links">
-							<li class="no_js_account"><a
-								href="pws/secure/ManageAccount0a41.html?secure_from=login">My
-									account</a></li>
-						</ul>
-
-					</li>
-					<li>
-						<form action="http://google.com.vn" method="get"
-							class="search_form" id="header_search_form">
-							<fieldset>
-								<input type="hidden" name="productsPerPage" value="20" /> <input
-									accesskey="4" name="keywords" type="text" id="keywords"
-									value="Search" class="text clear_value lowercase searchbox" />
-								<input type="image" class="submit img"
-									src="<?php echo @IMAGES; ?>
-buttons/en/btn_magnify_search.gif"
-									value="Submit" />
-							</fieldset>
-						</form>
-					</li>
 				</ul>
 			</div>
 			<div id="navigation" class="container">
@@ -133,7 +101,8 @@ buttons/en/btn_magnify_search.gif"
 							<li id="nav_introduce_overview_" class="level_2 last"><a
 								class="level_2" href="#">Bảng Giá</a></li>
 						</ul></li>
-					<li id="nav_news" class="level_1"><a class="level_1" href="#">Tin
+					<li id="nav_news" class="level_1"><a class="level_1" href="<?php echo @HOST; ?>
+news">Tin
 							Tức</a></li>
 					<li id="nav_project" class="level_1"><a class="level_1" href="#">Dự
 							Án</a>

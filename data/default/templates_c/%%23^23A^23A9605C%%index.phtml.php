@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2014-03-16 16:00:10
+<?php /* Smarty version 2.6.20, created on 2014-03-22 17:59:31
          compiled from public/index.phtml */ ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'common/header.phtml', 'smarty_include_vars' => array()));
@@ -51,25 +51,16 @@ homepage/main_ban_kitchen.jpg" />
 		all orders
 	</div>
 
-	<div class="carousel w4">
+	<!--div class="carousel w4">
 		<h2>
-			<a href="bestsellers/promo/fcp-category/list.html"
-				title="Bestsellers">Our favourites &raquo;</a>
+			<a href="#"  title="Nổi bật"> Favourites &raquo;</a>
 		</h2>
-		<img src="<?php echo @IMAGES; ?>
-arrow-left.png" />
 		<div class="wrapper">
 			<ul class="products">
-				<li>aaa</li>
-				<li>aaaa</li>
-				<li>aaaa</li>
-				<li>aaaa</li>
+				<li>
 			</ul>
 		</div>
-		<img src="<?php echo @IMAGES; ?>
-arrow-right.png" />
-
-	</div>
+	</div-->
 
 	<div class="w2 h2 black">
 		<img src="<?php echo @IMAGES; ?>
@@ -165,6 +156,7 @@ homepage/2x1_lights.jpg" /> <label>
 		</label>
 	</div>
 </div>
+<div class="rightbar"></div>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'common/footer.phtml', 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

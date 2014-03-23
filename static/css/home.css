@@ -358,10 +358,6 @@
 	background: #e8e8e8
 }
 
-.carousel,.twitter,[data-video],[data-product] {
-	display: none
-}
-
 .js .carousel,.js .twitter,.js [data-video],.js [data-product] {
 	display: block
 }

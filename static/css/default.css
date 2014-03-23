@@ -41,11 +41,20 @@ caption,th {
 .container {
 	float: left;
 	display: inline;
-	width: 920px;
-	padding: 0 20px
+	width: 1190px;
+	padding: 0 0px
 }
 
-.container1 {
+.rightbar {
+    float: left;
+    display: inline;
+    width: 265px;
+	height: auto;
+	background-color: blue;
+    padding: 0 0px
+}
+
+.designcontainer {
     display: inline;
     padding: 0 20px
 }

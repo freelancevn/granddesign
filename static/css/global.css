@@ -104,7 +104,7 @@ div#wrapper {
 div#page {
 	position: relative;
 	z-index: 0;
-	width: 960px;
+	width: 1190px;
 	margin: 0 auto
 }
 
@@ -116,8 +116,7 @@ div#header {
 	position: relative;
 	z-index: 4;
 	height: 80px;
-	padding: 20px 10px 10px 0px;
-	margin: 0 10px;
+	padding: 20px 0px 10px 0px;
 	border-bottom: 1px solid #000;
 }
 
@@ -392,338 +391,6 @@ form#header_change_country_form {
 	float: right
 }
 
-form#header_search_form {
-	text-align: left;
-	height: 27px;
-	padding-top: 5px
-}
-
-#de form#header_search_form {
-	width: 230px
-}
-
-#fr form#header_search_form {
-	width: 225px
-}
-
-form#header_search_form fieldset {
-	width: auto
-}
-
-form#header_search_form label {
-	float: left;
-	text-transform: lowercase;
-	margin: 3px 10px 0 0
-}
-
-form#header_search_form input#keywords {
-	float: left;
-	border: 0;
-	font-family: 'DINHabitatBold';
-	width: 228px;
-	padding: 2px 0 3px 0
-}
-
-form#header_search_form input.lowercase {
-	text-transform: lowercase
-}
-
-#de form#header_search_form input.lowercase {
-	text-transform: none
-}
-
-form#header_search_form input.searchbox,div#footerSectionRight input.searchbox
-	{
-	text-transform: none;
-	background: 0;
-	border: 1px solid #d4d3d5;
-	margin-left: 2px;
-	height: 16px;
-	padding: 2px 0 3px 4px
-}
-
-.ie form#header_search_form input.searchbox,.ie div#footerSectionRight input.searchbox
-	{
-	height: 14px;
-	padding: 2px 0 3px 4px
-}
-
-div#mini_basket {
-	float: right;
-	z-index: 10;
-	display: block;
-	position: relative;
-	top: -6px
-}
-
-div#mini_basket p.basket_empty {
-	text-align: center
-}
-
-div#mini_basket_heading {
-	background: url('../images/img_miniBag.gif') no-repeat right top;
-	cursor: pointer
-}
-
-div#mini_basket_heading a {
-	display: block;
-	padding: 1px 30px 0 0;
-	color: #000;
-	height: 30px
-}
-
-div#mini_basket_heading a:hover,div#mini_basket_heading a.basket_active
-	{
-	color: #464646;
-	text-decoration: none
-}
-
-.ie7 div#mini_basket {
-	top: 10px
-}
-
-div#mini_basket_heading span.mini_basket_title {
-	display: block;
-	padding-top: 12px
-}
-
-.js div#mini_basket_heading span.mini_basket_title {
-	display: none
-}
-
-div#mini_basket_heading span.mini_basket_total {
-	clear: both
-}
-
-div#mini_basket_heading a.empty span {
-	padding-top: 9px
-}
-
-div#mini_basket_heading a.empty span.mini_basket_total {
-	display: none !important
-}
-
-div#mini_basket_details {
-	float: right;
-	background: #FFF;
-	display: none;
-	width: 235px;
-	padding: 7px 0 10px 0;
-	position: absolute;
-	top: 35px;
-	right: 0;
-	-webkit-box-shadow: 1px 2px 2px #e5e5e5;
-	-moz-box-shadow: 1px 2px 2px #e5e5e5;
-	box-shadow: 1px 2px 2px #e5e5e5;
-	behavior: url('pie.htc')
-}
-
-div.basket_header {
-	height: 20px;
-	border-bottom: 1px solid #d9d9d9;
-	display: inline-block
-}
-
-ul.basket_products {
-	float: left;
-	width: 215px;
-	background: #f7f6f7
-}
-
-ul.basket_products li {
-	float: left;
-	width: 100%
-}
-
-ul.basket_products li ul {
-	width: 100%
-}
-
-ul.basket_products li ul li {
-	float: left;
-	position: relative;
-	padding: 10px 0;
-	border-bottom: 1px solid #e6e6e6
-}
-
-ul.basket_products li ul li.last {
-	border-bottom: 0
-}
-
-ul.basket_products li p {
-	margin-top: 0;
-	color: #767676;
-	margin: 0;
-	line-height: 1.2em
-}
-
-ul.basket_products li .product_range {
-	font-weight: bold;
-	color: #000;
-	text-transform: capitalize
-}
-
-ul.basket_products li .product_title {
-	text-transform: lowercase
-}
-
-ul.basket_products li .product_price {
-	color: #000
-}
-
-ul.basket_products li .product_qty {
-	font-size: .8333em
-}
-
-ul.basket_products li div#overlay {
-	position: absolute
-}
-
-div.basket {
-	float: left;
-	padding: 0 10px;
-	width: 215px;
-	color: #b8b8b8
-}
-
-div.basket_products_container ul li {
-	width: 215px;
-	height: 115px
-}
-
-div.basket_product_column {
-	float: left;
-	height: 90px;
-	width: 125px;
-	overflow: hidden;
-	margin-top: 10px
-}
-
-div.basket_product_info {
-	width: auto;
-	margin-top: 10px;
-	float: left;
-	overflow: hidden;
-	width: 90px
-}
-
-div.basket_product_info p {
-	display: block;
-	height: 15px;
-	width: 500px
-}
-
-div.basket_product_remove {
-	float: left;
-	padding-top: 5px;
-	text-transform: uppercase;
-	font-size: .9167em
-}
-
-div.basket_totals {
-	float: left;
-	width: 100%;
-	padding: 10px 0;
-	font-weight: bold
-}
-
-div.basket_totals ul {
-	width: 140px;
-	margin: 0 auto;
-	overflow: hidden
-}
-
-div.basket_totals ul li {
-	float: left;
-	width: 100%;
-	color: #767676
-}
-
-div.basket_totals ul li.basket_total {
-	color: #000
-}
-
-div.basket_totals span.name {
-	float: left;
-	text-align: left
-}
-
-div.basket_totals span.value {
-	float: right;
-	text-align: right
-}
-
-a#mini_basket_view_basket {
-	margin: 0 auto;
-	display: block;
-	text-align: center
-}
-
-a#mini_basket_view_basket {
-	display: block;
-	clear: both
-}
-
-div#mini_basket div.mini_basket_container {
-	float: left;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	height: 345px;
-	clear: both;
-	background: #f7f6f7
-}
-
-p.mini_basket_arrow {
-	float: left;
-	width: 100%;
-	height: 20px;
-	margin: 0;
-	background-color: #f7f6f7;
-	background-repeat: no-repeat;
-	text-indent: -9999px
-}
-
-p#mini_basket_prev {
-	border-top: 1px solid #e0e0e0;
-	background-image: url('../images/px_arrowMinibasketUp_0.gif');
-	background-position: center 5px
-}
-
-p#mini_basket_next {
-	border-bottom: 1px solid #e0e0e0;
-	background-image: url('../images/px_arrowMinibasketDown_0.gif');
-	background-position: center 4px
-}
-
-p#mini_basket_prev.enabled {
-	background-image: url('../images/px_arrowMinibasketUp_1.gif');
-	cursor: pointer
-}
-
-p#mini_basket_next.enabled {
-	background-image: url('../images/px_arrowMinibasketDown_1.gif');
-	cursor: pointer
-}
-
-ul#mini_basket_pagination {
-	float: left;
-	padding: 5px 0 15px;
-	text-align: center;
-	width: 140px
-}
-
-ul#mini_basket_pagination li {
-	cursor: pointer;
-	display: inline;
-	margin: 0 3px;
-	text-decoration: underline
-}
-
-ul#mini_basket_pagination li.selected {
-	font-weight: bold
-}
-
 @media screen and /*!*/ (max-device-width:1024px) {
 	#header_actions {
 		width: 580px
@@ -821,12 +488,8 @@ div#breadcrumb ul#crumbs li.first,div#breadcrumb ul#crumbs li.first a,div#breadc
 div#navigation {
 	display: inline;
 	float: left;
-	bottom: 0;
-	left: 0;
 	z-index: 2;
 	clear: both;
-	padding: 0px 10px 0px 0px;
-    margin: 0 10px;
 	border-bottom: solid 1px #000;
 	font-family: 'Helvetica'; font-size: 0.9em; font-weight: bolder;
 }
@@ -847,7 +510,7 @@ div#navigation {
 	float: left;
 	position: relative;
 	z-index: 3;
-	padding-right: 30px
+	padding-right: 60px
 }
 
 #main_navigation_level_1 li.selected a.level_1 {
