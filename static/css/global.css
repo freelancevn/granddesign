@@ -163,12 +163,13 @@ div#footer {
 }
 
 #header_actions {
-	width: 253px;
+	width: 900px;
+	height: 80px;
 	float: right;
 	font-family: 'DINHabitatBold';
 	color: #000;
 	font-size: 1.2em;
-	margin-top: 10px;
+	background-color: gray;
 }
 
 .js #header_actions {
