@@ -55,7 +55,7 @@
    		<p><a href="{$smarty.const.HOST_ADMIN}/footer" class="label_sub_menu">Thông tin Footer</a></p>
     </div>-->
     <div id="NewsGroup" style="display: none;">
-        
+        <p>Welcome to news page</p>
     </div>
     <div id="tab3" style="display: none;">
         <p>Nội Thất</p>
