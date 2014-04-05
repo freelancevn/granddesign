@@ -41,7 +41,11 @@
         	<a class="" href="#tab8">Tuyển Dụng</a>
         </li>        
         <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/contact" title="#Contacts">Liên hệ</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/contact" title="#Contacts">Liên Hệ</a>
+        </li>
+        
+        <li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/promotion" title="#Promotions">Khyến Mãi</a>
         </li>
 
     </ul>
