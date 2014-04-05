@@ -313,7 +313,7 @@ class NhutFunction {
 	 *	 
 	 * @return String $strLic
 	 */
-	public  function getOrderBY($order='',$sort='', $offset=0, $size='all') {
+	public static function getOrderBY($order='',$sort='', $offset=0, $size='all') {
 		$SQL='';
 		if(trim($order)!='') {
 			$SQL.=" ORDER BY ".$order;
