@@ -1,0 +1,1 @@
+(function(a){a.fn.checkFileStatus=function(b){var c;a.ajax({url:b,type:"HEAD",async:false,error:function(f,d,e){c=false},success:function(){c=b}});return c}}(jQuery));

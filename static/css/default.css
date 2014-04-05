@@ -1,0 +1,92 @@
+body {
+	background-image: url('../images/bg.gif');
+    background-repeat: repeat;
+    min-height: 100%;
+    font-size: 12px;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0
+}
+
+h1,h2,h3,h4,h5,h6,input,textarea,select {
+	font-size: 1.0;
+	font-weight: normal
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,img {
+	border: 0
+}
+
+li {
+	list-style: none
+}
+
+em,strong,th {
+	font-style: normal;
+	font-weight: normal
+}
+
+caption,th {
+	text-align: left
+}
+
+.container {
+	float: left;
+	display: inline;
+	width: 1190px;
+	padding: 0 0px
+}
+
+.rightbar {
+    float: left;
+    display: inline;
+    width: 265px;
+	height: auto;
+	background-color: blue;
+    padding: 0 0px
+}
+
+.designcontainer {
+    display: inline;
+    padding: 0 20px
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0
+}
+
+.clearfix {
+	display: inline-block
+}
+
+* html .clearfix {
+	height: 1%
+}
+
+.clearfix {
+	display: block
+}
