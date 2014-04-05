@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='introduce-group/introduceGroupsHeader.tpl'}
 
 <form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/info">
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
@@ -17,7 +17,8 @@
 					<td>Chức vụ</td>	
 					<td>Văn phòng</td>
 					<td>Hình ảnh</td>
-					<td>Vị trí</td>									
+					<td>Vị trí</td>
+                    <td>Thao tác</td>									
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -39,7 +40,21 @@
 					</td>
 					<td width="10%" valign="top">
 							{$row.sort}
-					</td>			
+					</td>
+                    <td>
+                        <table width="100%" border="0" cellpadding="1" cellspacing="1">
+                            <tr>
+                                <td align="right" width="40%" valign="top">						
+                                    <input type="button" name="btAddNew" class="content_button" value="Edit" onClick="javascript: actionAddNew(this.form,'{$smarty.const.HOST_ADMIN}/info/add');"/>		  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" width="40%" valign="top">						
+                                    <input type="button" name="btDelete" class="content_button" value="Xóa" onClick="javascript:confirmDelete(this.form,'Vui lòng chọn một record','Bạn có chắc là muốn xóa?')"/>	
+                                </td>
+                            </tr>
+                        </table>
+                    </td>			
 				</tr>
 				{/foreach}
 				{else}
@@ -60,6 +75,8 @@
           			<td align="right" width="40%" valign="top">						
 		  	  			<input type="button" name="btAddNew" class="content_button" value="Thêm mới" onClick="javascript: actionAddNew(this.form,'{$smarty.const.HOST_ADMIN}/info/add');"/>		  
 		 				&nbsp;&nbsp;&nbsp;
+                        <input type="button" name="btAddNew" class="content_button" value="Edit" onClick="javascript: actionAddNew(this.form,'{$smarty.const.HOST_ADMIN}/info/add');"/>		  
+		 				&nbsp;&nbsp;&nbsp;
 		   				<input type="button" name="btDelete" class="content_button" value="Xóa" onClick="javascript:confirmDelete(this.form,'Vui lòng chọn một record','Bạn có chắc là muốn xóa?')"/>	  
 		  			</td>
         		</tr>
@@ -69,4 +86,4 @@
 </table>
 </form>
 
-{include file='common/footer.tpl'}
+{include file='introduce-group/introduceGroupsFooter.tpl'}

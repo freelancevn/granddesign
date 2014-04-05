@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='introduce-group/introduceGroupsHeader.tpl'}
 <form name="frmProduct" id="frmProduct" action="{$smarty.const.HOST_ADMIN}/footer" method="post">
 <input type="hidden" name="btSave" value="save"/>
 <table width="100%" border="0" cellpadding="3" cellspacing="1">
@@ -95,4 +95,4 @@ $(document).ready(function() {
 });
 </script>
 {/literal}
-{include file='common/footer.tpl'}
+{include file='introduce-group/introduceGroupsFooter.tpl'}

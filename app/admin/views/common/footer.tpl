@@ -15,7 +15,7 @@
 			<table cellpadding="0" cellspacing="0" width="100%" border="0">
 				<tr class="tr_footer">
 					<td width="100%" height="32">
-						<p align="center">&copy;2013 by NhutLm<br>
+						<p align="center">&copy;2014 HTD<br>
 							</p>
 					</td>
 				</tr>					

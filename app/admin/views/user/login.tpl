@@ -14,7 +14,7 @@
 		</tr>				
 		{/if}
 		<tr class="login">
-			<td width="37%" align="right">UserName :&nbsp;</td>
+			<td width="37%" align="right">Username :&nbsp;</td>
 			<td width="63%" align="left"><input type="text" value="" maxlength="30" name="txtUserName" id="txtUserName" class="input"></td>
 		</tr>
 		<tr class="login">

@@ -67,6 +67,12 @@
 		<a href="{$smarty.const.HOST_ADMIN}/info" class="label_sub_menu">Thông tin nhân viên</a>
 	</td>			
 </tr>
+<tr height="20">
+	<td class="label_sub_menu">&raquo;</td>
+	<td align="left" class="label_sub_menu">						
+		<a href="{$smarty.const.HOST_ADMIN}/promotion" class="label_sub_menu">Promotion</a>											
+	</td>			
+</tr>
 {if $AppUI->id>0}
 <tr height="20">
 	<td class="label_sub_menu">&raquo;</td>

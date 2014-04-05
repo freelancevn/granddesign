@@ -1,16 +1,18 @@
 {include file='common/header.tpl'}
-<form name="frmCategory" id="frmCategory" action="{$smarty.const.HOST_ADMIN}/category/dosave" method="GET" enctype="multipart/form-data">
+
+<form name="frmCategory" id="frmCategory" action="{$smarty.const.HOST_ADMIN}/promotion/dosaveedit" method="post" enctype="multipart/form-data">
+<input type="hidden" value="{$arrDetail.id}" name="txtId" />
 <input type="hidden" name="btSave" value="save"/>
 <table width="100%" border="0" cellpadding="0" cellspacing="1">
 	<tr class="label_title">
-		<td colspan="2">Thêm mới danh mục</td>
+		<td colspan="2">Cập nhật Khuyến Mãi</td>
 	</tr>
 	<tr class="login">
 		<td width="20%">Loại danh mục :<span class="alert">*</span></td>
 		<td width="870%">
 			<select name="cbo_type" id="cbo_type">
-				<option value="0" selected="selected">Công trình</option>
-				<option value="1">Shop nội thất</option>
+				<option value="0" {if $arrDetail.type==0}selected="selected"{/if}>Công trình</option>
+				<option value="1" {if $arrDetail.type==1}selected="selected"{/if}>Shop nội thất</option>
 			</select>
 		</td>
 	</tr>
@@ -28,14 +30,14 @@
 		</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Tên danh mục :<span class="alert">*</span></td>
-		<td width="870%"><input type="text" id="txtName" name="txtName" class="input" maxlength="255" value="" />
+		<td width="30%">Tên danh mục :<span class="alert">*</span></td>
+		<td width="70%"><input type="text" id="txtName" name="txtName" value="{$arrDetail.category_name}" class="input" maxlength="255"/>
 		</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Vị trí :<span class="alert">*</span></td>
-		<td width="80%" align="left">				
-			<input type="text" name="txt_sort" id="txt_sort" class="input" maxlength="255" value=""> 
+		<td width="30%">Vị trí :<span class="alert">*</span></td>
+		<td width="70%" align="left">				
+			<input type="text" name="txt_sort" id="txt_sort" class="input" maxlength="255" value="{$arrDetail.sort}"> 
 			
 		</td>
 	</tr>
@@ -74,10 +76,11 @@ $(document).ready(function() {
 		},
 		errorPlacement: function(label, element) {
 			var id = element.attr('id');
-			label.insertAfter($('#' + id));
+			label.insertAfter($('#' + id));					
 		}
 	});
 });
 </script>
 {/literal}
+
 {include file='common/footer.tpl'}

@@ -1,9 +1,9 @@
-{include file='common/header.tpl'}
+{include file='contacts/contactsHeader.tpl'}
 <form name="frmProduct" id="frmProduct" action="{$smarty.const.HOST_ADMIN}/contact" method="post">
 <input type="hidden" name="btSave" value="save"/>
 <table width="100%" border="0" cellpadding="3" cellspacing="1">
 	 <tr>
-		<td align="center" class="lable_list">Thông tin liên hệ Hồ Chí Minh</td>
+		<td align="center" class="lable_list">Hồ Chí Minh</td>
 		<td align="right"></td>
     </tr>
 	{if $smarty.get.errid > 0 || $smarty.session.newsid > 0}
@@ -30,7 +30,7 @@
 		</td>
 	</tr>
 	 <tr>
-		<td align="center" class="lable_list">Thông tin liên hệ văn phòng Hà Nội</td>
+		<td align="center" class="lable_list">Hà Nội</td>
 		<td align="right"></td>
     </tr>
 	<tr class="login">		
@@ -91,4 +91,4 @@ $(document).ready(function() {
 });
 </script>
 {/literal}
-{include file='common/footer.tpl'}
+{include file='contacts/contactsFooter.tpl'}

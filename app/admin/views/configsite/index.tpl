@@ -12,18 +12,18 @@
 	</tr>
 	{/if}		
 	<tr class="login">		
-		<td width="20%">Tên site :<span class="alert">*</span></td>
+		<td width="20%">Tên site<span class="alert">*</span></td>
 		<td width="870%"><input type="text" id="txtTitle" name="txtTitle" class="input" maxlength="255" value="{$arrTitle.key_value}" />
 		</td>
 	</tr>
 	<tr class="login">		
-		<td width="20%">Keywords :<span class="alert">*</span></td>
+		<td width="20%">Keywords<span class="alert">*</span></td>
 		<td width="870%">
 			<textarea name="txtKeywords" style="width:99%;">{$arrKeywords.key_value}</textarea>
 		</td>
 	</tr>	
 	<tr class="login">		
-		<td width="20%">Description :<span class="alert">*</span></td>
+		<td width="20%">Description<span class="alert">*</span></td>
 		<td width="870%">
 			<textarea name="txtDes" style="width:99%;">{$arrDes.key_value}</textarea>
 		</td>
