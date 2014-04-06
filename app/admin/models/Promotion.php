@@ -45,6 +45,12 @@ class Promotion {
 		$db->update ( 'ktv_promotion', $arrDataUpdate, $sWhere );
 		return 0;
 	}
+
+	function getPromotionAdmin($intPromotionId) {
+		$SQL = 'SELECT * FROM ktv_promotion WHERE `id`=' . $intPromotionId;
+		$arrResult = $this->db->fetchRow ( $SQL );
+		return $arrResult;
+	}
 }
 
 ?>
