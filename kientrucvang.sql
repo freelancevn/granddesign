@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 05, 2014 at 04:33 PM
+-- Generation Time: Apr 06, 2014 at 12:12 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -846,21 +846,19 @@ INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`,
 CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `startDate` date NOT NULL,
-  `endDate` date NOT NULL,
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   `order` int(11) NOT NULL,
   `available` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `ktv_promotion`
 --
 
-INSERT INTO `ktv_promotion` (`id`, `name`, `startDate`, `endDate`, `content`, `order`, `available`) VALUES
-(1, 'Ten khuyen mai', '2014-03-02', '2014-03-27', 'Noi dung khuyen mai', 1, 1);
+INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`) VALUES
+(1, 'Ten khuyen mai', 'Noi dung khuyen mai', 1, 1);
 
 -- --------------------------------------------------------
 
