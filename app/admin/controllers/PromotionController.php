@@ -34,18 +34,21 @@ class PromotionController extends Zend_Controller_Action {
 	{
 	}
 	
-	/* function dosaveAction() {
+	function dosaveAction() {
 		$objRequest 		= $this->_request;
-		$name				= $objRequest->getParam('txtName', "");
-		$startDate			= $objRequest->getParam('startDate', 1);
-		$endDate			= $objRequest->getParam('endDate', 1);
-		$content			= $objRequest->getParam('txtContent', "");
-		$order				= $objRequest->getParam('order', 1);
+		$name				= $objRequest->getParam('txt_name', "");
+		$content			= $objRequest->getParam('txt_content', "");
+		$order			    = $objRequest->getParam('txt_sort', 1);
+		$ava                = $objRequest->getParam('checkAvailable', null);
+		$check = 0;
+		if ($ava != null) {
+			$check = 1;
+		}
 		$objPromotion		= new Promotion();
-		$arrData			= array('name'=>$name, 'startDate'=>$startDate, 'endDate'=>$endDate, 'order'=>$order,'content'=>$content);
+		$arrData			= array('name'=>$name, 'content'=>$content, 'order'=>$order, 'available'=>$check);
 		$objPromotion->insertPromotion($arrData);
 		$this->_redirect(HOST_ADMIN.'/Promotion');
-	} */
+	}
 }
 
 ?>

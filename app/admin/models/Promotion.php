@@ -7,7 +7,7 @@ class Promotion {
 	}
 	
 	public function getAllPromotion() {
-		$strQuery = 'SELECT p.id, p.name, p.startDate, p.endDate, p.content, p.order, p.available FROM ktv_promotion AS p';
+		$strQuery = 'SELECT p.id, p.name, p.content, p.order, p.available FROM ktv_promotion AS p';
 		$rs = $this->db->fetchAll ( $strQuery );
 		return $rs;
 	}
