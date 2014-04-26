@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.0.9
 -- http://www.phpmyadmin.net
 --
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `ktv_news` (
   `visible` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
