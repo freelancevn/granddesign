@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 05, 2014 at 04:33 PM
+-- Generation Time: Apr 09, 2014 at 07:44 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -140,6 +140,21 @@ INSERT INTO `ktv_info` (`id`, `name`, `postion`, `image`, `sort`, `type`) VALUES
 (25, 'Trần Qúy Thắng', 'Chuyên viên kinh doanh', '1384478355.9701.jpg', 5, 1),
 (26, 'Trần Nguyễn Giáng Tiên', 'Chuyên viên kinh doanh', '1384478431.0967.jpg', 6, 0),
 (27, 'Thái Trần Phương Mai', 'Chuyên viên kinh doanh', '1384478604.0392.jpg', 5, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ktv_news`
+--
+
+CREATE TABLE IF NOT EXISTS `ktv_news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `summary` text CHARACTER SET utf8 NOT NULL,
+  `content` longtext CHARACTER SET utf8 NOT NULL,
+  `visible` tinyint(1) NOT NULL,
+  `creationDate` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -846,21 +861,22 @@ INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`,
 CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `startDate` date NOT NULL,
-  `endDate` date NOT NULL,
   `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   `order` int(11) NOT NULL,
   `available` tinyint(1) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ktv_promotion`
 --
 
-INSERT INTO `ktv_promotion` (`id`, `name`, `startDate`, `endDate`, `content`, `order`, `available`) VALUES
-(1, 'Ten khuyen mai', '2014-03-02', '2014-03-27', 'Noi dung khuyen mai', 1, 1);
+INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `status`) VALUES
+(1, 'Ten khuyen mai', '<p>\r\n	Noi dung khuyen mai</p>\r\n', 10, 0, 1),
+(2, 'KM2 (UPDATED)', '<p>\r\n	Nội dung KM2 (UPDATED)</p>\r\n', 12, 1, 0),
+(3, 'KM3', '<p>\r\n	Khuyen mai 3</p>\r\n', 1, 0, 0);
 
 -- --------------------------------------------------------
 

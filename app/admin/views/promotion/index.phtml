@@ -16,8 +16,6 @@
 					</td>
           			<td align="center" valign="top">Tên Khuyến Mãi</td>
                     <td align="center" valign="top">Nội dung Khuyến Mãi</td>	
-					<td align="center" valign="top">Ngày bắt đầu</td>
-					<td align="center" valign="top">Ngày kết thúc</td>
 					<td align="center" valign="top">Thứ tự</td>
                     <td align="center" valign="top">Hiển thị</td>							
         		</tr>
@@ -30,20 +28,19 @@
 					<td width="15%" valign="top">	 
 					&nbsp;<a href="{$smarty.const.HOST_ADMIN}/promotion/edit?id={$row.id}" class="ahref">{$row.name|stripslashes}</a>
                     <td width="42%" valign="top">	 
-					{$row.content}</a>
-					</td>				
-					<td width="15%" valign="top" title="{$row.description|stripslashes}">
-							{$row.startDate}
-					</td>
-					<td width="15%" valign="top" title="{$row.description|stripslashes}">
-							{$row.endDate}
+					{$row.content}
 					</td>
 					<td width="5%" valign="top">
 							{$row.order}
 					</td>
                     <td width="5%" valign="top">
-							<input type="checkbox" name="txtCheckBoxAvailable[]" value="{$row.available}" id="availableCheck"/>
-					</td>	
+                    {if $row.available == 1}
+							<input type="checkbox" name="checkAvailable" id="availableCheck" checked disabled="disabled"/>
+				    {else}
+				    		<input type="checkbox" name="checkAvailable" id="availableCheck" disabled="disabled"/>
+				    {/if}
+					</td>
+					
 				</tr>
 				{/foreach}
 				{else}

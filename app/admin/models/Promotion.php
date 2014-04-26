@@ -1,36 +1,38 @@
 <?php
-
 class Promotion {
 	private $db = null;
+
 	function __construct() {
 		$this->db = Zend_Registry::get ( 'db' );
 	}
-	
+
 	public function getAllPromotion() {
-		$strQuery = 'SELECT p.id, p.name, p.startDate, p.endDate, p.content, p.order, p.available FROM ktv_promotion AS p';
+		$strQuery = 'SELECT p.id, p.name, p.content, p.order, p.available FROM ktv_promotion AS p WHERE p.status=1';
 		$rs = $this->db->fetchAll ( $strQuery );
 		return $rs;
 	}
-	
-	public function getListPromotionAdmin($intOffset,$intLimit)
-	{
-		$SQL		= 'SELECT SQL_CALC_FOUND_ROWS * FROM ktv_promotion';
-		$SQL 		.= NhutFunction::getOrderBY('`order`', 'DESC', $intOffset, $intLimit);
-		$rs 		= $this->db->fetchAll($SQL);
-		$total	= $this->db->fetchOne('SELECT FOUND_ROWS()');
-		return array('total'=>$total, 'result'=>$rs);
+
+	public function getListPromotionAdmin($intOffset, $intLimit) {
+		$SQL = 'SELECT SQL_CALC_FOUND_ROWS * FROM ktv_promotion AS p WHERE p.status=1';
+		$SQL .= NhutFunction::getOrderBY ( '`order`', 'DESC', $intOffset, $intLimit );
+		$rs = $this->db->fetchAll ( $SQL );
+		$total = $this->db->fetchOne ( 'SELECT FOUND_ROWS()' );
+		return array (
+				'total' => $total,
+				'result' => $rs 
+		);
 	}
-	
+
 	function insertPromotion($arrData) {
 		$db = Zend_Registry::get ( 'db' );
 		$db->insert ( 'ktv_promotion', $arrData );
 	}
-	
+
 	function updatePromotion($arrData, $sWhere) {
 		$db = Zend_Registry::get ( 'db' );
 		$db->update ( 'ktv_promotion', $arrData, $sWhere );
 	}
-	
+
 	function deleteData($arrData) {
 		$j = count ( $arrData );
 		$s1 = '';
@@ -44,6 +46,12 @@ class Promotion {
 		$db = Zend_Registry::get ( 'db' );
 		$db->update ( 'ktv_promotion', $arrDataUpdate, $sWhere );
 		return 0;
+	}
+
+	function getPromotionAdmin($intPromotionId) {
+		$SQL = 'SELECT * FROM ktv_promotion WHERE `id`=' . $intPromotionId;
+		$arrResult = $this->db->fetchRow ( $SQL );
+		return $arrResult;
 	}
 }
 

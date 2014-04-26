@@ -10,6 +10,9 @@ $(document).ready(function(){
 		if ($aaa.indexOf("contact") != -1) {
 			$url = "http://granddesign.local/admin/contact";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
+		} else if($aaa.indexOf("promotion") != -1) {
+			$url = "http://granddesign.local/admin/promotion";
+			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);
 		}
