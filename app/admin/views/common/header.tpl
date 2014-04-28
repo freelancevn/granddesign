@@ -12,7 +12,8 @@
 		<script type="text/javascript" src="{$smarty.const.JS}jquery.validate.js"></script>
 		<script type="text/javascript" src="{$smarty.const.JS}listform.js"></script>
 		<script type="text/javascript" src="{$smarty.const.JS}ckeditor/ckeditor.js"></script>
-        <script type="text/javascript" src="{$smarty.const.JS}/tab.js"></script>      
+        <script type="text/javascript" src="{$smarty.const.JS}/tab.js"></script>    
+        <script type="text/javascript" src="{$smarty.const.JS}/datetimepicker.js"></script>  
    	</head>
     <body>
     <ul class="tabs">
@@ -20,7 +21,7 @@
 	        <a class="active" href="{$smarty.const.HOST_ADMIN}/IntroduceGroup" title="#IntroduceGroup">Giới Thiệu</a>
         </li>
         <li>
-    	    <a class="" href="{$smarty.const.HOST_ADMIN}/newsGroup" title="#NewsGroup">Tin Tức</a>
+    	    <a class="" href="{$smarty.const.HOST_ADMIN}/news" title="#News">Tin Tức</a>
         </li>
         <li>
         	<a class="" href="#tab3">Dự án</a>

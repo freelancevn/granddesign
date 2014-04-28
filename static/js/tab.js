@@ -13,7 +13,10 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("promotion") != -1) {
 			$url = "http://granddesign.local/admin/promotion";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else {
+		} else if($aaa.indexOf("news") != -1) {
+			$url = "http://granddesign.local/admin/news";
+			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
+		}else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);
 		}
 	});
