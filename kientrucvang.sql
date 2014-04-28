@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 09, 2014 at 07:44 AM
+-- Generation Time: Apr 28, 2014 at 01:34 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -73,8 +73,8 @@ CREATE TABLE IF NOT EXISTS `ktv_config` (
 --
 
 INSERT INTO `ktv_config` (`id`, `key_config`, `key_value`) VALUES
-(1, 'ABOUT', '<p>\n	GRANDDESIGN l&agrave; c&ocirc;ng ty tư vấn thiết kế được th&agrave;nh lập theo h&igrave;nh thức cổ phần. Hoạt động dưới sự điều h&agrave;nh của ban gi&aacute;m đốc v&agrave; hội đồng quản trị, c&ugrave;ng với đội ngũ c&aacute;c kiến tr&uacute;c sư c&oacute; năng lực chuy&ecirc;n m&ocirc;n cao v&agrave; phong c&aacute;ch l&agrave;m việc chuy&ecirc;n nghiệp. Quan điểm thiết kế: Ph&acirc;n t&iacute;ch kh&ocirc;ng gian sống từ mọi g&oacute;c độ, nghi&ecirc;n cứu những ưu ti&ecirc;n của cuộc sống. GRANDDESIGN đề xuất c&aacute;c giải ph&aacute;p thiết kế ph&ugrave; hợp nhất cho từng kh&ocirc;ng gian trong ng&ocirc;i nh&agrave; bạn</p>\n'),
-(2, 'FACTORY', '<p>\r\n	Đang cập nhật ....</p>\r\n'),
+(1, 'ABOUT', '<p>GRANDDESIGN l&agrave; c&ocirc;ng ty tư vấn thiết kế được th&agrave;nh lập theo h&igrave;nh thức cổ phần. Hoạt động dưới sự điều h&agrave;nh của ban gi&aacute;m đốc v&agrave; hội đồng quản trị, c&ugrave;ng với đội ngũ c&aacute;c kiến tr&uacute;c sư c&oacute; năng lực chuy&ecirc;n m&ocirc;n cao v&agrave; phong c&aacute;ch l&agrave;m việc chuy&ecirc;n nghiệp. Quan điểm thiết kế: Ph&acirc;n t&iacute;ch kh&ocirc;ng gian sống từ mọi g&oacute;c độ, nghi&ecirc;n cứu những ưu ti&ecirc;n của cuộc sống. GRANDDESIGN đề xuất c&aacute;c giải ph&aacute;p thiết kế ph&ugrave; hợp nhất cho từng kh&ocirc;ng gian trong ng&ocirc;i nh&agrave; bạn</p>\r\n'),
+(2, 'FACTORY', '<p>Đang cập nhật ..</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt="" src="http://m.f29.img.vnecdn.net/2014/04/08/KOR-5086-4204-1393304484-7081-1396942691.jpg" style="height:374px; width:500px" /></p>\r\n\r\n<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="quality" value="high" /><param name="movie" value="http://www.youtube.com/watch?v=v7y-ue9z5w0" /><embed pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://www.youtube.com/watch?v=v7y-ue9z5w0" type="application/x-shockwave-flash"></embed></object></p>\r\n'),
 (3, 'FOOTERHCM', '<p>\r\n	&nbsp;216 Nguyễn Thị Minh Khai, Quận 3, Tp.HCM</p>\r\n<p>\r\n	<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="color:#ff0000;"><span> </span><span>Hotline</span></span><span>:</span> 0916.979.777 ( Mr Minh )</p>\r\n<p>\r\n	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0902.797.548 ( Mr Sơn )</p>\r\n'),
 (4, 'FOOTERHANOI', '<p>\n	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15/36 Nguyễn Viết Xu&acirc;n - H&agrave; Nội</p>\n<p>\n	<span style="color:#ff0000;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Hotline</span></span>: &nbsp;0985.37.3333 (Mr Hảii )</p>\n<p>\n	&nbsp;</p>\n'),
 (5, 'CONTACTHCM', '<p>\r\n	<span class="right">216 Nguyễn Thị Minh Khai, Q.3, Tp.HCM</span> - 0916.979.777(Mr.Minh)</p>\r\n'),
@@ -149,12 +149,21 @@ INSERT INTO `ktv_info` (`id`, `name`, `postion`, `image`, `sort`, `type`) VALUES
 
 CREATE TABLE IF NOT EXISTS `ktv_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
   `summary` text CHARACTER SET utf8 NOT NULL,
   `content` longtext CHARACTER SET utf8 NOT NULL,
   `visible` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `ktv_news`
+--
+
+INSERT INTO `ktv_news` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
+(9, 'Một số tin mới', 'Một số tin mới đáng chú ý trong ngày', '<p>Trang n&agrave;y được l&agrave;m trong ng&agrave;y</p>\r\n\r\n<p>Hết</p>\r\n', 1, '2014-04-28 08:32:38', 1);
 
 -- --------------------------------------------------------
 
@@ -867,16 +876,14 @@ CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `ktv_promotion`
 --
 
 INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `status`) VALUES
-(1, 'Ten khuyen mai', '<p>\r\n	Noi dung khuyen mai</p>\r\n', 10, 0, 1),
-(2, 'KM2 (UPDATED)', '<p>\r\n	Nội dung KM2 (UPDATED)</p>\r\n', 12, 1, 0),
-(3, 'KM3', '<p>\r\n	Khuyen mai 3</p>\r\n', 1, 0, 0);
+(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 0, 1);
 
 -- --------------------------------------------------------
 
