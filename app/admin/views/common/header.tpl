@@ -39,7 +39,7 @@
         	<a class="" href="#tab7">Blogs</a>
         </li>        
         <li>
-        	<a class="" href="#tab8">Tuyển Dụng</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/recruitment" title="#Tuyển Dụng">Tuyển Dụng</a>
         </li>        
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/contact" title="#Contacts">Liên Hệ</a>

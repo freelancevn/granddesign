@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 28, 2014 at 01:34 PM
+-- Generation Time: May 01, 2014 at 06:10 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -156,14 +156,14 @@ CREATE TABLE IF NOT EXISTS `ktv_news` (
   `creationDate` datetime NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `ktv_news`
 --
 
 INSERT INTO `ktv_news` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
-(9, 'Một số tin mới', 'Một số tin mới đáng chú ý trong ngày', '<p>Trang n&agrave;y được l&agrave;m trong ng&agrave;y</p>\r\n\r\n<p>Hết</p>\r\n', 1, '2014-04-28 08:32:38', 1);
+(9, 'Một số tin mới', 'Một số tin mới đáng chú ý trong ngày', '<p>Trang n&agrave;y được l&agrave;m trong ng&agrave;y</p>\r\n\r\n<p>Hết</p>\r\n', 1, '2014-05-01 17:40:49', 1);
 
 -- --------------------------------------------------------
 
@@ -876,14 +876,14 @@ CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `ktv_promotion`
 --
 
 INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `status`) VALUES
-(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 0, 1);
+(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -893,11 +893,21 @@ INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `sta
 
 CREATE TABLE IF NOT EXISTS `ktv_recruitment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
   `summary` longtext NOT NULL,
   `content` longtext NOT NULL,
   `visible` tinyint(1) NOT NULL,
+  `creationDate` datetime NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `ktv_recruitment`
+--
+
+INSERT INTO `ktv_recruitment` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
+(1, 'Tuyển 50 designer', 'Tuyển 50 designer làm việc tại HCM', '<p>Hiện đang cần tuyển designer l&agrave;m việc tại HCM</p>\r\n\r\n<p>Lương từ 1k đến 2k/th&aacute;ng<br />\r\n&nbsp;</p>\r\n', 1, '2014-05-01 17:22:45', 1);
 
 -- --------------------------------------------------------
 

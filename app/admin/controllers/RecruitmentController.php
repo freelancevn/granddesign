@@ -1,17 +1,17 @@
 <?php
-class NewsController extends AbstractController{
+class RecruitmentController extends AbstractController{
 
     function indexAction(){
         $objRequest = $this->_request;
         $intPage = $objRequest->getParam('page', 1);
-        $objNews = new News();
+        $objRecruitment = new Recruitment();
         if (count($objRequest->getParam('txtCheckBoxId', array ())) > 0) {
-            $objNews->delete($objRequest->getParam('txtCheckBoxId', array ()));
+            $objRecruitment->delete($objRequest->getParam('txtCheckBoxId', array ()));
         }
         $intLimit = 10;
         $intTotal = 0;
         $intOffset = ($intPage - 1) * $intLimit;
-        $arrList = $objNews->getListNewsAdmin($intOffset, $intLimit);
+        $arrList = $objRecruitment->getListRecruitmentAdmin($intOffset, $intLimit);
         $this->view->arrList = $arrList ['result'];
         $this->view->intTotal = $arrList ['total'];
         $this->view->intLimit = $intLimit;
@@ -33,7 +33,7 @@ class NewsController extends AbstractController{
         if ($ava != null) {
             $check = 1;
         }
-        $objNews = new News();
+        $objRecruitment = new Recruitment();
         $arrData = array (
                         'title' => $title,
                         'summary' => $summary,
@@ -41,15 +41,15 @@ class NewsController extends AbstractController{
                         'creationDate' => $creationDate,
                         'visible' => $check 
         );
-        $objNews->insert($arrData);
-        $this->_redirect(HOST_ADMIN . '/news');
+        $objRecruitment->insert($arrData);
+        $this->_redirect(HOST_ADMIN . '/recruitment');
     }
 
     function editAction(){
         $objRequest = $this->_request;
-        $intNewsId = $objRequest->getParam('id', 0);
-        $objNews = new News();
-        $arrDetail = $objNews->getById($intNewsId);
+        $intRecruitmentId = $objRequest->getParam('id', 0);
+        $objRecruitment = new Recruitment();
+        $arrDetail = $objRecruitment->getById($intRecruitmentId);
         $this->view->arrDetail = $arrDetail;
     }
 
@@ -66,7 +66,7 @@ class NewsController extends AbstractController{
         }
         $now = new DateTime();
         $creationDate = $now->format('Y-m-d H:i:s');
-        $objNews = new News();
+        $objRecruitment = new Recruitment();
         $arrData = array (
                         'title' => $title,
                         'summary' => $summary,
@@ -75,9 +75,10 @@ class NewsController extends AbstractController{
                         'visible' => $check 
         );
         $strWhere = 'id=' . $id;
-        $objNews->update($arrData, $strWhere);
-        $this->_redirect(HOST_ADMIN . '/news');
+        $objRecruitment->update($arrData, $strWhere);
+        $this->_redirect(HOST_ADMIN . '/recruitment');
     }
 
 }
+
 ?>
