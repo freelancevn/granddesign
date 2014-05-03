@@ -48,7 +48,14 @@
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/promotion" title="#Promotions">Khyến Mãi</a>
         </li>
-
+        {if $AppUI->id>0}
+        <li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/user/changepass" title="#ChangePassword">Đổi mật khẩu</a>
+        </li>
+		<li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/user/logout" title="#Logout">Thoát</a>
+        </li>
+		{/if}
     </ul>
     <!--<div id="IntroduceGroup" style="display: block;">
         <p><a href="{$smarty.const.HOST_ADMIN}/about" class="label_sub_menu">Tổng Quan</a> </p>
