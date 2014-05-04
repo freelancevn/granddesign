@@ -27,7 +27,7 @@
         	<a class="" href="#tab3">Dự án</a>
         </li>
         <li>
-        	<a class="" href="#tab4">Phong Thủy</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/fengshui" title="#Fengshui">Phong Thủy</a>
         </li>
         <li>
         	<a class="" href="#tab5">Vật Liệu Gỗ</a>
@@ -47,6 +47,9 @@
         
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/promotion" title="#Promotions">Khyến Mãi</a>
+        </li>
+        <li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/pricetable" title="#PriceTable">Bảng giá</a>
         </li>
         {if $AppUI->id>0}
         <li>

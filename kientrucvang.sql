@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 01, 2014 at 06:10 PM
+-- Generation Time: May 04, 2014 at 11:05 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `ktv_config` (
   `key_config` varchar(255) DEFAULT NULL,
   `key_value` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `ktv_config`
@@ -83,7 +83,33 @@ INSERT INTO `ktv_config` (`id`, `key_config`, `key_value`) VALUES
 (8, 'CONTACTHANOILINK', '<iframe width="525" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.au/maps?f=q&source=s_q&hl=en&geocode=&q=15%2F36+Nguy%E1%BB%85n+Vi%E1%BA%BFt+Xu%C3%A2n+-+H%C3%A0+N%E1%BB%99i&aq=&sll=-25.335448,135.745076&sspn=43.719032,86.572266&ie=UTF8&hq=15%2F36+Nguy%E1%BB%85n+Vi%E1%BA%BFt+Xu%C3%A2n+-&hnear=Hanoi,+Hoan+Kiem+District,+Hanoi,+Vietnam&t=m&cid=3316819898581495654&ll=21.021701,105.829239&spn=0.056083,0.072956&z=13&iwloc=A&output=embed"></iframe><br /><small><a href="https://maps.google.com.au/maps?f=q&source=embed&hl=en&geocode=&q=15%2F36+Nguy%E1%BB%85n+Vi%E1%BA%BFt+Xu%C3%A2n+-+H%C3%A0+N%E1%BB%99i&aq=&sll=-25.335448,135.745076&sspn=43.719032,86.572266&ie=UTF8&hq=15%2F36+Nguy%E1%BB%85n+Vi%E1%BA%BFt+Xu%C3%A2n+-&hnear=Hanoi,+Hoan+Kiem+District,+Hanoi,+Vietnam&t=m&cid=3316819898581495654&ll=21.021701,105.829239&spn=0.056083,0.072956&z=13&iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>'),
 (9, 'TITLE', 'GRANDDESIGN Saigon - Kiến trúc - Nội thất'),
 (10, 'KEYWORDS', 'thiết kế nội thất, thiet ke noi that, nhà đẹp, thiet ke nha dep, xay nha dep, kiến trúc, nội thất, xây dựng'),
-(11, 'DESCRIPTION', 'Nhà đẹp với phong cách thiết kế đơn giản và bố trí nội thất thông minh. Ánh sáng tràn ngập với các khung cửa kính lớn, thiên về cảnh quan xanh màu lá | granddesign.com.vn');
+(11, 'DESCRIPTION', 'Nhà đẹp với phong cách thiết kế đơn giản và bố trí nội thất thông minh. Ánh sáng tràn ngập với các khung cửa kính lớn, thiên về cảnh quan xanh màu lá | granddesign.com.vn'),
+(12, 'PRICETABLE', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>T&ecirc;n</td>\r\n			<td>Gi&aacute; (USD)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>H&agrave; Trọng Đại</td>\r\n			<td>100.000k</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Nguyễn Văn Dương</td>\r\n			<td>1.000k</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ktv_fengshui`
+--
+
+CREATE TABLE IF NOT EXISTS `ktv_fengshui` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `summary` text CHARACTER SET utf8 NOT NULL,
+  `content` longtext CHARACTER SET utf8 NOT NULL,
+  `visible` tinyint(1) NOT NULL,
+  `creationDate` datetime NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `ktv_fengshui`
+--
+
+INSERT INTO `ktv_fengshui` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
+(14, 'Phong thủy 1', 'Phong thủy 1', '<p>Phong thủy 1</p>\r\n', 1, '2014-05-04 10:52:10', 1),
+(16, 'Phong thủy 2', 'Phong thủy 2', '<p>Phong thủy 2</p>\r\n', 0, '2014-05-04 11:01:52', 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `ktv_info` (
   `sort` int(11) DEFAULT NULL,
   `type` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `ktv_info`
@@ -156,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `ktv_news` (
   `creationDate` datetime NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `ktv_news`
@@ -876,7 +902,7 @@ CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `ktv_promotion`
@@ -900,7 +926,7 @@ CREATE TABLE IF NOT EXISTS `ktv_recruitment` (
   `creationDate` datetime NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `ktv_recruitment`

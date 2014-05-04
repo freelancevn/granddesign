@@ -19,7 +19,10 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("recruitment") != -1) {
 			$url = "http://granddesign.local/admin/recruitment";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		}else {
+		} else if($aaa.indexOf("fengshui") != -1) {
+			$url = "http://granddesign.local/admin/fengshui";
+			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
+		} else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);
 		}
 	});
