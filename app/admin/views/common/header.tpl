@@ -33,7 +33,7 @@
         	<a class="" href="#tab5">Vật Liệu Gỗ</a>
         </li>
         <li>
-        	<a class="" href="#tab6">Clips</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/clips" title="#Clips">Clips</a>
         </li>        
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/blogs" title="#Blogs">Blogs</a>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 10, 2014 at 03:35 PM
+-- Generation Time: May 10, 2014 at 05:01 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -77,6 +77,29 @@ INSERT INTO `ktv_category` (`id`, `category_name`, `type`, `date_create`, `statu
 (14, 'Nhà Hàng, Cafe, Spa, Beauty Salon', 0, '2013-09-10 22:00:34', 1, 7, 0),
 (15, 'Bàn Sofa', 1, '2013-09-23 14:51:08', 1, 2, 1),
 (16, 'Giường Ngủ', 1, '2013-09-23 14:50:10', 1, 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ktv_clips`
+--
+
+CREATE TABLE IF NOT EXISTS `ktv_clips` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `embed` varchar(255) NOT NULL,
+  `visible` tinyint(1) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0:deleted',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `ktv_clips`
+--
+
+INSERT INTO `ktv_clips` (`id`, `description`, `embed`, `visible`, `status`) VALUES
+(1, 'BÍCH PHƯƠNG - Mình Yêu Nhau Đi [OFFICIAL MV] ', '<iframe width="560" height="315" src="//www.youtube.com/embed/X8mhF6HgzVA" frameborder="0" allowfullscreen></iframe>', 1, 1),
+(2, 'Bai noi chuyen cua Thieu tuong Nguyen Thanh Tuan ve bien Dong ', '<iframe width="560" height="315" src="//www.youtube.com/embed/N59a8SivrUE" frameborder="0" allowfullscreen></iframe>', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -932,7 +955,7 @@ CREATE TABLE IF NOT EXISTS `ktv_promotion` (
 --
 
 INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `status`) VALUES
-(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 1, 1),
+(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\n\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\n	<tbody>\n		<tr>\n			<td>Ten San pham</td>\n			<td>Gia</td>\n		</tr>\n		<tr>\n			<td>Ghe sofa</td>\n			<td>10M</td>\n		</tr>\n		<tr>\n			<td>Ban</td>\n			<td>15M</td>\n		</tr>\n	</tbody>\n</table>\n\n<p>&nbsp;</p>\n', 10, 1, 1),
 (2, 'khuyen mai 3', '<p>khuyen mai 3</p>\r\n', 12, 1, 1);
 
 -- --------------------------------------------------------
