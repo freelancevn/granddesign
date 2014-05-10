@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 04, 2014 at 11:05 AM
+-- Generation Time: May 10, 2014 at 03:35 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `kientrucvang`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ktv_blogs`
+--
+
+CREATE TABLE IF NOT EXISTS `ktv_blogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `visible` tinyint(1) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0:deleted',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `ktv_blogs`
+--
+
+INSERT INTO `ktv_blogs` (`id`, `description`, `link`, `visible`, `status`) VALUES
+(1, 'Google+', 'http://googleplus', 1, 1),
+(2, 'Facebook', 'http://facebook.com', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -94,21 +117,21 @@ INSERT INTO `ktv_config` (`id`, `key_config`, `key_value`) VALUES
 
 CREATE TABLE IF NOT EXISTS `ktv_fengshui` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `summary` text CHARACTER SET utf8 NOT NULL,
-  `content` longtext CHARACTER SET utf8 NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `summary` text NOT NULL,
+  `content` longtext NOT NULL,
   `visible` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `ktv_fengshui`
 --
 
 INSERT INTO `ktv_fengshui` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
-(14, 'Phong thủy 1', 'Phong thủy 1', '<p>Phong thủy 1</p>\r\n', 1, '2014-05-04 10:52:10', 1),
+(14, 'Phong thủy 1', 'Phong thủy 1', '<p>Phong thủy1</p>\r\n', 1, '2014-05-10 15:32:36', 1),
 (16, 'Phong thủy 2', 'Phong thủy 2', '<p>Phong thủy 2</p>\r\n', 0, '2014-05-04 11:01:52', 1);
 
 -- --------------------------------------------------------
@@ -148,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `ktv_info` (
   `sort` int(11) DEFAULT NULL,
   `type` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `ktv_info`
@@ -175,14 +198,14 @@ INSERT INTO `ktv_info` (`id`, `name`, `postion`, `image`, `sort`, `type`) VALUES
 
 CREATE TABLE IF NOT EXISTS `ktv_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `summary` text CHARACTER SET utf8 NOT NULL,
-  `content` longtext CHARACTER SET utf8 NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `summary` text NOT NULL,
+  `content` longtext NOT NULL,
   `visible` tinyint(1) NOT NULL,
   `creationDate` datetime NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `ktv_news`
@@ -902,14 +925,15 @@ CREATE TABLE IF NOT EXISTS `ktv_promotion` (
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `ktv_promotion`
 --
 
 INSERT INTO `ktv_promotion` (`id`, `name`, `content`, `order`, `available`, `status`) VALUES
-(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 1, 1);
+(1, 'Ten khuyen mai', '<p>Noi dung khuyen mai</p>\r\n\r\n<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>Ten San pham</td>\r\n			<td>Gia</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ghe sofa</td>\r\n			<td>10M</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Ban</td>\r\n			<td>15M</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n', 10, 1, 1),
+(2, 'khuyen mai 3', '<p>khuyen mai 3</p>\r\n', 12, 1, 1);
 
 -- --------------------------------------------------------
 

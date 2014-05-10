@@ -22,6 +22,9 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("fengshui") != -1) {
 			$url = "http://granddesign.local/admin/fengshui";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
+		} else if($aaa.indexOf("blogs") != -1) {
+			$url = "http://granddesign.local/admin/blogs";
+			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);
 		}

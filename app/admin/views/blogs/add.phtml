@@ -1,0 +1,65 @@
+{include file='common/header.tpl'}
+<form name="frmBlogs" id="frmBlogs" action="{$smarty.const.HOST_ADMIN}/blogs/dosave" method="post" enctype="multipart/form-data">
+<input type="hidden" name="btSave" value="save"/>
+<table width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr class="label_title">
+		<td colspan="2">Thêm Blogs</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Mô tả:<span class="alert">*</span></td>
+		<td width="870%"><input type="text" id="txt_description" name="txt_description" class="input" maxlength="255" value="" />
+		</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Link:<span class="alert">*</span></td>
+		<td width="870%"><input type="text" id="txt_link" name="txt_link" class="input" maxlength="255" value="" />
+		</td>
+	</tr>
+    <tr class="login">
+		<td width="20%">Cho phép hiển thị:</td>
+		<td width="80%" align="left">				
+			<input type="checkbox" name="checkAvailable" id="checkAvailable" value="1" class="input"> 
+		</td>
+	</tr>
+	<tr class="login">
+		<td colspan="2" align="center"> 							
+			<input type="submit" value="Lưu" class="content_button">
+			&nbsp;&nbsp;
+			<input type="reset" value="Reset" class="content_button"/>
+		</td>			
+	</tr>
+</table>	
+</form>
+{literal}
+<script language="javascript">
+$(document).ready(function() {
+	$("#frmBlogs").validate({		
+		errorClass	: 'errorMessage',
+		errorElement: 'span',
+		onfocusout	: false,
+		onkeyup		: false,
+		rules: {
+			txt_description:{
+				required 				: true
+			},			
+			txt_link:{
+				required				: true
+			},		
+		},
+		messages: {
+			txt_description:{
+				required 			: 'Bạn vui lòng nhập mô tả'
+			},
+			txt_link:{
+				required			: 'Bạn vui lòng nhập link'
+			}
+		},
+		errorPlacement: function(label, element) {
+			var id = element.attr('id');
+			label.insertAfter($('#' + id));
+		}
+	});
+});
+</script>
+{/literal}
+{include file='common/footer.tpl'}
