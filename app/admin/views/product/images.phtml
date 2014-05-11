@@ -8,14 +8,14 @@
 <input type="hidden" name="txtLuu" value="1">
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
     <tr>
-		<td align="center" class="lable_list" colspan="2">Hình ảnh công trình <strong>{$arrDetail.product_name}</strong></td>		
+    	<br/>
+		<td align="center" class="lable_list" colspan="2">
+			Hình ảnh công trình <a href="{$smarty.const.HOST_ADMIN}/product/edit?id={$arrDetail.id}"><strong>{$arrDetail.product_name}</strong></a>
+		</td>		
     </tr>
 	<tr>
 		<td colspan="2">&nbsp;</td>
     </tr>	
-	<tr>
-		<td colspan="2">&nbsp;</td>
-    </tr>
 	<tr>		
 		<td colspan="2" align="center">
 			<div class="contenttext" id="custom-demo">
@@ -24,7 +24,7 @@
 					<span id="spanButtonPlaceholder"></span>
 				</div>
 			  	
-				<img src="{$smarty.const.IMAGES}but_huypho.png" id="btnCancel" value="Cancel Uploads" onclick="cancelQueue(upload);" disabled="disabled" />
+				<img src="{$smarty.const.IMAGES}but_huypho.png" id="btnCancel" value="Cancel Uploads" onclick="cancelQueue(upload);" disabled="disabled" hidden="true" />
 			</div>
 		</td>
     </tr>
@@ -43,8 +43,14 @@
 								<td><input type="text" id="txtContent_{$row.id}" name="txtContent_{$row.id}" class="input" value="{$row.description}" /></td>
 							</tr>
 							<tr>
-								<td>Vị trí:</td>
-								<td><input type="text" id="txtSort_{$row.id}" name="txtSort_{$row.id}" class="input" value="{$row.sort}" /></td>
+								<td>Loại Hiển Thị:</td>
+								<td>
+									<!--input type="text" id="txtType_{$row.id}" name="txtType_{$row.id}" class="input" value="{$row.type}" /-->
+									<select id="txtType_{$row.id}" name="txtType_{$row.id}">
+										<option value="1">Ảnh Chi Tiết</option>
+										<option value="0" {if $row.type==0}selected="selected{/if}">Ảnh Đại Diện</option>
+									</select>
+								</td>
 							</tr>
 						</table>
 					</td>

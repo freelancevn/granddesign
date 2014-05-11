@@ -46,13 +46,14 @@ class ProductController extends Zend_Controller_Action
 		$sAddress			= $objRequest->getParam('txtAddress', '');
 		$sUnbuilt_Area		= $objRequest->getParam('txtUnbuilt_Area', '');
 		$sTime_Finish		= $objRequest->getParam('txtTime_Finish', '');
+		$sContent			= $objRequest->getParam('txtContent', '');
 		$iShow				= $objRequest->getParam('chk_ishowhot', 0);
 		$iSort				= $objRequest->getParam('txt_sort', 1);
 		if($sName!='')
 		{
 			$objProduct			= new Product();
 			$arrData			= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'sort'=>$iSort, 'ishowhot'=>$iShow,'date_create'=>date('Y-m-d H:i:s'));
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'ishowhot'=>$iShow,'date_create'=>date('Y-m-d H:i:s'));
 			$objProduct->insertProduct($arrData);
 		}		
 		$this->_redirect(HOST_ADMIN.'/product');
@@ -79,6 +80,7 @@ class ProductController extends Zend_Controller_Action
 		$sAddress			= $objRequest->getParam('txtAddress', '');
 		$sUnbuilt_Area		= $objRequest->getParam('txtUnbuilt_Area', '');
 		$sTime_Finish		= $objRequest->getParam('txtTime_Finish', '');
+		$sContent			= $objRequest->getParam('txtContent', '');
 		$iSort				= $objRequest->getParam('txt_sort', 1);
 		$iShow				= $objRequest->getParam('chk_ishowhot', 0);
 		$intID				= $objRequest->getParam('txtId', 0);
@@ -86,7 +88,7 @@ class ProductController extends Zend_Controller_Action
 		{
 			$objProduct		= new Product();
 			$arrData		= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'ishowhot'=>$iShow, 'sort'=>$iSort);
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'ishowhot'=>$iShow, 'sort'=>$iSort);
 			$strWhere		= 'id=' . $intID;
 			$objProduct->updateProduct($arrData, $strWhere);
 		}
@@ -108,8 +110,8 @@ class ProductController extends Zend_Controller_Action
 		if($iCheckLuu==1){
 			foreach($arrImages as $rRow){
 				$sContent	= $objRequest->getParam('txtContent_' . $rRow['id'],'');
-				$sSort		= $objRequest->getParam('txtSort_' . $rRow['id'],0);
-				$arrData	= array('description'=>$sContent,'sort'=>$sSort);
+				$sType		= $objRequest->getParam('txtType_' . $rRow['id'],0);
+				$arrData	= array('description'=>$sContent,'type'=>$sType);
 				$objProduct->updateProductImages($arrData, $rRow['id']);
 			}
 			$arrImages	= $objProduct->getProductImagesAdmin($intID);

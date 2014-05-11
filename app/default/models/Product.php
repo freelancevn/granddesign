@@ -10,9 +10,9 @@ class Product
 	
 	function getProductIndex($iCategory=0)
 	{
-		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors, p.unbuilt_area, p.address, p.time_finish, p.fk_imges, p.date_create, 
+		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors, p.unbuilt_area, p.address, p.time_finish, p.date_create, 
 		p.`status`, p.sort, p.ishowhot, c.category_name, 
-		(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id ORDER BY i.sort DESC LIMIT 0,1 ) as file_name 
+		(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id) as file_name 
 		FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
 		WHERE p.`status`=1 AND c.`status`=1';
 		if($iCategory==0)
@@ -26,7 +26,7 @@ class Product
 	
 	function getProductDetail($iProductID)
 	{
-		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, p.fk_imges, 
+		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, 
 		p.date_create, p.`status`, p.sort, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
 		WHERE p.`status`=1 AND c.`status`=1 AND p.id=' . $iProductID;
 		$rs 		= $this->db->fetchRow($SQL);
@@ -34,7 +34,7 @@ class Product
 	}
 	
 	public function getProductImagesAdmin($iID){
-		$SQL		= 'SELECT * FROM ktv_product_image WHERE `fk_product`=' . $iID . ' ORDER BY sort DESC';
+		$SQL		= 'SELECT * FROM ktv_product_image WHERE `fk_product`=' . $iID . '';
 		$rs 		= $this->db->fetchAll($SQL);
 		return $rs;
 	}
