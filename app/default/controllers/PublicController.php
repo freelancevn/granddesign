@@ -135,16 +135,21 @@ class PublicController extends Zend_Controller_Action
 		$this->view->arrDetail	= $arrDetail;
 	}
 	
+	public function newsAction() {
+		
+		include_once ('common/header.php');		
+		$objNews = new News();		
+		$arrList = $objNews->getListNewsAdmin(0, 10);
+		$this->view->arrList = $arrList ['result'];
+		$this->view->intTotal = $arrList ['total'];		
+	}
+	
 	public function projectsAction()
 	{
 	}
 	
 	public function projectdesignAction()
 	{
-	}
-	
-	public function newsAction() {
-		
 	}
 	
 	public function newsdetailAction() {

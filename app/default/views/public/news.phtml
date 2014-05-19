@@ -2,7 +2,12 @@
 
 <div class="container">
 	
-		<div id="newMain">
+		{foreach key=i item=row from=$arrList}
+			<td width="15%" valign="top">	 
+					{$row.summary}
+			</td>
+		{/foreach}
+		<!-- <div id="newMain">
 		
 			<div class="nw1 nh2 newsImage">
 				<img src="{$smarty.const.IMAGES}news/mh370.jpg" />			
@@ -37,7 +42,7 @@
 			<div class="nw2 nh3 newsSum">
 				Radar trên một máy bay trinh sát Mỹ phát hiện một thứ "cỡ lớn" dưới mặt nước phía nam Ấn Độ Dương, sau khi vệ tinh chụp được những vật thể có thể là mảnh vỡ của chuyến bay MH370 mất tích. 
 			</div>	
-		</div>
+		</div> -->
 </div>
 
 {include file='common/footer.phtml'}

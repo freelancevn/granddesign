@@ -23,6 +23,7 @@ class NewsController extends AbstractController{
         $title = $objRequest->getParam('txt_title', "");
         $summary = $objRequest->getParam('txt_summary', "");
         $content = $objRequest->getParam('txt_content', "");
+        $img = $objRequest->getParam('txt_img',"");
         $creationDate = $objRequest->getParam('txt_creationDate', null);
         if ($creationDate == null) {
             $now = new DateTime();
@@ -39,7 +40,8 @@ class NewsController extends AbstractController{
                         'summary' => $summary,
                         'content' => $content,
                         'creationDate' => $creationDate,
-                        'visible' => $check 
+                        'visible' => $check,
+        				'image' =>$img
         );
         $objNews->insert($arrData);
         $this->_redirect(HOST_ADMIN . '/news');
