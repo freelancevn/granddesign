@@ -27,10 +27,6 @@ class Product
 			$type = $this->getRandomSizeTypeZero();
 		}
 		if ($isAll) {
-// 			$query = 'SELECT p.id, p.product_name, p.status, 
-// 						(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
-// 				     '.$type.' as holderSize
-// 					  FROM ktv_product as p WHERE p.sort=' . $sort;
 			$query = 'SELECT p.id, p.product_name AS productName, p.status AS status, 
 					  i.file_name AS image, i.type AS imgType FROM ktv_product AS p, ktv_product_image AS i 
 					  WHERE p.sort=0 AND i.type IN (21,11) AND p.id=i.fk_product ORDER BY productName';
@@ -55,6 +51,9 @@ class Product
 					$selectedProduct = $products[$i+1];
 				}
 				$i = $i+2;
+				if ($totalRowSize == 4) {
+					$totalRowSize = 0;
+				}
 				array_push($randomProducts, $selectedProduct);
 			}
 			return $randomProducts;
