@@ -27,19 +27,45 @@ class Product
 			$type = $this->getRandomSizeTypeZero();
 		}
 		if ($isAll) {
-			$query = 'SELECT p.id, p.product_name, p.status, 
-						(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
-				     '.$type.' as holderSize
-					  FROM ktv_product as p WHERE p.sort=' . $sort;
-			$product = $this->db->fetchAll($query);
+// 			$query = 'SELECT p.id, p.product_name, p.status, 
+// 						(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
+// 				     '.$type.' as holderSize
+// 					  FROM ktv_product as p WHERE p.sort=' . $sort;
+			$query = 'SELECT p.id, p.product_name AS productName, p.status AS status, 
+					  i.file_name AS image, i.type AS imgType FROM ktv_product AS p, ktv_product_image AS i 
+					  WHERE p.sort=0 AND i.type IN (21,11) AND p.id=i.fk_product ORDER BY productName';
+			$products = $this->db->fetchAll($query);
+			$totalRowSize=0;//max is 4
+			$randomProducts = array();
+			for ($i=0; $i<count($products);) {
+				$imageSize = $this->getRandomSizeTypeZero();
+				if ($imageSize == 11) {
+					$rowSize=1;
+				} else if ($imageSize == 21) {
+					$rowSize=2;
+				}
+				$totalRowSize = $totalRowSize + $rowSize;
+				if ($totalRowSize > 4) {
+					$imageSize = 11;
+					$totalRowSize = 0;
+				}
+				if ($products[$i]["imgType"] == $imageSize) {
+					$selectedProduct = $products[$i];
+				} else {
+					$selectedProduct = $products[$i+1];
+				}
+				$i = $i+2;
+				array_push($randomProducts, $selectedProduct);
+			}
+			return $randomProducts;
 		} else {
 			$query = 'SELECT p.id, p.product_name, p.status,
 					(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
 					 '.$type.' as holderSize
 				  	FROM ktv_product as p WHERE p.sort=' . $sort;
-			$product = $this->db->fetchRow ($query);
+			$products = $this->db->fetchRow ($query);
 		}
-		return $product;
+		return $products;
 	}
 	
 	function getProductIndex($iCategory=0)

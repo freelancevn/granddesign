@@ -77,19 +77,19 @@
 		</label>
 	</div>
 	{foreach key=i item=product from=$otherProducts}
-	{if $product.holderSize=='11'}
+	{if $product.imgType=='11'}
 		<div class="w1 h1 black">
 		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
-			<h2>{$product.product_name}</h2> <a
+			<h2>{$product.productName}</h2> <a
 			href="#"
 			title="{$product.product_name}">detail &raquo;</a>
 		</label>
 	</div>	
 	{/if}
-	{if $product.holderSize=='21'}
+	{if $product.imgType=='21'}
 		<div class="w2 h1 black">
 		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
-			<h2>{$product.product_name}</h2> <a
+			<h2>{$product.productName}</h2> <a
 			href="#"
 			title="{$product.product_name}">detail &raquo;</a>
 		</label>
