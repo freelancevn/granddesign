@@ -6,7 +6,41 @@ class Product
 	function __construct(){
 		$this->db=Zend_Registry::get('db');
 	}
-
+	
+	function getProductsAtIndex() {
+		$SQL = "select p.id, p.product_name, p.status from ktv_product as p";
+	}
+	
+	function getRandomSizeTypeZero() {
+		$num = rand(1, 4);
+		if ($num%2 == 0) {
+			return 11;
+		} else {
+			return 21;
+		}
+	}
+	
+	function getTopProductAtIndexByType($type, $isAll) {
+		$sort = $type;
+		if ($isAll) {
+			$sort = 0;
+			$type = $this->getRandomSizeTypeZero();
+		}
+		if ($isAll) {
+			$query = 'SELECT p.id, p.product_name, p.status, 
+						(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
+				     '.$type.' as holderSize
+					  FROM ktv_product as p WHERE p.sort=' . $sort;
+			$product = $this->db->fetchAll($query);
+		} else {
+			$query = 'SELECT p.id, p.product_name, p.status,
+					(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
+					 '.$type.' as holderSize
+				  	FROM ktv_product as p WHERE p.sort=' . $sort;
+			$product = $this->db->fetchRow ($query);
+		}
+		return $product;
+	}
 	
 	function getProductIndex($iCategory=0)
 	{

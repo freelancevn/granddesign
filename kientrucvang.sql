@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 11, 2014 at 04:03 PM
+-- Generation Time: May 31, 2014 at 01:33 PM
 -- Server version: 5.5.23
 -- PHP Version: 5.4.23
 
@@ -257,14 +257,24 @@ CREATE TABLE IF NOT EXISTS `ktv_product` (
   `sort` int(11) DEFAULT NULL,
   `ishowhot` int(1) DEFAULT '0' COMMENT '1:hot',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
 
 --
 -- Dumping data for table `ktv_product`
 --
 
 INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `time_finish`, `date_create`, `status`, `sort`, `ishowhot`) VALUES
-(86, 'test', 1, '123', '123', '123', '<p>Add thử chứ năng n&agrave;y</p>\r\n', '13', '2014-05-11 08:57:13', 1, 0, 0);
+(87, 'Test1', 1, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
+(88, 'test2', 1, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', '3 months', '2014-05-27 04:15:25', 1, 21, 0),
+(89, 'test3', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 0),
+(90, 'test4', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
+(91, 'test5', 1, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', '2 month', '2014-05-27 05:20:07', 1, 0, 0),
+(92, 'test7', 1, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', '3 months', '2014-05-27 05:20:33', 1, 0, 0),
+(93, 'Test8', 1, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:00', 1, 0, 0),
+(94, 'test9', 1, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
+(95, 'test10', 1, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
+(96, 'test11', 1, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
+(97, 'test12', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:22:12', 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -279,17 +289,46 @@ CREATE TABLE IF NOT EXISTS `ktv_product_image` (
   `description` varchar(255) DEFAULT NULL,
   `type` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `ktv_product_image`
 --
 
 INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`, `type`) VALUES
-(2, 86, '7e/99/9248997e.jpg', 'uiook', 0),
-(3, 86, '85/03/fbe00385.jpg', '', 1),
-(4, 86, 'b4/a7/75eba7b4.jpg', '', 1),
-(5, 86, 'd5/fc/b973fcd5.jpg', '', 0);
+(6, 87, 'b3/18/65bb18b3.jpg', 'Ảnh 2x1', 21),
+(7, 87, '5e/9d/869d9d5e.jpg', 'Ảnh 1x1', 11),
+(8, 87, '8b/89/4d2d898b.jpg', 'Ảnh 2x2', 22),
+(9, 88, '86/3b/548a3b86.jpg', '', 11),
+(10, 88, '99/b5/dbdbb599.jpg', '', 21),
+(11, 88, '51/fc/7dbcfc51.jpg', '', 22),
+(12, 89, '64/d6/31b7d664.jpg', '', 11),
+(13, 89, 'cc/63/883563cc.jpg', '', 21),
+(14, 89, '4d/de/6924de4d.jpg', '', 22),
+(15, 90, 'a5/f0/7147f0a5.jpg', '', 11),
+(16, 90, 'b9/a0/58c0a0b9.jpg', '', 21),
+(17, 90, 'bc/fc/913bfcbc.jpg', '', 22),
+(18, 91, 'e7/30/0f8a30e7.jpg', '', 11),
+(19, 91, '18/f3/f14cf318.jpg', '', 21),
+(20, 91, 'df/24/5dc524df.jpg', '', 22),
+(21, 92, '11/a6/f988a611.jpg', '', 11),
+(22, 92, '4f/be/2250be4f.jpg', '', 21),
+(23, 92, '23/1e/bb9b1e23.jpg', '', 22),
+(24, 93, '16/ba/22ceba16.jpg', '', 11),
+(25, 93, 'b2/68/36af68b2.jpg', '', 21),
+(26, 93, '2d/21/d302212d.jpg', '', 22),
+(27, 94, '75/a6/aab6a675.jpg', '', 11),
+(28, 94, '9e/89/d9c7899e.jpg', '', 22),
+(29, 94, '69/d4/781ed469.jpg', '', 21),
+(30, 95, '84/18/3f3b1884.jpg', '', 11),
+(31, 95, 'df/03/548003df.jpg', '', 22),
+(32, 95, 'bc/76/043c76bc.jpg', '', 21),
+(33, 96, '4f/67/5fa6674f.jpg', '', 11),
+(34, 96, '09/d4/959bd409.jpg', '', 21),
+(35, 96, '62/4d/aa6c4d62.jpg', '', 22),
+(36, 97, '17/15/bdcf1517.jpg', '', 11),
+(37, 97, 'bc/91/a26791bc.jpg', '', 21),
+(38, 97, '02/86/7a4e8602.jpg', '', 22);
 
 -- --------------------------------------------------------
 

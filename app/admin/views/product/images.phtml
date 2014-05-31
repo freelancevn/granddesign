@@ -47,8 +47,10 @@
 								<td>
 									<!--input type="text" id="txtType_{$row.id}" name="txtType_{$row.id}" class="input" value="{$row.type}" /-->
 									<select id="txtType_{$row.id}" name="txtType_{$row.id}">
-										<option value="1">Ảnh Chi Tiết</option>
-										<option value="0" {if $row.type==0}selected="selected{/if}">Ảnh Đại Diện</option>
+										<option value="0">Ảnh Chi Tiết</option>
+										<option value="22" {if $row.type==22}selected="selected{/if}">Ảnh Đại Diện 2x2 (458x464)</option>
+										<option value="21" {if $row.type==21}selected="selected{/if}">Ảnh Đại Diện 2x1 (458x230)</option>
+										<option value="11" {if $row.type==11}selected="selected{/if}">Ảnh Đại Diện 1x1 (227x230)</option>
 									</select>
 								</td>
 							</tr>
