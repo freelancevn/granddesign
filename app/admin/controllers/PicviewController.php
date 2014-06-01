@@ -12,7 +12,6 @@ class PicviewController extends Zend_Controller_Action
 
     }
 	
-	
 	function indexAction()
 	{
 		$objRequest 					= $this->_request;
@@ -27,17 +26,23 @@ class PicviewController extends Zend_Controller_Action
 	function addAction()
 	{
 		$objRequest 		= $this->_request;
-		$arrParam			= $objRequest->getParams();
+		$inputParam			= $objRequest->getParams();
 		$objPicture			= new Picture();
 		$strPathImage 		= 'index';
 		$strUploadDir 	 	= ROOT_DIR . '/data/upload/' . $strPathImage;
-		$arrResultUpload 	= NhutFunction::process($_FILES['fileImage'], $strUploadDir, 3*1024*1024);
+		$arrResultUpload 	= NhutFunction::process($_FILES['imgname'], $strUploadDir, 3*1024*1024);
+		$arrParam = array();
 		if ($arrResultUpload['error']==''){
-			$arrParam['pimage']		= $strPathImage . '/' .  $arrResultUpload['filename'];
+			$arrParam['imgname'] =  $strPathImage . '/' .  $arrResultUpload['filename'];
 		} else {
-				$arrParam['pimage']		= '';
+				$arrParam['imgname'] = '';
 		}
-		$intPictureID = $objPicture->insertPicture($arrParam['pimage']);
+		$arrParam['date_create'] = date("Y-m-d H:i:s");
+		$arrParam['link'] = $inputParam['link'];
+		$arrParam['description'] = $inputParam['description'];
+		$arrParam['type'] = $inputParam['type'];
+		$arrParam['visible'] = isset($inputParam['visible']);
+		$intPictureID = $objPicture->insertPicture($arrParam);
 		$this->_redirect(HOST_ADMIN.'/picview');
 	}
 }

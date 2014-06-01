@@ -14,15 +14,14 @@ class Picture
 		return $rs;
 	}
 		
-	public function insertPicture($strPicture)
+	public function insertPicture($arrData)
 	{
-		$arrData		= array('imgname'=>$strPicture);
-		$rs				= $this->db->insert('ktv_img_header',$arrData);
-		return 1;
+		$rs = $this->db->insert('ktv_img_header',$arrData);
 	}
 	
 	public function deleteData($arrData){
-		$j	  = count($arrData);
+		$j = count($arrData);
+		$s1 = "";
 		for ($i=0; $i<$j; $i++)
 		{
 			$s1 .= ($s1 != '') ? ',' . $arrData[$i] : $arrData[$i];

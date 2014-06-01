@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 31, 2014 at 01:33 PM
+-- Generation Time: Jun 01, 2014 at 08:34 AM
 -- Server version: 5.5.23
 -- PHP Version: 5.4.23
 
@@ -166,19 +166,23 @@ INSERT INTO `ktv_fengshui` (`id`, `title`, `summary`, `content`, `visible`, `cre
 CREATE TABLE IF NOT EXISTS `ktv_img_header` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `imgname` varchar(50) DEFAULT NULL,
+  `link` text NOT NULL,
+  `description` varchar(255) NOT NULL,
   `date_create` datetime DEFAULT NULL,
+  `visible` tinyint(1) NOT NULL,
+  `type` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `ktv_img_header`
 --
 
-INSERT INTO `ktv_img_header` (`id`, `imgname`, `date_create`) VALUES
-(1, 'index/7961377844443.jpg', NULL),
-(3, 'index/3281377844550.jpg', NULL),
-(4, 'index/9421381292792.jpg', NULL),
-(5, 'index/8231381296144.jpg', NULL);
+INSERT INTO `ktv_img_header` (`id`, `imgname`, `link`, `description`, `date_create`, `visible`, `type`) VALUES
+(1, 'index/4661401584677.png', 'www.google.com', 'test banner', '2014-06-01 08:04:37', 1, 1),
+(2, 'index/5291401586278.png', 'www.google.com.vn', 'ablo', '2014-06-01 08:31:18', 1, 2),
+(3, 'index/4221401586297.png', 'www.google.com.vn', 'slider2', '2014-06-01 08:31:37', 1, 1),
+(4, 'index/5291401586309.png', 'www.google.com.vn', 'test banner', '2014-06-01 08:31:49', 1, 1);
 
 -- --------------------------------------------------------
 
