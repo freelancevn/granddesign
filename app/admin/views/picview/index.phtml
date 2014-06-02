@@ -1,8 +1,6 @@
 {include file='common/header.tpl'}
 
-<form name="frmProduct" id="frmProduct"
-	action="{$smarty.const.HOST_ADMIN}/picview/add" method="post"
-	enctype="multipart/form-data">
+<form name="frmProduct" id="frmProduct" action="{$smarty.const.HOST_ADMIN}/picview/add" method="post" enctype="multipart/form-data">
 	<table width="100%" border="0" cellpadding="0" cellspacing="1">
 		<tr class="label_title">
 			<td colspan="2">Thêm hình ảnh</td>
@@ -21,28 +19,21 @@
 		</tr>
 		<tr class="login">
 			<td width="15%">Vị trí hình :</td>
-			<td width="85%">
-				<select name="type">
+			<td width="85%"><select name="type">
 					<option value="1">Ảnh Banners</option>
 					<option value="2">Ảnh Slider</option>
-				</select>
-			</td>
+			</select></td>
 		</tr>
 		<tr class="login">
 			<td width="15%">Cho phép hiển thị :</td>
-			<td width="85%">
-				<input type="checkbox" name="visible" checked="checked"></input>
-			</td>
+			<td width="85%"><input type="checkbox" name="visible" checked="checked"></input></td>
 		</tr>
 		<tr class="login">
-			<td colspan="2" align="center"><input type="submit" value="Lưu"
-				class="content_button"> &nbsp;&nbsp; <input type="reset"
-				value="Reset" class="content_button" /></td>
+			<td colspan="2" align="center"><input type="submit" value="Lưu" class="content_button"> &nbsp;&nbsp; <input type="reset" value="Reset" class="content_button" /></td>
 		</tr>
 	</table>
 </form>
-<form name="frmNews" method="post"
-	action="{$smarty.const.HOST_ADMIN}/picview">
+<form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/picview">
 	<table width="100%" border="0" cellpadding="1" cellspacing="1">
 		<tr>
 			<td align="center" class="lable_list">Danh sách hình ảnh trang chủ</td>
@@ -53,7 +44,7 @@
 				<table width="100%" style="border: thin;" cellpadding="2" cellspacing="1">
 					<tr class="label_title">
 						<td align="center" valign="middle">
-							<input type="checkbox"	name="checkAll" width="5%" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);">All</input>
+							<input type="checkbox" name="checkAll" width="5%" value=""onClick="checkBoxAll(this.form, 'id[]', this.checked);">All
 						</td>
 						<td align="center" valign="center">Hình ảnh</td>
 						<td align="center" valign="center">Liên kết</td>
@@ -63,27 +54,35 @@
 						<td align="center" valign="center">Cho phép hiển thị</td>
 					</tr>
 					{foreach key=i item=row from=$arrList}
-					<tr class="{cycle values="content_odd,content_even"}">
+					<tr class='{cycle values="content_odd,content_even"}'>
 						<td align="center" valign="middle" width="5%">
-							<input type="checkbox" name="txtCheckBoxId[]" value="{$row.id}" id="idCheck" />
+							<input type="checkbox" name="id[]" value="{$row.id}"/>
+							<input type="hidden" name="all_id[]" value="{$row.id}"/>
 						</td>
 						<td valign="middle">
-							<img src="{$smarty.const.HOST}/data/upload/{$row.imgname}" width="200" height="80" /></td>
-						<td align="center" valign="middle">{$row.link}</td>
-						<td align="center" valign="middle">{$row.description}</td>
+							<img src="{$smarty.const.HOST}/data/upload/{$row.imgname}" width="200" height="80" />
+						</td>
 						<td align="center" valign="middle">
-							<select name="type" disabled="disabled">
+							<input type="text" value="{$row.link}" name="link[]">
+						</td>
+						<td align="center" valign="middle">
+							<input type="text" value="{$row.description}" name="description[]">
+						</td>
+						<td align="center" valign="middle">
+							<select name="type[]" >
 								<option value="1">Ảnh Banners</option>
 								<option value="2" {if $row.type==2}selected="selected{/if}">Ảnh Slider</option>
 							</select>
 						</td>
 						<td align="center" valign="middle">{$row.date_create}</td>
 						<td align="center" valign="middle">
-							<input type="checkbox" name="visible" disabled="disabled" {if $row.visible==1}checked="checked"{/if}></input>
+							<select name="visible[]" >
+								<option value="1">Hiển thị</option>
+								<option value="0" {if $row.visible==0}selected="selected{/if}">Ẩn đi</option>
+							</select>
 						</td>
 					</tr>
 					{/foreach}
-
 				</table>
 			</td>
 		</tr>
@@ -91,9 +90,11 @@
 			<td colspan="2">
 				<table width="100%" border="0" cellpadding="1" cellspacing="1">
 					<tr>
-						<td align="right" width="40%" valign="top"><input type="button"
-							name="btDelete" class="content_button" value="Xóa"
-							onClick="javascript:confirmDelete(this.form,'Vui lòng chọn một record','Bạn có chắc là muốn xóa?')" />
+						<td align="center" valign="top">
+							<input type="submit" name="btUpdate" class="content_button" value="Cập nhật"
+							onClick="javascript:confirmDelete(this.form,'Vui lòng chọn một record','Bạn có chắc là muốn cập nhật lại dữ liệu?')"/>
+							<input type="submit" name="btDelete" class="content_button" value="Xóa"
+							onClick="javascript:confirmDelete(this.form,'Vui lòng chọn một record','Bạn có chắc là muốn xóa?')"/>
 						</td>
 					</tr>
 				</table>

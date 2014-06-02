@@ -4,8 +4,11 @@ class PublicController extends Zend_Controller_Action
 
     public function indexAction()
     {
-		include_once('common/header.php');
+// 		include_once('common/header.php');
 		$objProduct	= new Product();
+		$indexPicture = new Picture();
+		$this->view->sliderPics = $indexPicture->getListSliderPictures();
+		$this->view->headerPic = $indexPicture->getHeaderPicture();
 		$this->view->topOne = $objProduct->getTopProductAtIndexByType(22, false);
 		$this->view->topTwo = $objProduct->getTopProductAtIndexByType(21, false);
 		$this->view->topThree = $objProduct->getTopProductAtIndexByType(11, false);
