@@ -21,7 +21,7 @@
     	    <a class="" href="{$smarty.const.HOST_ADMIN}/news" title="News">Tin Tức</a>
         </li>
         <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/product">Dự án</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/productgroup">Dự án</a>
         </li>
         <li>
         	<a class="" href="#tab4">Phong Thủy</a>

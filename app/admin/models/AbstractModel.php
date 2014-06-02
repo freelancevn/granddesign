@@ -45,12 +45,9 @@ abstract class AbstractModel{
         for($i = 0; $i < $j; $i ++) {
             $s1 .= ($s1 != '') ? ',' . $arrData [$i] : $arrData [$i];
         }
-        $arrDataUpdate = array (
-                        'status' => 0 
-        );
         $sWhere = '`id` IN (' . $s1 . ')';
         $db = Zend_Registry::get('db');
-        $db->update($this->tableName, $arrDataUpdate, $sWhere);
+        $db->delete($this->tableName, $sWhere);
         return 0;
     }
 
