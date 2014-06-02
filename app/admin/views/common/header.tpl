@@ -49,5 +49,12 @@
         <li>
             <a class="" href="{$smarty.const.HOST_ADMIN}/picview" title="Quản trị nội dung con">Các nội dung khác</a>
         </li>
-
+       {if $AppUI->id>0}
+        <li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/user/changepass" title="#ChangePassword">Đổi mật khẩu</a>
+        </li>
+		<li>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/user/logout" title="#Logout">Thoát</a>
+        </li>
+		{/if}
     </ul>
