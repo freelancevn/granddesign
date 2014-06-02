@@ -4,13 +4,13 @@
 <script type="text/javascript" src="{$smarty.const.JS}swfupload.queue.js"></script>
 <script type="text/javascript" src="{$smarty.const.JS}fileprogress.js"></script>
 <script type="text/javascript" src="{$smarty.const.JS}handlers.js"></script>
-<form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/product/images?id={$arrDetail.id}">
+<form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/indexImage/images?id={$arrDetail.id}">
 <input type="hidden" name="txtLuu" value="1">
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
     <tr>
     	<br/>
 		<td align="center" class="lable_list" colspan="2">
-			Hình ảnh công trình <a href="{$smarty.const.HOST_ADMIN}/product/edit?id={$arrDetail.id}"><strong>{$arrDetail.product_name}</strong></a>
+			<strong>Quản lý Banners Trang chủ</strong>
 		</td>		
     </tr>
 	<tr>
@@ -23,7 +23,6 @@
 					<span class="legend">Đăng hình cho công trình {$arrDetail.name}</span>
 					<span id="spanButtonPlaceholder"></span>
 				</div>
-			  	
 				<img src="{$smarty.const.IMAGES}but_huypho.png" id="btnCancel" value="Cancel Uploads" onclick="cancelQueue(upload);" disabled="disabled" hidden="true" />
 			</div>
 		</td>
@@ -35,7 +34,7 @@
 				{foreach key=i item=row from=$arrImages}
 				<tr {if $i%2==0}style="background-color:#E6E7E4;"{else} style="background-color:#D5EAFF;"{/if}>
 					<td width="20px"><input type="checkbox" name="txtCheckBoxId[]" value="{$row.id}" id="idCheck"/></td>
-					<td width="200px"><img src="{$smarty.const.HOST}/upload_thumb/product/{$row.file_name}" width="200" /></td>
+					<td width="200px"><img src="{$smarty.const.HOST}/upload_thumb/imageIndex/{$row.file_name}" width="200" /></td>
 					<td>
 						<table width="100%"  cellpadding="0" cellspacing="5" align="center">
 							<tr>
@@ -43,13 +42,12 @@
 								<td><input type="text" id="txtContent_{$row.id}" name="txtContent_{$row.id}" class="input" value="{$row.description}" /></td>
 							</tr>
 							<tr>
-								<td>Loại Hiển Thị:</td>
+								<td>Loại Ảnh Hiển Thị:</td>
 								<td>
+									<!--input type="text" id="txtType_{$row.id}" name="txtType_{$row.id}" class="input" value="{$row.type}" /-->
 									<select id="txtType_{$row.id}" name="txtType_{$row.id}">
-										<option value="0">Ảnh Chi Tiết</option>
-										<option value="22" {if $row.type==22}selected="selected{/if}">Ảnh Đại Diện 2x2 (458x464)</option>
-										<option value="21" {if $row.type==21}selected="selected{/if}">Ảnh Đại Diện 2x1 (458x230)</option>
-										<option value="11" {if $row.type==11}selected="selected{/if}">Ảnh Đại Diện 1x1 (227x230)</option>
+										<option value="1">Ảnh Trên Slidebar</option>
+										<option value="2" {if $row.type==11}selected="selected{/if}">Ảnh trên Header</option>
 									</select>
 								</td>
 							</tr>

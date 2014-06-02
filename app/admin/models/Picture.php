@@ -14,21 +14,24 @@ class Picture
 		return $rs;
 	}
 		
-	public function insertPicture($strPicture)
+	public function insertPicture($arrData)
 	{
-		$arrData		= array('imgname'=>$strPicture);
-		$rs				= $this->db->insert('ktv_img_header',$arrData);
-		return 1;
+		$this->db->insert('ktv_img_header',$arrData);
 	}
 	
 	public function deleteData($arrData){
-		$j	  = count($arrData);
+		$j = count($arrData);
+		$s1 = "";
 		for ($i=0; $i<$j; $i++)
 		{
 			$s1 .= ($s1 != '') ? ',' . $arrData[$i] : $arrData[$i];
 		}
 		$rs = $this->db->delete('ktv_img_header','`id` IN ('. $s1 .')');
 		return 0;
+	}
+	
+	public function updatePicture($arrData, $whereClause) {
+		$this->db->update('ktv_img_header',$arrData, $whereClause);
 	}
 	
 }

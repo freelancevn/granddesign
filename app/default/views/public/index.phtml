@@ -26,13 +26,13 @@
 
 	<div class="slideshow">
 		<ul>
-			<li><a href="#" title="New SS14 Collection"> <img
-					src="{$smarty.const.IMAGES}homepage/main_banner_hyde.jpg" />
-			</a></li>
-			<li class="white" style="border-bottom: 1px solid #000000"><a
-				href="#" title="Fitted kitchens"> <img
-					src="{$smarty.const.IMAGES}homepage/main_ban_kitchen.jpg" />
-			</a></li>
+			{foreach key=i item=sliderPic from=$sliderPics}
+            <li>
+                 <a href="#" title="{$sliderPic.description}">
+                     <img src="{$smarty.const.HOST}/data/upload/{$sliderPic.imgname}" />
+                 </a>
+            </li>
+            {/foreach}
 		</ul>
 	</div>
 

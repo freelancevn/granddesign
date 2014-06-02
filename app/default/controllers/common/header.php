@@ -10,4 +10,6 @@
 		$arrConfig[$rRows['key_config']]	= $rRows['key_value'];
 	}
 	$this->view->arrConfigSite	= $arrConfig;
+// 	$picture = new Picture();
+// 	$this->view->headerPic = $picture->getHeaderPicture();
 ?>
