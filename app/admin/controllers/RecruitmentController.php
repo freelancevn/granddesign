@@ -23,11 +23,14 @@ class RecruitmentController extends AbstractController{
         $title = $objRequest->getParam('txt_title', "");
         $summary = $objRequest->getParam('txt_summary', "");
         $content = $objRequest->getParam('txt_content', "");
-        $creationDate = $objRequest->getParam('txt_creationDate', null);
-        if ($creationDate == null) {
+        $postdate = $objRequest->getParam('txt_creationDate', null);
+        if ($postdate == null) {
             $now = new DateTime();
-            $creationDate = $now->format('Y-m-d H:i:s');
+            $postdate = $now->format('Y-m-d');
         }
+        
+        $deadline = $objRequest->getParam('txt_deadline', "");
+
         $ava = $objRequest->getParam('checkAvailable', null);
         $check = 0;
         if ($ava != null) {
@@ -35,11 +38,12 @@ class RecruitmentController extends AbstractController{
         }
         $objRecruitment = new Recruitment();
         $arrData = array (
-                        'title' => $title,
-                        'summary' => $summary,
-                        'content' => $content,
-                        'creationDate' => $creationDate,
-                        'visible' => $check 
+                        Recruitment::TITLE => $title,
+                        Recruitment::SUMMARY => $summary,
+                        Recruitment::CONTENT => $content,
+                        Recruitment::POSTDATE => $postdate,
+                        Recruitment::DEADLINE => $deadline,
+                        Recruitment::VISIBLE => $check 
         );
         $objRecruitment->insert($arrData);
         $this->_redirect(HOST_ADMIN . '/recruitment');
@@ -47,7 +51,7 @@ class RecruitmentController extends AbstractController{
 
     function editAction(){
         $objRequest = $this->_request;
-        $intRecruitmentId = $objRequest->getParam('id', 0);
+        $intRecruitmentId = $objRequest->getParam(Recruitment::ID, 0);
         $objRecruitment = new Recruitment();
         $arrDetail = $objRecruitment->getById($intRecruitmentId);
         $this->view->arrDetail = $arrDetail;
@@ -65,20 +69,21 @@ class RecruitmentController extends AbstractController{
             $check = 1;
         }
         $now = new DateTime();
-        $creationDate = $now->format('Y-m-d H:i:s');
+        $postdate = $now->format('Y-m-d');
+        $deadline = $objRequest->getParam('txt_deadline', "");
         $objRecruitment = new Recruitment();
         $arrData = array (
-                        'title' => $title,
-                        'summary' => $summary,
-                        'content' => $content,
-                        'creationDate' => $creationDate,
-                        'visible' => $check 
+                        Recruitment::TITLE => $title,
+                        Recruitment::SUMMARY => $summary,
+                        Recruitment::CONTENT => $content,
+                        Recruitment::POSTDATE => $postdate,
+                        Recruitment::DEADLINE => $deadline,
+                        Recruitment::VISIBLE => $check 
         );
-        $strWhere = 'id=' . $id;
+        $strWhere = Recruitment::ID . '=' . $id;
         $objRecruitment->update($arrData, $strWhere);
         $this->_redirect(HOST_ADMIN . '/recruitment');
     }
-
 }
 
 ?>

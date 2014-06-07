@@ -14,11 +14,12 @@
           			<td align="center" width="3%" valign="top">
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
-          			<td align="center" valign="top">Tiêu đề</td>
-                    <td align="center" valign="top">Tóm tắt</td>	
-					<td align="center" valign="top">Nội dung</td>
-                    <td align="center" valign="top">Ngày đăng</td>							
-                    <td align="center" valign="top">Hiển thị</td>
+          			<td align="center" valign="top">Vị trí tuyển dụng</td>
+                    <td align="center" valign="top">Mô tả sơ lược</td>	
+					<td align="center" valign="top">Nội dung tuyển dụng</td>
+                    <td align="center" valign="top">Ngày đăng</td>
+                    <td align="center" valign="top">Hạn nộp hồ sơ</td>
+                    <td align="center" valign="top">Cho phép hiển thị</td>
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -32,13 +33,16 @@
                     <td width="15%" valign="top">	 
 					{$row.summary}
 					</td>
-					<td width="50%" valign="top">
+					<td width="44%" valign="top">
 							{$row.content}
 					</td>
-					<td width="10%" valign="top">
-							{$row.creationDate}
+					<td width="7%" valign="top">
+							{$row.postdate}
 					</td>
-                    <td width="5%" valign="top">
+					<td width="7%" valign="top">
+							{$row.deadline}
+					</td>
+                    <td width="7%" valign="top">
                     {if $row.visible == 1}
 							<input type="checkbox" name="checkVisible" id="checkVisible" checked disabled="disabled"/>
 				    {else}

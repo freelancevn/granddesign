@@ -1,16 +1,29 @@
 <?php
-class Recruitment extends AbstractModel{
+class Recruitment extends AbstractModel {
 
-    public $tableName = "ktv_recruitment" ;
+    public $tableName = 'ktv_recruitment';
     
+    // COLUMN NAMES
+    const TITLE = 'title';
+
+    const SUMMARY = 'summary';
+
+    const CONTENT = 'content';
+
+    const POSTDATE = 'postdate';
+
+    const DEADLINE = 'deadline';
+
+    const VISIBLE = 'visible';
+
     public function getAllRecruitment(){
-        $strQuery = 'SELECT n.id, n.title, n.summary, n.content, n.visible, n.creationDate, n.status FROM '.$this->tableName.' AS r';
+        $strQuery = 'SELECT * FROM ' . $this->tableName;
         return parent::getAll($strQuery);
     }
 
     public function getListRecruitmentAdmin($intOffset, $intLimit){
-        $SQL = 'SELECT SQL_CALC_FOUND_ROWS * FROM '.$this->tableName.' AS r WHERE r.status=1';
-        $SQL .= NhutFunction::getOrderBY('DATE(`creationDate`)', 'DESC', $intOffset, $intLimit);
+        $SQL = 'SELECT SQL_CALC_FOUND_ROWS * FROM ' . $this->tableName . ' AS r';
+        $SQL .= NhutFunction::getOrderBY('DATE(`postdate`)', 'DESC', $intOffset, $intLimit);
         return parent::getListAdmin($intOffset, $intLimit, $SQL);
     }
 

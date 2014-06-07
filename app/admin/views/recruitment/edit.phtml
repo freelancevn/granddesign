@@ -8,17 +8,17 @@
 		<td colspan="2">Cập nhật Tuyển Dụng</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Tiêu đề:<span class="alert">*</span></td>
+		<td width="20%">Vị trí tuyển dụng:<span class="alert">*</span></td>
 		<td width="870%"><input type="text" id="txt_title" name="txt_title" class="input" maxlength="255" value="{$arrDetail.title}" />
 		</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Tóm tắt:<span class="alert">*</span></td>
+		<td width="20%">Mô tả sơ lược:<span class="alert">*</span></td>
 		<td width="870%"><input type="text" id="txt_summary" name="txt_summary" class="input" maxlength="255" value="{$arrDetail.summary}" />
 		</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Nội dung:<span class="alert">*</span></td>
+		<td width="20%">Nội dung tuyển dụng:<span class="alert">*</span></td>
 		<td width="870%">
 			<textarea id="txt_content" name="txt_content" style="width:95%;">{$arrDetail.content}</textarea>
 		{literal}
@@ -29,6 +29,11 @@
 			});
 		</script>
 		{/literal}
+		</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Hạn nộp hồ sơ:<span class="alert">*</span></td>
+		<td width="870%"><input type="text" id="txt_deadline" name="txt_deadline" class="input" maxlength="255" value="{$arrDetail.deadline}" />
 		</td>
 	</tr>
 	<tr class="login">
