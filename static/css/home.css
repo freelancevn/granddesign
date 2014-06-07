@@ -1,5 +1,5 @@
 #main {
-	font: 15px/16px 'DINHabitatBold', sans-serif;
+	font: 15px/16px 'Arial', sans-serif;
 	color: #000
 }
 
@@ -76,10 +76,6 @@
 	font-family: 'DINHabitatReg', sans-serif;
 	text-align: center;
 	text-transform: uppercase
-}
-
-#main strong {
-	font-family: 'DINHabitatBold', sans-serif
 }
 
 #main img {

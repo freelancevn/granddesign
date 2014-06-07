@@ -62,33 +62,22 @@ class Product
 					(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
 					 '.$type.' as holderSize
 				  	FROM ktv_product as p WHERE p.sort=' . $sort;
-			$products = $this->db->fetchRow ($query);
+			$products = $this->db->fetchRow($query);
 		}
 		return $products;
 	}
 	
-	function getProductIndex($iCategory=0)
+	function getProductInfoByIndex($productId)
 	{
-		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors, p.unbuilt_area, p.address, p.time_finish, p.date_create, 
-		p.`status`, p.sort, p.ishowhot, c.category_name, 
-		(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id) as file_name 
-		FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
-		WHERE p.`status`=1 AND c.`status`=1';
-		if($iCategory==0)
-			$SQL		.= '  AND p.ishowhot=1';
-		else 
-			$SQL		.= '  AND p.fk_category=' . $iCategory;
-		$SQL			.= '  ORDER BY p.sort DESC';
-		$rs 		= $this->db->fetchAll($SQL);
+		$SQL = 'SELECT * FROM `ktv_product` AS p where p.id=' . $productId;
+		$rs = $this->db->fetchRow($SQL);
 		return $rs;
 	}
 	
-	function getProductDetail($iProductID)
+	function getProductDetailImages($productId)
 	{
-		$SQL		= 'SELECT p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, 
-		p.date_create, p.`status`, p.sort, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
-		WHERE p.`status`=1 AND c.`status`=1 AND p.id=' . $iProductID;
-		$rs 		= $this->db->fetchRow($SQL);
+		$SQL = 'SELECT `file_name`, `description` from `ktv_product_image` WHERE `fk_product`=' . $productId . ' AND `type`=0';
+		$rs 		= $this->db->fetchAll($SQL);
 		return $rs;
 	}
 	

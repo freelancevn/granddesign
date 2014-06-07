@@ -95,19 +95,18 @@ class ProductController extends Zend_Controller_Action
 		$this->_redirect(HOST_ADMIN.'/product');
 	}
 	
-	#image
 	function imagesAction()
 	{
-		$objRequest 		= $this->_request;
-		$intID				= $objRequest->getParam('id', 0);
-		$objProduct			= new Product();
-		if(count($objRequest->getParam('txtCheckBoxId',array())) >0 ){
-			$objProduct->deleteDataProductImages($objRequest->getParam('txtCheckBoxId',array()));
-		}		
+		$objRequest = $this->_request;
+		$intID = $objRequest->getParam('id', 0);
+		$objProduct	= new Product();
+		$checkSave = $objRequest->getParam('btnLuu');
+		$checkDelete = $objRequest->getParam('btDelete');
 		$arrImages		= $objProduct->getProductImagesAdmin($intID);		
-		$arrDetail		= $objProduct->getProductAdmin($intID);		
-		$iCheckLuu		= $objRequest->getParam('txtLuu',0);
-		if($iCheckLuu==1){
+		$arrDetail		= $objProduct->getProductAdmin($intID);
+		$checkedItems = count($objRequest->getParam('txtCheckBoxId',array()));
+		if (isset($checkSave) && $checkedItems > 0)
+		{
 			foreach($arrImages as $rRow){
 				$sContent	= $objRequest->getParam('txtContent_' . $rRow['id'],'');
 				$sType		= $objRequest->getParam('txtType_' . $rRow['id'],0);
@@ -115,7 +114,14 @@ class ProductController extends Zend_Controller_Action
 				$objProduct->updateProductImages($arrData, $rRow['id']);
 			}
 			$arrImages	= $objProduct->getProductImagesAdmin($intID);
+			$arrDetail		= $objProduct->getProductAdmin($intID);
 		}
+		if( isset($checkDelete) && $checkedItems > 0 )
+		{
+			$objProduct->deleteDataProductImages($objRequest->getParam('txtCheckBoxId',array()));
+			$arrImages		= $objProduct->getProductImagesAdmin($intID);
+			$arrDetail		= $objProduct->getProductAdmin($intID);
+		}		
 		$this->view->arrDetail	= $arrDetail;
 		$this->view->arrImages	= $arrImages;
 	}

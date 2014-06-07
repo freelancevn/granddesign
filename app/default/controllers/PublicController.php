@@ -4,39 +4,15 @@ class PublicController extends Zend_Controller_Action
 
     public function indexAction()
     {
-// 		include_once('common/header.php');
+		include_once('common/header.php');
 		$objProduct	= new Product();
 		$indexPicture = new Picture();
 		$this->view->sliderPics = $indexPicture->getListSliderPictures();
-		$this->view->headerPic = $indexPicture->getHeaderPicture();
 		$this->view->topOne = $objProduct->getTopProductAtIndexByType(22, false);
 		$this->view->topTwo = $objProduct->getTopProductAtIndexByType(21, false);
 		$this->view->topThree = $objProduct->getTopProductAtIndexByType(11, false);
 		$this->view->otherProducts = $objProduct->getTopProductAtIndexByType(0, true);
     }
-	
-	public function viewproductAction()
-	{
-		include_once('common/header.php');
-		$objRequest = $this->_request;
-		$iCategory	= $objRequest->getParam('category', 0);
-		$iProduct	= $objRequest->getParam('id', 0);
-		if($iProduct>0)
-		{
-			$objProduct	= new Product();
-			$arrProduct	= $objProduct->getProductIndex($iCategory);
-			$this->view->arrProduct	= $arrProduct;
-			$arrDetail	= $objProduct->getProductDetail($iProduct);
-			$arrImage	= $objProduct->getProductImagesAdmin($iProduct);
-			$this->view->arrDetail	= $arrDetail;
-			$this->view->arrImage	= $arrImage;
-			$this->view->viewProdut	= 1;
-			$arrShop	 = $objProduct->getShopbyCate(0,0,1);
-			$this->view->arrShop	= $arrShop;
-		} else {
-			$this->_redirect(HOST);
-		}
-	}
 	
 	public function shopnoithatAction()
 	{
@@ -151,6 +127,17 @@ class PublicController extends Zend_Controller_Action
 	
 	public function projectdesignAction()
 	{
+		include_once('common/header.php');
+		$objRequest = $this->_request;
+		$productId	= $objRequest->getParam('pid', 0);
+		if($productId > 0)
+		{
+			$objProduct	= new Product();
+			$this->view->productDetails = $objProduct->getProductInfoByIndex($productId);
+			$this->view->productImages = $objProduct->getProductDetailImages($productId);
+		} else {
+			$this->_redirect(HOST);
+		}
 	}
 	
 	public function newsdetailAction() {

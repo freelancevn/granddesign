@@ -1,38 +1,33 @@
 {include file='common/header.phtml'}
 <div id="main" class="designcontainer">
 </div>
-	<div id="wrapperslide">
+<div id="wrapperslide">
 	<div id="bigPic">
-		<img src="{$smarty.const.IMAGES}demoSlide/1.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/2.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/3.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/4.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/5.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/6.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/7.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/8.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/9.jpg" alt="" />
-		<img src="{$smarty.const.IMAGES}demoSlide/10.jpg" alt="" />
+		{foreach key=i item=image from=$productImages}
+			<img src="{$smarty.const.HOST}/upload/product/{$image.file_name}" title="{$image.description}"/>
+		{/foreach}
 	</div>
-
 	<ul id="thumbs">
-		<li class='active' rel='1'><img src="{$smarty.const.IMAGES}demoSlide/1_thumb.jpg" alt="" /></li>
-		<li rel='2'><img src="{$smarty.const.IMAGES}demoSlide/3_thumb.jpg" alt="" /></li>
-		<li rel='3'><img src="{$smarty.const.IMAGES}demoSlide/4_thumb.jpg" alt="" /></li>
-		<li rel='4'><img src="{$smarty.const.IMAGES}demoSlide/5_thumb.jpg" alt="" /></li>
-		<li rel='5'><img src="{$smarty.const.IMAGES}demoSlide/6_thumb.jpg" alt="" /></li>
-		<li rel='6'><img src="{$smarty.const.IMAGES}demoSlide/7_thumb.jpg" alt="" /></li>
-		<li rel='7'><img src="{$smarty.const.IMAGES}demoSlide/8_thumb.jpg" alt="" /></li>
-		<li rel='8'><img src="{$smarty.const.IMAGES}demoSlide/9_thumb.jpg" alt="" /></li>
-		<li rel='9'><img src="{$smarty.const.IMAGES}demoSlide/10_thumb.jpg" alt="" /></li>
+		{foreach key=i item=image from=$productImages}
+			<li {if $i==1}class='active'{/if} rel="{$i}">
+				<img src="{$smarty.const.HOST}/upload_thumb/product/{$image.file_name}"/>
+			</li>
+		{/foreach}
 	</ul>
-	<br/>
 </div>
 <div id="main" class="container">
-	<div style="font-family: Arial">
-		<strong>Dự Án A</strong><br>
-		Phong cách:
-		Vật liệu:
-	</div>
+	<br>
+	<h2>Dự Án: {$productDetails.product_name}<hr></h2>
+	<br>
+	<h4>Chủ Dự Án: {$productDetails.investors}</h4>
+	<br>
+	<h4>Địa Chỉ: {$productDetails.address}</h4>
+	<br>
+	<h4>Thời gian thi công: {$productDetails.time_finish}</h4>
+	<br>
+	<h4>Diện Tích: {$productDetails.unbuilt_area}</h4>
+	<br>
+	<h4>Thông tin dự án: {$productDetails.content}</h4>
+	<br>
 </div>
 {include file='common/footer.phtml'}

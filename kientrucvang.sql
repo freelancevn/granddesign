@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 02, 2014 at 08:15 AM
+-- Generation Time: Jun 07, 2014 at 05:14 PM
 -- Server version: 5.5.23
 -- PHP Version: 5.4.23
 
@@ -270,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `ktv_product` (
 INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `time_finish`, `date_create`, `status`, `sort`, `ishowhot`) VALUES
 (87, 'Test1', 1, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
 (88, 'test2', 1, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', '3 months', '2014-05-27 04:15:25', 1, 21, 0),
-(89, 'test3', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 0),
+(89, 'test3', 1, 'mr.b', '50', 'HCM', '<p>Kh&ocirc;ng gian mở với nhiều c&acirc;y cối, tiểu cảnh xung quanh ng&ocirc;i nh&agrave;. Nội thất tinh tế, sang trọng với hầu hết c&aacute;c chi tiết từ da.</p>\r\n\r\n<p>M&agrave;u sơn chủ đạo l&agrave; m&agrave;u trắng, &aacute;nh s&aacute;ng v&agrave;ng dịu tạo kh&ocirc;ng gian mở.</p>\r\n\r\n<p>Tiết kiệm tối đa diện t&iacute;ch sử dụng, hệ thống tủ &acirc;m tường được bố tr&iacute; th&ocirc;ng minh</p>\r\n\r\n<p>Hệ thống điện, nước được thiết kế tự động h&oacute;a cao, độ bền cam kết từ 20 năm trở l&ecirc;n</p>\r\n\r\n<p>Bảo h&agrave;nh l&acirc;u d&agrave;i, 2 năm.</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 0),
 (90, 'test4', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
 (91, 'test5', 1, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', '2 month', '2014-05-27 05:20:07', 1, 0, 0),
 (92, 'test7', 1, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', '3 months', '2014-05-27 05:20:33', 1, 0, 0),
@@ -291,9 +291,9 @@ CREATE TABLE IF NOT EXISTS `ktv_product_image` (
   `fk_product` int(11) DEFAULT NULL,
   `file_name` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL,
+  `type` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
 
 --
 -- Dumping data for table `ktv_product_image`
@@ -332,7 +332,9 @@ INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`,
 (35, 96, '62/4d/aa6c4d62.jpg', '', 22),
 (36, 97, '17/15/bdcf1517.jpg', '', 11),
 (37, 97, 'bc/91/a26791bc.jpg', '', 21),
-(38, 97, '02/86/7a4e8602.jpg', '', 22);
+(38, 97, '02/86/7a4e8602.jpg', '', 22),
+(51, 89, '52/dc/d834dc52.png', 'Ngoại cảnh', 0),
+(52, 89, 'd4/80/aa4c80d4.png', 'Nội Thất', 0);
 
 -- --------------------------------------------------------
 
