@@ -13,8 +13,8 @@ class Picture
 	}
 	
 	public function getHeaderPicture() {
-		$query = 'select * from `ktv_img_header` where `visible`=1 and `type`=1 LIMIT 1';
-		return $this->db->fetchAll($query);
+		$query = 'select `imgname`, `link` from `ktv_img_header` where `visible`=1 and `type`=1 LIMIT 1';
+		return $this->db->fetchRow($query);
 	}
 	
 }

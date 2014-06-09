@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="{$smarty.const.IMAGES}favicon.ico" />
 <title>Professional Interior Design Consult and Assitant - GrandDesign SaiGon</title>
 
@@ -11,7 +12,6 @@
 <link rel="stylesheet" href="{$smarty.const.CSS}home.css" type="text/css" />
 <link rel="stylesheet" href="{$smarty.const.CSS}client.css" type="text/css" />
 <link rel="stylesheet" href="{$smarty.const.CSS}projectDesignSlide.css" type="text/css" />
-
 <link rel="stylesheet" href="{$smarty.const.CSS}news.css" type="text/css" />
 	
 <script type="text/javascript" src="{$smarty.const.JS}jquery-1.11.0.js"></script>
@@ -31,15 +31,7 @@
 	content="lighting, furniture, upholstery, textiles, sofas, accessories, tables, chairs, beds,  granddesign" />
 <meta name="description"
 	content="Choose from a broad range of furniture, upholstery, textiles, lighting and more at granddesign Great deals on furniture - style your home!" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="copyright" content="GrandDesign 2014" />
-<meta name="robots" content="index,follow" />
-<meta name="author" content="Fresca Limited" />
-<meta http-equiv="imagetoolbar" content="no" />
-<meta http-equiv="expires" content="now" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Cache-control" content="no-cache" />
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 </head>
 
 <body id="en" class="Home ly_basic">
@@ -51,7 +43,7 @@
 					<a href="{$smarty.const.HOST}"><img src="{$smarty.const.IMAGES}logo.png" alt="Grand Design" /></a>
 				</h1>
 				<div id="header_actions">
-					<img src="{$smarty.const.HOST}data/upload/{$headerPic.imgname}" />
+					<a href={$headerPic.link}><img src="{$smarty.const.HOST}data/upload/{$headerPic.imgname}"/></a>
 				</div>
 			</div>
 			<div id="navigation" class="container">
