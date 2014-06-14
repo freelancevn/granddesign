@@ -1,6 +1,8 @@
 <?php
 abstract class AbstractModel{
 
+    const ID = 'id';
+    
     public $db = null;
     
     public $tableName = null;

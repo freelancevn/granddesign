@@ -121,3 +121,44 @@ caption,th {
 .clearfix {
 	display: block
 }
+
+.gridWiew {
+	background-color: #FFF;
+    border-collapse: collapse;
+    font-family: Arial;
+}
+
+.gridWiewHeader, .gridWiewHeader th {
+    background-color: #5F5F5F;
+    color: #FFF;
+    font-size: 13px;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    padding-right: 5px;
+    text-align: center;
+    border: 1px solid #CCE8A5;
+    font-family: Arial;
+	font-weight:bold;
+}
+
+.grid_jobtitle {
+    width: 480px;
+	font-weight:bold;
+}
+
+.grid_jobdate {
+    width: 120px;
+}
+
+.gridWiew td {
+    font-size: 13px;
+    font-family: Arial;
+    padding: 3px 3px 2px 10px;
+    border: 1px solid #D9E1A6;
+}
+
+.alt {
+    background-color: #F8F8F8;
+    font-family: Arial;
+    color: #000;
+}

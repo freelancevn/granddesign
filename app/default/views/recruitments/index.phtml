@@ -1,20 +1,24 @@
 {include file='common/header.phtml'}
 <div id="main" class="container">
+	<table class="gridWiew" cellspacing="0" border="1"
+		style="width: 905px; border-collapse: collapse;" rules="all">
+		<tr class="gridWiewHeader">
+			<th align="center" scope="col">Vị trí</th>
 
-<div>
-Hello admin
+			<th align="center" scope="col">Ngày hết hạn</th>
+
+		</tr>
+		{foreach key=i item=recruitment from=$recruitmentlist}
+		<tr {if $i is not even} class ="alt" {/if}>
+			<td class="grid_jobtitle" align="left"><a
+				href="{$smarty.const.HOST}recruitments/detail?id={$recruitment.id}"
+				title="{$recruitment.title}">{$recruitment.title}
+				</a></td>
+			<td class="grid_jobdate" align="center">{$recruitment.deadline}</td>
+		</tr>
+		{/foreach}
+
+	</table>
+
 </div>
-<div>
-{foreach key=i item=recruitment from=$recruitmentlist}
-		<div>
-		<label>
-			<h2>{$recruitment.title}</h2> <a
-			href="#"
-			title="{$recruitment.title}">detail &raquo;</a>
-		</label>
-	</div>
-{/foreach}
-</div>
-</div>
-{include file='common/panel.phtml'}
-{include file='common/footer.phtml'}
+{include file='common/panel.phtml'} {include file='common/footer.phtml'}
