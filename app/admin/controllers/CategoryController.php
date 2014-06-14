@@ -43,7 +43,7 @@ class CategoryController extends Zend_Controller_Action
 		$iSort				= $objRequest->getParam('txt_sort', 1);
 		$iCateShop			= $objRequest->getParam('cbo_type_shop', 0);
 		$objCategory		= new Category();
-		$arrData			= array('category_name'=>$sName, 'type'=>$iType, 'cate_shop'=>$iCateShop,'sort'=>$iSort,'date_create'=>date('Y-m-d H:i:s'));
+		$arrData			= array('category_name'=>$sName, 'type'=>$iType, 'sort'=>$iSort,'date_create'=>date('Y-m-d H:i:s'));
 		$objCategory->insertCategory($arrData);
 		$this->_redirect(HOST_ADMIN.'/category');
 	}
@@ -66,7 +66,7 @@ class CategoryController extends Zend_Controller_Action
 		$intID			= $objRequest->getParam('txtId', 1);
 		$iCateShop		= $objRequest->getParam('cbo_type_shop', 0);
 		$objCategory	= new Category();
-		$arrData		= array('category_name'=>$sName, 'type'=>$iType,'cate_shop'=>$iCateShop,'sort'=>$iSort,'date_create'=>date('Y-m-d H:i:s'));
+		$arrData		= array('category_name'=>$sName, 'type'=>$iType,'sort'=>$iSort,'date_create'=>date('Y-m-d H:i:s'));
 		$strWhere		= 'id=' . $intID;
 		$intCategoryID = $objCategory->updateCategory($arrData, $strWhere);
 		$this->_redirect(HOST_ADMIN.'/category');

@@ -1,7 +1,9 @@
 <?php
 	$objCategory	= new Category();
 	$arrMenu		= $objCategory->getAllCategory(0);
-	$this->view->arrMenu	= $arrMenu;
+	$this->view->projectTypes	= $arrMenu;
+	$arrMenu		= $objCategory->getAllCategory(1);
+	$this->view->materialTypes	= $arrMenu;
 	
 	$objConfig		= new Config();
 	$arrTemp		= $objConfig->getAllConfig();

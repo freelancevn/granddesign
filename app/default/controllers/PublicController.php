@@ -8,10 +8,10 @@ class PublicController extends Zend_Controller_Action
 		$objProduct	= new Product();
 		$indexPicture = new Picture();
 		$this->view->sliderPics = $indexPicture->getListSliderPictures();
-		$this->view->topOne = $objProduct->getTopProductAtIndexByType(22, false);
-		$this->view->topTwo = $objProduct->getTopProductAtIndexByType(21, false);
-		$this->view->topThree = $objProduct->getTopProductAtIndexByType(11, false);
-		$this->view->otherProducts = $objProduct->getTopProductAtIndexByType(0, true);
+		$this->view->topOne = $objProduct->getTopProductByDisplaySizeAndCategory(22, false);
+		$this->view->topTwo = $objProduct->getTopProductByDisplaySizeAndCategory(21, false);
+		$this->view->topThree = $objProduct->getTopProductByDisplaySizeAndCategory(11, false);
+		$this->view->otherProducts = $objProduct->getTopProductByDisplaySizeAndCategory(0, true);
     }
 	
 	public function shopnoithatAction()
@@ -121,20 +121,40 @@ class PublicController extends Zend_Controller_Action
 		$this->view->intTotal = $arrList ['total'];		
 	}
 	
+	/*
+	 * Should:
+	 * + Return the project which has greatest number of view_count and its represent 2x2 image
+	 * + Return projects which have number of view_count at 2nd and 3rd position and their 2x1 image
+	 * + Return all projects which orders by date_create (do not count 3 top view_count project)
+	 */
 	public function projectsAction()
 	{
+		include_once('common/header.php');
+		$catId = $this->_request->getParam('catId');
+		$productsArray = array();
+		if ($catId > 0) {
+			$objProduct	= new Product();
+			$projectsByCat = $objProduct->getProductsByCat($catId);
+			$this->view->topOne = $projectsByCat[0];
+			$this->view->topTwo = $projectsByCat[1];
+			$this->view->topThree = $projectsByCat[2];
+			$this->view->otherProjects = $projectsByCat[3];
+		} else {
+			$this->redirect(HOST);
+		}
 	}
 	
 	public function projectdesignAction()
 	{
 		include_once('common/header.php');
 		$objRequest = $this->_request;
-		$productId	= $objRequest->getParam('pid', 0);
-		if($productId > 0)
+		$projectId	= $objRequest->getParam('pid', 0);
+		if($projectId > 0)
 		{
 			$objProduct	= new Product();
-			$this->view->productDetails = $objProduct->getProductInfoByIndex($productId);
-			$this->view->productImages = $objProduct->getProductDetailImages($productId);
+			$objProduct->updateProductViewCount($projectId, 0);
+			$this->view->productDetails = $objProduct->getProductInfoByIndex($projectId);
+			$this->view->productImages = $objProduct->getProductDetailImages($projectId);
 		} else {
 			$this->_redirect(HOST);
 		}

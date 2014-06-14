@@ -14,7 +14,6 @@
 					</td>
           			<td align="center" valign="top">Tên danh mục</td>	
 					<td>Loại</td>
-					<td>Cate shop</td>		
 					<td>Vị trí</td>									
         		</tr>
 				{if $arrList}
@@ -27,10 +26,7 @@
 					&nbsp;<a href="{$smarty.const.HOST_ADMIN}/category/edit?id={$row.id}" class="ahref">{$row.category_name|stripslashes}</a>
 					</td>				
 					<td width="20%" valign="top" title="{$row.description|stripslashes}">
-							{if $row.type==0}Công Trình{else}Shop Nội Thất{/if}
-					</td>
-					<td width="15%" valign="top" title="{$row.description|stripslashes}">
-							{if $row.cate_shop==1}Phòng khách{elseif $row.cate_shop==2}Bếp & Phòng ăn{elseif $row.cate_shop==3}Phòng ngủ{elseif $row.cate_shop==4}Phòng vệ sinh{elseif $row.cate_shop==5}Đèn nội thất{/if}
+							{if $row.type==0}Dự Án{else}Vật Liệu - Gỗ Công Nghiệp{/if}
 					</td>
 					<td width="15%" valign="top">
 							{$row.sort}

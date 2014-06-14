@@ -20,47 +20,52 @@ class Product
 		}
 	}
 	
-	function getTopProductAtIndexByType($type, $isAll) {
-		$sort = $type;
+	function getRandomProductByDisplaySize($products) {
+		$totalRowSize=0;//max is 4
+		$randomProducts = array();
+		for ($i=0; $i<count($products);) {
+			$imageSize = $this->getRandomSizeTypeZero();
+			if ($imageSize == 11) {
+				$rowSize=1;
+			} else if ($imageSize == 21) {
+				$rowSize=2;
+			}
+			$totalRowSize = $totalRowSize + $rowSize;
+			if ($totalRowSize > 4) {
+				$imageSize = 11;
+				$totalRowSize = 0;
+			}
+			if ($products[$i]["imgType"] == $imageSize) {
+				$selectedProduct = $products[$i];
+			} else {
+				$selectedProduct = $products[$i+1];
+			}
+			$i = $i+2;
+			if ($totalRowSize == 4) {
+				$totalRowSize = 0;
+			}
+			array_push($randomProducts, $selectedProduct);
+		}
+		return $randomProducts;
+		
+	}
+	
+	function getTopProductByDisplaySizeAndCategory($displaySize, $isAll) {
+		$sort = $displaySize;
 		if ($isAll) {
 			$sort = 0;
-			$type = $this->getRandomSizeTypeZero();
+			$displaySize = $this->getRandomSizeTypeZero();
 		}
 		if ($isAll) {
 			$query = 'SELECT p.id, p.product_name AS productName, p.status AS status, 
 					  i.file_name AS image, i.type AS imgType FROM ktv_product AS p, ktv_product_image AS i 
-					  WHERE p.sort=0 AND i.type IN (21,11) AND p.id=i.fk_product ORDER BY productName';
+					  WHERE p.sort=0 AND i.type IN (21,11) AND p.id=i.fk_product ORDER BY `date_create`, `productName`';
 			$products = $this->db->fetchAll($query);
-			$totalRowSize=0;//max is 4
-			$randomProducts = array();
-			for ($i=0; $i<count($products);) {
-				$imageSize = $this->getRandomSizeTypeZero();
-				if ($imageSize == 11) {
-					$rowSize=1;
-				} else if ($imageSize == 21) {
-					$rowSize=2;
-				}
-				$totalRowSize = $totalRowSize + $rowSize;
-				if ($totalRowSize > 4) {
-					$imageSize = 11;
-					$totalRowSize = 0;
-				}
-				if ($products[$i]["imgType"] == $imageSize) {
-					$selectedProduct = $products[$i];
-				} else {
-					$selectedProduct = $products[$i+1];
-				}
-				$i = $i+2;
-				if ($totalRowSize == 4) {
-					$totalRowSize = 0;
-				}
-				array_push($randomProducts, $selectedProduct);
-			}
-			return $randomProducts;
+			return $this->getRandomProductByDisplaySize($products);
 		} else {
 			$query = 'SELECT p.id, p.product_name, p.status,
-					(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $type . ') AS image,
-					 '.$type.' as holderSize
+					(SELECT i.file_name FROM ktv_product_image AS i WHERE i.fk_product=p.id AND i.type=' . $displaySize . ') AS image,
+					 '.$displaySize.' as holderSize
 				  	FROM ktv_product as p WHERE p.sort=' . $sort;
 			$products = $this->db->fetchRow($query);
 		}
@@ -87,29 +92,54 @@ class Product
 		return $rs;
 	}
 	
-	public function getShopbyCate($iCategory, $iProduct=0, $iShow = 0)
-	{
-		$SQL		= 'SELECT s.id, s.`name`, s.fk_category, s.feed, s.size, s.price, s.description, s.img_1, s.img_2, 
-		s.img_3, s.`status`, s.sort, c.category_name FROM ktv_shop AS s INNER JOIN ktv_category AS c ON s.fk_category = c.id  
-		WHERE s.`status`=1 AND c.`status`=1';
-		if($iCategory>0)
-		$SQL		.= ' AND  s.fk_category=' . $iCategory;
-		if($iProduct>0)
-		$SQL		.= ' AND  s.id!=' . $iProduct;
-		if($iShow==1)
-		$SQL		.= ' AND  s.showproduct=1';	
-		$SQL		.= ' ORDER BY s.sort  DESC';
-		$rs 		= $this->db->fetchAll($SQL);
-		return $rs;
+	public function updateProductViewCount($productId, $numberOfViews) {
+		if ($numberOfViews == 0) {
+			$arrayData = array('view_count' => new Zend_Db_Expr('`view_count` + 1'));
+		} else {
+			$arrayData = array('view_count' => $numberOfViews);
+		}
+		$whereClause = '`id`=' . $productId;
+		$this->db->update('ktv_product', $arrayData, $whereClause);
 	}
 	
-	public function getDetailShop($iProduct)
-	{
-		$SQL		= 'SELECT s.id, s.`name`, s.fk_category, s.feed, s.size, s.price, s.description, s.img_1, s.img_2, 
-		s.img_3, s.`status`, s.sort, c.category_name FROM ktv_shop AS s INNER JOIN ktv_category AS c ON s.fk_category = c.id  
-		WHERE s.`status`=1 AND c.`status`=1 AND  s.id=' . $iProduct .  '  ORDER BY s.sort  DESC';		
-		$rs 		= $this->db->fetchRow($SQL);
-		return $rs;
+	public function getProductsByCat($catId) {
+		$topId = '(';
+		$productsByCategory = array();
+		$query = 'select p.id, p.product_name as productName, i.file_name as image, i.type as imgType from `ktv_product` as p, `ktv_product_image` as i where p.fk_category=' . $catId . ' and i.fk_product=p.id and i.type=22 order by p.`view_count` desc limit 1';
+		$topOne = $this->db->fetchRow( $query );
+		
+		if (isset($topOne['id'])) {
+			$topId = $topId . $topOne ['id'] . ',';
+			array_push ( $productsByCategory, $topOne);
+		}
+		
+		$query = 'select p.id as id, p.product_name as productName, i.file_name as image, i.type as imgType from `ktv_product` as p, `ktv_product_image` as i where p.fk_category=' . $catId . ' and i.fk_product=p.id and i.type=21 order by p.`view_count` desc limit 1, 2';
+		$topTwoThree = $this->db->fetchAll ( $query );
+		if (isset($topTwoThree[0]['id'])) {
+			array_push ( $productsByCategory, $topTwoThree [0]);
+			$topId = $topId . $topTwoThree[0]['id'] . ',';
+		}
+		if (isset($topTwoThree[1]['id'])) {
+			array_push ( $productsByCategory, $topTwoThree [1]);
+			$topId = $topId . $topTwoThree[1]['id'];
+		}
+		$topId = $topId . ')';
+		if($topId != '()') {
+			$query = 'select p.id as id, p.product_name as productName, i.file_name as image, i.type as imgType from `ktv_product` as p, `ktv_product_image` as i where p.fk_category=' . $catId . ' and p.id not in' . $topId . ' and i.fk_product=p.id and i.type in (21,11) order by p.`date_create`';
+		} else {
+			$query = 'select p.id as id, p.product_name as productName, i.file_name as image, i.type as imgType from `ktv_product` as p, `ktv_product_image` as i where p.fk_category=' . $catId . ' and i.fk_product=p.id and i.type in (21,11) order by p.`date_create`';
+		}
+		$otherProducts = $this->db->fetchAll ( $query );
+		$randomProducts = $this->getRandomProductByDisplaySize($otherProducts);
+		array_push ( $productsByCategory, $randomProducts);
+		return $productsByCategory;
 	}
+	
+	public function getBestProjects() {
+		$query = 'select p.id, p.product_name, p.view_count, i.file_name from ktv_product as p, ktv_product_image as i where i.fk_product=p.id and i.type=22 order by p.view_count desc limit 0,2';
+		$bestProjects = $this->db->query($query);
+		return $bestProjects;
+	}
+	
 }
 ?>

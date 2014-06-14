@@ -26,7 +26,7 @@
 										<td align="center" valign="top">Thời gian</td>
 										<td align="center" valign="top">Hình ảnh</td>
 										<td align="center" valign="top">Vị trí</td>
-
+										<td align="center" valign="top">Lượt xem</td>
 									</tr>
 									{foreach key=i item=row from=$arrList}
 									<tr class="{cycle values="content_odd,content_even"}">
@@ -46,6 +46,7 @@
 											href="{$smarty.const.HOST_ADMIN}/product/images?id={$row.id}"
 											class="ahref">Hình ảnh ({$row.countImages})</a></td>
 										<td width="5%" valign="top">{$row.sort}</td>
+										<td width="5%" valign="top">{$row.view_count}</td>
 									</tr>
 									{/foreach}
 

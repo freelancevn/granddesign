@@ -1,89 +1,50 @@
 {include file='common/header.phtml'}
 <div id="main" class="container">
+	<div class="feature">
+			Free delivery on home accessory orders over &pound;50 and on all orders over &pound;500** Free returns on all orders
+	</div>
 	<div class="w2 h2 black">
-		<img src="{$smarty.const.IMAGES}homepage/merch_2x2_outdoor-insp.jpg" />
+		<img src="{$smarty.const.HOST}upload/product/{$topOne.image}" />
 		<label>
-			<h2>Outdoor inspiration</h2> <a
-			href="{$smarty.const.HOST}projectdesign"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot a 2x2']); WaitForSeconds(0.25);"
-			title="Outdoor inspiration">detail &raquo;</a>
-		</label>
-	</div>
-
-
-	<div class="w2 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/merch_2x1_bun.jpg" /> <label>
-			<h2>Sit back and relax</h2> <a
-			href="type/sofas/fcp-category/home.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot b 2x2']); WaitForSeconds(0.25);"
-			title="Sit back and relax">detail &raquo;</a>
+		<h2>{$topOne.productName}</h2>
+		<a	href="{$smarty.const.HOST}projectdesign?pid={$topOne.id}" title="{$topOne.productName}">detail &raquo;</a>
 		</label>
 	</div>
 
 	<div class="w2 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/2x1_lights.jpg" /> <label>
-			<h2>Brighten up your space</h2> <a
-			href="categories/lighting/fcp-category/home.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot c 2x2']); WaitForSeconds(0.25);"
-			title="Brighten up your space">detail &raquo;</a>
-		</label>
-	</div>
-
-
-	<div class="w1 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/1x1_furniture.jpg" /> <label>
-			<h2>Storage and shelving</h2> <a
-			href="categories/storage/fcp-category/home.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot 2x1 – a']); WaitForSeconds(0.25);"
-			title="Storage and shelving">detail &raquo;</a>
-		</label>
-	</div>
-
-	<div class="w2 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/2x1_lights.jpg" /> <label>
-			<h2>Brighten up your space</h2> <a
-			href="categories/lighting/fcp-category/home.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot c 2x2']); WaitForSeconds(0.25);"
-			title="Brighten up your space">detail &raquo;</a>
-		</label>
-	</div>
-
-	<div class="w1 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/1x1_soft_furnishings.jpg" />
+		<img src="{$smarty.const.HOST}upload/product/{$topTwo.image}" />
 		<label>
-			<h2>Beautiful rugs</h2> <a
-			href="rugs-floor-coverings/furniture/fcp-category/list.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot 1x1 – a']); WaitForSeconds(0.25);"
-			title=Beautifulrugs">detail &raquo;</a>
-		</label>
-	</div>
-
-	<div class="w1 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/1x1_pictureFrames.jpg" /> <label>
-			<h2>Frames</h2> <a
-			href="picture-frames/accessories/fcp-category/list.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot 1x1 – a']); WaitForSeconds(0.25);"
-			title="Frames">detail &raquo;</a>
-		</label>
-	</div>
-
-	<div class="w1 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/1x1-Talia-Stools.jpg" /> <label>
-			<h2>Practical stools</h2> <a
-			href="stools/furniture/fcp-category/list.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot 1x1 – b']); WaitForSeconds(0.25);"
-			title="Practical stools">detail &raquo;</a>
+		<h2>{$topTwo.productName}</h2>
+		<a	href="{$smarty.const.HOST}projectdesign?pid={$topTwo.id}" title="{$topTwo.productName}">detail &raquo;</a>
 		</label>
 	</div>
 
 	<div class="w2 h1 black">
-		<img src="{$smarty.const.IMAGES}homepage/2x1_lights.jpg" /> <label>
-			<h2>Brighten up your space</h2> <a
-			href="categories/lighting/fcp-category/home.html"
-			onclick="_gaq.push(['_trackEvent', 'Homepage ', 'Click', 'merchspot c 2x2']); WaitForSeconds(0.25);"
-			title="Brighten up your space">detail &raquo;</a>
+		<img src="{$smarty.const.HOST}upload/product/{$topThree.image}" />
+		<label>
+		<h2>{$topThree.productName}</h2>
+		<a	href="{$smarty.const.HOST}projectdesign?pid={$topThree.id}" title="{$topThree.productName}">detail &raquo;</a>
 		</label>
 	</div>
+
+{foreach key=i item=product from=$otherProjects}
+	{if $product.imgType=='11'}
+		<div class="w1 h1 black">
+		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
+			<h2>{$product.productName}</h2>
+			<a href="{$smarty.const.HOST}projectdesign?pid={$product.id}" title="{$product.productName}">detail &raquo;</a>
+		</label>
+	</div>	
+	{/if}
+	{if $product.imgType=='21'}
+		<div class="w2 h1 black">
+		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
+			<h2>{$product.productName}{$product.imgType}</h2>
+			<a href="{$smarty.const.HOST}projectdesign?pid={$product.id}" title="{$product.productName}">detail &raquo;</a>
+		</label>
+	</div>
+	{/if}
+	{/foreach}
 </div>
 {include file='common/panel.phtml'}
 {include file='common/footer.phtml'}

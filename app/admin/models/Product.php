@@ -6,7 +6,7 @@ class Product {
 	}
 	function getListProductAdmin($intOffset, $intLimit) {
 		$SQL = 'SELECT SQL_CALC_FOUND_ROWS p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, p.content, 
-		p.date_create, p.`status`, p.sort, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages  FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
+		p.date_create, p.`status`, p.sort, p.view_count, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages  FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
 		WHERE p.`status`=1 AND c.`status`=1';
 		$SQL .= NhutFunction::getOrderBY ( 'p.sort', 'DESC', $intOffset, $intLimit );
 		$rs = $this->db->fetchAll ( $SQL );
@@ -17,7 +17,7 @@ class Product {
 		);
 	}
 	function getProductAdmin($iProductID) {
-		$SQL = 'SELECT p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, p.content, p.date_create, p.`status`, p.sort, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
+		$SQL = 'SELECT p.id, p.product_name, p.fk_category, p.investors,p.unbuilt_area, p.address, p.time_finish, p.content, p.date_create, p.`status`, p.sort, p.view_count, c.category_name, (SELECT count(m.id) FROM ktv_product_image as m WHERE p.id=m.fk_product) as countImages FROM ktv_product AS p INNER JOIN ktv_category AS c ON p.fk_category = c.id 
 		WHERE p.`status`=1 AND c.`status`=1 AND p.id=' . $iProductID;
 		$rs = $this->db->fetchRow ( $SQL );
 		return $rs;
@@ -32,7 +32,7 @@ class Product {
 	}
 	function updateProduct($arrData, $sWhere) {
 		$db = Zend_Registry::get ( 'db' );
-		$db->update ( 'ktv_product', $arrData, $sWhere );
+		$db->update( 'ktv_product', $arrData, $sWhere );
 	}
 	function deleteData($arrData) {
 		$j = count ( $arrData );
@@ -45,7 +45,7 @@ class Product {
 		);
 		$sWhere = '`id` IN (' . $s1 . ')';
 		$db = Zend_Registry::get ( 'db' );
-		$db->update ( 'ktv_product', $arrDataUpdate, $sWhere );
+		$db->update( 'ktv_product', $arrDataUpdate, $sWhere );
 		return 0;
 	}
 	public function getProductImagesAdmin($iID) {

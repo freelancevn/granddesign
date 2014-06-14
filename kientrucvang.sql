@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 07, 2014 at 05:14 PM
+-- Generation Time: Jun 14, 2014 at 03:51 PM
 -- Server version: 5.5.23
 -- PHP Version: 5.4.23
 
@@ -56,27 +56,23 @@ CREATE TABLE IF NOT EXISTS `ktv_category` (
   `date_create` datetime DEFAULT NULL,
   `status` int(1) DEFAULT '1' COMMENT '0: delete',
   `sort` int(11) DEFAULT NULL,
-  `cate_shop` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `ktv_category`
 --
 
-INSERT INTO `ktv_category` (`id`, `category_name`, `type`, `date_create`, `status`, `sort`, `cate_shop`) VALUES
-(1, 'Chung cư, Penhouse', 0, '2013-08-27 15:08:16', 1, 1, 0),
-(3, 'Biệt thự, Nhà phố', 0, '2013-08-27 15:09:21', 1, 3, 0),
-(4, 'Khách sạn, Resort', 0, '2013-08-27 15:09:49', 1, 4, 0),
-(5, 'Showroom, văn phòng', 0, '2013-08-27 15:10:03', 1, 5, 0),
-(6, 'Nội Thất Cổ Điển', 0, '2013-09-10 22:02:21', 1, 6, 0),
-(7, 'Sofa', 1, '2013-09-09 22:19:19', 1, 10, 1),
-(8, 'Kệ tivi', 1, '2013-09-08 08:49:13', 1, 2, 1),
-(9, 'Bộ bàn ghế ăn', 1, '2013-09-08 08:49:05', 1, 3, 2),
-(10, 'Đèn chùm', 1, '2013-09-08 08:48:57', 1, 5, 5),
-(14, 'Nhà Hàng, Cafe, Spa, Beauty Salon', 0, '2013-09-10 22:00:34', 1, 7, 0),
-(15, 'Bàn Sofa', 1, '2013-09-23 14:51:08', 1, 2, 1),
-(16, 'Giường Ngủ', 1, '2013-09-23 14:50:10', 1, 1, 3);
+INSERT INTO `ktv_category` (`id`, `category_name`, `type`, `date_create`, `status`, `sort`) VALUES
+(3, 'Biệt Thự', 0, '2014-06-10 05:51:27', 1, 3),
+(4, 'Nhà Hàng, Khách Sạn, Spa', 0, '2013-08-27 15:09:49', 1, 4),
+(5, 'Văn Phòng', 0, '2013-08-27 15:10:03', 1, 5),
+(14, 'Nhà Phố', 0, '2013-09-10 22:00:34', 1, 7),
+(17, 'Chung cư', 0, '2014-06-10 05:44:28', 1, 1),
+(18, 'MDF', 1, '2014-06-10 06:06:59', 1, 1),
+(19, 'MFC', 1, '2014-06-10 06:08:07', 1, 2),
+(20, 'Polly Wood', 1, '2014-06-10 06:08:41', 1, 3),
+(21, 'Vật Liệu Phủ Bề Mặt', 1, '2014-06-10 06:09:23', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -259,26 +255,27 @@ CREATE TABLE IF NOT EXISTS `ktv_product` (
   `date_create` datetime DEFAULT NULL,
   `status` int(1) DEFAULT '1' COMMENT '0:delete',
   `sort` int(11) DEFAULT NULL,
-  `ishowhot` int(1) DEFAULT '0' COMMENT '1:hot',
+  `view_count` int(11) DEFAULT '0' COMMENT '1:hot',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=99 ;
 
 --
 -- Dumping data for table `ktv_product`
 --
 
-INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `time_finish`, `date_create`, `status`, `sort`, `ishowhot`) VALUES
-(87, 'Test1', 1, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
-(88, 'test2', 1, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', '3 months', '2014-05-27 04:15:25', 1, 21, 0),
-(89, 'test3', 1, 'mr.b', '50', 'HCM', '<p>Kh&ocirc;ng gian mở với nhiều c&acirc;y cối, tiểu cảnh xung quanh ng&ocirc;i nh&agrave;. Nội thất tinh tế, sang trọng với hầu hết c&aacute;c chi tiết từ da.</p>\r\n\r\n<p>M&agrave;u sơn chủ đạo l&agrave; m&agrave;u trắng, &aacute;nh s&aacute;ng v&agrave;ng dịu tạo kh&ocirc;ng gian mở.</p>\r\n\r\n<p>Tiết kiệm tối đa diện t&iacute;ch sử dụng, hệ thống tủ &acirc;m tường được bố tr&iacute; th&ocirc;ng minh</p>\r\n\r\n<p>Hệ thống điện, nước được thiết kế tự động h&oacute;a cao, độ bền cam kết từ 20 năm trở l&ecirc;n</p>\r\n\r\n<p>Bảo h&agrave;nh l&acirc;u d&agrave;i, 2 năm.</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 0),
-(90, 'test4', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
-(91, 'test5', 1, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', '2 month', '2014-05-27 05:20:07', 1, 0, 0),
-(92, 'test7', 1, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', '3 months', '2014-05-27 05:20:33', 1, 0, 0),
-(93, 'Test8', 1, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:00', 1, 0, 0),
-(94, 'test9', 1, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
-(95, 'test10', 1, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
-(96, 'test11', 1, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
-(97, 'test12', 1, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:22:12', 1, 0, 0);
+INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `time_finish`, `date_create`, `status`, `sort`, `view_count`) VALUES
+(87, 'Test1', 14, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
+(88, 'test2', 14, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', '3 months', '2014-05-27 04:15:25', 1, 21, 0),
+(89, 'test3', 14, 'mr.b', '50', 'HCM', '<p>Kh&ocirc;ng gian mở với nhiều c&acirc;y cối, tiểu cảnh xung quanh ng&ocirc;i nh&agrave;. Nội thất tinh tế, sang trọng với hầu hết c&aacute;c chi tiết từ da.</p>\r\n\r\n<p>M&agrave;u sơn chủ đạo l&agrave; m&agrave;u trắng, &aacute;nh s&aacute;ng v&agrave;ng dịu tạo kh&ocirc;ng gian mở.</p>\r\n\r\n<p>Tiết kiệm tối đa diện t&iacute;ch sử dụng, hệ thống tủ &acirc;m tường được bố tr&iacute; th&ocirc;ng minh</p>\r\n\r\n<p>Hệ thống điện, nước được thiết kế tự động h&oacute;a cao, độ bền cam kết từ 20 năm trở l&ecirc;n</p>\r\n\r\n<p>Bảo h&agrave;nh l&acirc;u d&agrave;i, 2 năm.</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 1),
+(90, 'test4', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
+(91, 'test5', 3, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', '2 month', '2014-05-27 05:20:07', 1, 0, 1),
+(92, 'test7', 3, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', '3 months', '2014-05-27 05:20:33', 1, 0, 1),
+(93, 'Test8', 17, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:00', 1, 0, 11),
+(94, 'test9', 3, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
+(95, 'test10', 17, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
+(96, 'test11', 3, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
+(97, 'test12', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:22:12', 1, 0, 0),
+(98, 'Nhà anh Chương quận 9', 14, 'Anh Chương', '100m2', 'Khu dân cư Thăng Long, Quận 9', '<p>It is really strange, since the pure SQL works. I&#39;ve tried going to the code of the Update() function, then I just say <code>exit($sql)</code> and I can see that the SQL is ok, it runs properly under phpMyAdmin, except when I let update() run.</p>\r\n', '3 tháng', '2014-06-14 11:51:45', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -293,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `ktv_product_image` (
   `description` varchar(255) DEFAULT NULL,
   `type` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
 
 --
 -- Dumping data for table `ktv_product_image`
@@ -334,7 +331,10 @@ INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`,
 (37, 97, 'bc/91/a26791bc.jpg', '', 21),
 (38, 97, '02/86/7a4e8602.jpg', '', 22),
 (51, 89, '52/dc/d834dc52.png', 'Ngoại cảnh', 0),
-(52, 89, 'd4/80/aa4c80d4.png', 'Nội Thất', 0);
+(52, 89, 'd4/80/aa4c80d4.png', 'Nội Thất', 0),
+(54, 98, '10/a8/8aefa810.jpg', '', 11),
+(55, 98, 'f5/f4/8282f4f5.jpg', '', 21),
+(56, 98, '96/c7/d912c796.jpg', '', 22);
 
 -- --------------------------------------------------------
 
@@ -373,8 +373,8 @@ CREATE TABLE IF NOT EXISTS `ktv_recruitment` (
   `summary` longtext NOT NULL,
   `content` longtext NOT NULL,
   `visible` tinyint(1) NOT NULL,
-  `creationDate` datetime NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '1' COMMENT '0: deleted',
+  `postdate` date NOT NULL,
+  `deadline` varchar(20) NOT NULL COMMENT '0: deleted',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -382,8 +382,8 @@ CREATE TABLE IF NOT EXISTS `ktv_recruitment` (
 -- Dumping data for table `ktv_recruitment`
 --
 
-INSERT INTO `ktv_recruitment` (`id`, `title`, `summary`, `content`, `visible`, `creationDate`, `status`) VALUES
-(1, 'Tuyển 50 designer', 'Tuyển 50 designer làm việc tại HCM', '<p>Hiện đang cần tuyển designer l&agrave;m việc tại HCM</p>\r\n\r\n<p>Lương từ 1k đến 2k/th&aacute;ng<br />\r\n&nbsp;</p>\r\n', 1, '2014-05-01 17:22:45', 1);
+INSERT INTO `ktv_recruitment` (`id`, `title`, `summary`, `content`, `visible`, `postdate`, `deadline`) VALUES
+(1, 'Tuyển 50 designer', 'Tuyển 50 designer làm việc tại HCM', '<p>Hiện đang cần tuyển designer l&agrave;m việc tại HCM</p>\r\n\r\n<p>Lương từ 1k đến 2k/th&aacute;ng<br />\r\n&nbsp;</p>\r\n', 1, '2014-05-01', '1');
 
 -- --------------------------------------------------------
 

@@ -35,7 +35,7 @@
 				{foreach key=i item=row from=$arrImages}
 				<tr {if $i%2==0}style="background-color:#E6E7E4;"{else} style="background-color:#D5EAFF;"{/if}>
 					<td width="20px"><input type="checkbox" name="txtCheckBoxId[]" value="{$row.id}" id="idCheck"/></td>
-					<td width="200px"><img src="{$smarty.const.HOST}/upload_thumb/product/{$row.file_name}" width="200" /></td>
+					<td width="200px"><img src="{$smarty.const.HOST}upload_thumb/product/{$row.file_name}" width="200" /></td>
 					<td>
 						<table width="100%"  cellpadding="0" cellspacing="5" align="center">
 							<tr>

@@ -56,15 +56,15 @@
 		</td>
 	</tr>
 	<tr class="login">
-		<td width="20%">Hiển thị index :<span class="alert">*</span></td>
-		<td width="80%" align="left">				
-			<input type="checkbox" name="chk_ishowhot" value="1" {if $arrDetail.ishowhot==1} checked="checked"{/if} />
-		</td>
-	</tr>
-	<tr class="login">
 		<td width="20%">Vị trí :<span class="alert">*</span></td>
 		<td width="80%" align="left">				
 			<input type="text" name="txt_sort" id="txt_sort" class="input" maxlength="255" value="{$arrDetail.sort}">
+		</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Lượt xem :<span class="alert">*</span></td>
+		<td width="80%" align="left">
+			<input type="text" name="txt_viewCount" id="txt_viewCount" class="input" maxlength="255" value="{$arrDetail.view_count}">
 		</td>
 	</tr>
 	<tr class="login">

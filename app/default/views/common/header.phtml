@@ -74,17 +74,13 @@
 								class="level_2 first last counter_1"><a class="level_2" href="#">Nội
 									Thất</a>
 								<ul class="main_navigation_level_3">
-									<li id="nav_project_interior_aparment" class="level_3 first"><a
-										class="level_3" href="{$smarty.const.HOST}projects">Chung cư</a></li>
-									<li id="nav_project_interior_house" class="level_3"><a
-										class="level_3" href="{$smarty.const.HOST}projects">Nhà Phố</a></li>
-									<li id="nav_project_interior_villa" class="level_3"><a
-										class="level_3" href="{$smarty.const.HOST}projects">Biệt Thự</a></li>
-									<li id="nav_project_interior_office" class="level_3"><a
-										class="level_3" href="{$smarty.const.HOST}projects">Văn Phòng</a></li>
-									<li id="nav_project_interior_hotel" class="level_3 last"><a
-										class="level_3" href="{$smarty.const.HOST}projects">Nhà Hàng, Khách Sạn, Spa</a></li>
-								</ul></li>
+									{foreach key=i item=type from=$projectTypes}
+										<li id="nav_project_interior_aparment" class="level_3 first">
+											<a class="level_3" href="{$smarty.const.HOST}projects?catId={$type.id}">{$type.category_name}</a>
+										</li>
+									{/foreach}
+								</ul>
+							</li>
 							<li id="nav_project_architect" class="level_2"><a class="level_2"
 								href="#">Kiến Trúc</a></li>
 							<li id="nav_project_realImgs" class="level_2"><a class="level_2"
@@ -99,16 +95,11 @@
 								class="level_2 first last counter_1"><a class="level_2" href="#">Gỗ
 									Công Nghiệp</a>
 								<ul class="main_navigation_level_3">
-									<li id="nav_woods_industrialWood_mdf" class="level_3 first"><a
-										class="level_3" href="#">MDF</a></li>
-									<li id="nav_woods_industrialWood_mfc" class="level_3"><a
-										class="level_3" href="#">MFC</a></li>
-									<li id="nav_woods_industrialWood_pollywood" class="level_3"><a
-										class="level_3" href="#">Polly Wood</a></li>
-									<li id="nav_woods_industrialWood" class="level_3"><a
-										class="level_3" href="#">Văn Phòng</a></li>
-									<li id="nav_woods_industrialWood_facialCover" class="level_3"><a
-										class="level_3" href="#">Vật Liệu Phủ Bề Mặt</a></li>
+									{foreach key=i item=type from=$materialTypes}
+										<li id="nav_project_interior_aparment" class="level_3 first">
+											<a class="level_3" href="#material?materialId={$type.id}">{$type.category_name}</a>
+										</li>
+									{/foreach}
 								</ul></li>
 							<li id="nav_woods_naturalWoods" class="level_2 last"><a
 								class="level_2" href="#">Kiến Trúc</a></li>

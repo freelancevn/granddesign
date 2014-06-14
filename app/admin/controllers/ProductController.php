@@ -47,13 +47,12 @@ class ProductController extends Zend_Controller_Action
 		$sUnbuilt_Area		= $objRequest->getParam('txtUnbuilt_Area', '');
 		$sTime_Finish		= $objRequest->getParam('txtTime_Finish', '');
 		$sContent			= $objRequest->getParam('txtContent', '');
-		$iShow				= $objRequest->getParam('chk_ishowhot', 0);
 		$iSort				= $objRequest->getParam('txt_sort', 1);
 		if($sName!='')
 		{
 			$objProduct			= new Product();
 			$arrData			= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'ishowhot'=>$iShow,'date_create'=>date('Y-m-d H:i:s'));
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'date_create'=>date('Y-m-d H:i:s'));
 			$objProduct->insertProduct($arrData);
 		}		
 		$this->_redirect(HOST_ADMIN.'/product');
@@ -73,22 +72,22 @@ class ProductController extends Zend_Controller_Action
 	
 	function dosaveeditAction()
 	{
-		$objRequest 		= $this->_request;
-		$iCategory			= $objRequest->getParam('cbo_Category', 1);
-		$sName				= $objRequest->getParam('txtName', '');
-		$sInvestors			= $objRequest->getParam('txtInvestors', '');
-		$sAddress			= $objRequest->getParam('txtAddress', '');
-		$sUnbuilt_Area		= $objRequest->getParam('txtUnbuilt_Area', '');
-		$sTime_Finish		= $objRequest->getParam('txtTime_Finish', '');
-		$sContent			= $objRequest->getParam('txtContent', '');
-		$iSort				= $objRequest->getParam('txt_sort', 1);
-		$iShow				= $objRequest->getParam('chk_ishowhot', 0);
-		$intID				= $objRequest->getParam('txtId', 0);
+		$objRequest = $this->_request;
+		$iCategory = $objRequest->getParam ( 'cbo_Category', 1 );
+		$sName = $objRequest->getParam ( 'txtName', '' );
+		$sInvestors = $objRequest->getParam ( 'txtInvestors', '' );
+		$sAddress = $objRequest->getParam ( 'txtAddress', '' );
+		$sUnbuilt_Area = $objRequest->getParam ( 'txtUnbuilt_Area', '' );
+		$sTime_Finish = $objRequest->getParam ( 'txtTime_Finish', '' );
+		$sContent = $objRequest->getParam ( 'txtContent', '' );
+		$iSort = $objRequest->getParam ( 'txt_sort', 1 );
+		$intID = $objRequest->getParam ( 'txtId', 0 );
+		$view_count = $objRequest->getParam ( 'txt_viewCount', 0 );
 		if($intID>0)
 		{
 			$objProduct		= new Product();
 			$arrData		= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'ishowhot'=>$iShow, 'sort'=>$iSort);
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'view_count'=>$view_count);
 			$strWhere		= 'id=' . $intID;
 			$objProduct->updateProduct($arrData, $strWhere);
 		}

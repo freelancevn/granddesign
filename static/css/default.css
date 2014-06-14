@@ -77,6 +77,14 @@ caption,th {
 	outline: medium none;
 }
 
+.rightbar_block_content {
+	border:thin;
+    display: block;
+    font-size: 16px;
+	height:150px;
+	width: 100%;
+}
+
 .right_block_cat h3 {
 	line-height: 35px;
 	font-weight: normal;

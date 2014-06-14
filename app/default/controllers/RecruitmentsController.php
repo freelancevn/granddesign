@@ -8,6 +8,7 @@ class RecruitmentsController extends Zend_Controller_Action {
     }
 
     function detailAction(){
+    	include_once ('common/header.php');
         $objRequest = $this->_request;
         $intRecruitmentId = $objRequest->getParam(Recruitment::ID, 0);
         $objRecruitment = new Recruitment();
