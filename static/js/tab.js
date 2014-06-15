@@ -22,14 +22,14 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("fengshui") != -1) {
 			$url = "http://granddesign.local/admin/fengshui";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else if($aaa.indexOf("blogs") != -1) {
-			$url = "http://granddesign.local/admin/blogs";
-			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else if($aaa.indexOf("clips") != -1) {
-			$url = "http://granddesign.local/admin/clips";
+		} else if($aaa.indexOf("blogs") != -1 || $aaa.indexOf("clips") != -1) {
+			$url = "http://granddesign.local/admin/clipblog";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else if($aaa.indexOf("product") != -1 || $aaa.indexOf("category") != -1) {
 			$url = "http://granddesign.local/admin/productgroup";
+			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
+		} else if($aaa.indexOf("/general") != -1 || $aaa.indexOf("category") != -1) {
+			$url = "http://granddesign.local/admin/general";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);

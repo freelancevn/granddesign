@@ -15,26 +15,20 @@
     <body>
     <ul class="tabs">
         <li>
-	        <a class="active" href="{$smarty.const.HOST_ADMIN}/IntroduceGroup" title="IntroduceGroup">Giới Thiệu</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/productgroup">Dự án</a>
         </li>
         <li>
     	    <a class="" href="{$smarty.const.HOST_ADMIN}/news" title="News">Tin Tức</a>
         </li>
         <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/productgroup">Dự án</a>
-        </li>
-        <li>
-        	<a class="" href="#tab4">Phong Thủy</a>
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/fengshui" title="#Fengshui">Phong Thủy</a>
         </li>
         <li>
         	<a class="" href="#tab5">Vật Liệu Gỗ</a>
         </li>
         <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/clips" title="#Clips">Clips</a>
-        </li>        
-        <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/blogs" title="#Blogs">Blogs</a>
-        </li>        
+        	<a class="" href="{$smarty.const.HOST_ADMIN}/clipblog" title="#Clips">Clips & Blogs</a>
+        </li>      
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/recruitment" title="Recruitment">Tuyển Dụng</a>
         </li>        
@@ -45,9 +39,11 @@
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/promotion" title="Promotions">Khuyến Mãi</a>
         </li>
-        
         <li>
-            <a class="" href="{$smarty.const.HOST_ADMIN}/picview" title="Quản trị nội dung con">Các nội dung khác</a>
+            <a class="" href="{$smarty.const.HOST_ADMIN}/picview" title="#Picview">Hình Trang Chủ</a>
+        </li>
+        <li>
+            <a class="" href="{$smarty.const.HOST_ADMIN}/general" title="general">Các nội dung khác</a>
         </li>
        {if $AppUI->id>0}
         <li>

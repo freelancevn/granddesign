@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='clipblog/clipblogheader.phtml'}
 
 <form name="frmClips" id="frmClips" action="{$smarty.const.HOST_ADMIN}/clips/dosaveedit" method="post" enctype="multipart/form-data">
 <input type="hidden" value="{$arrDetail.id}" name="txtId" />
@@ -69,4 +69,4 @@ $(document).ready(function() {
 </script>
 {/literal}
 
-{include file='common/footer.tpl'}
+{include file='clipblog/clipblogfooter.phtml'}

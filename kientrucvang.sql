@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.5
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 15, 2014 at 01:54 PM
--- Server version: 5.5.23
+-- Generation Time: Jun 15, 2014 at 03:45 PM
+-- Server version: 5.6.12-log
 -- PHP Version: 5.4.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `ktv_blogs` (
   `visible` tinyint(1) NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1' COMMENT '0:deleted',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `ktv_blogs`
@@ -41,7 +41,8 @@ CREATE TABLE IF NOT EXISTS `ktv_blogs` (
 
 INSERT INTO `ktv_blogs` (`id`, `description`, `link`, `visible`, `status`) VALUES
 (1, 'Google+', 'http://googleplus', 1, 1),
-(2, 'Facebook', 'http://facebook.com', 1, 1);
+(2, 'Facebook', 'http://facebook.com', 1, 1),
+(3, 'http://haha.vn', 'http://haha.vn', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `ktv_config` (
   `key_config` varchar(255) DEFAULT NULL,
   `key_value` longtext,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `ktv_config`
@@ -126,7 +127,11 @@ INSERT INTO `ktv_config` (`id`, `key_config`, `key_value`) VALUES
 (9, 'TITLE', 'GRANDDESIGN Saigon - Kiến trúc - Nội thất'),
 (10, 'KEYWORDS', 'thiết kế nội thất, thiet ke noi that, nhà đẹp, thiet ke nha dep, xay nha dep, kiến trúc, nội thất, xây dựng'),
 (11, 'DESCRIPTION', 'Nhà đẹp với phong cách thiết kế đơn giản và bố trí nội thất thông minh. Ánh sáng tràn ngập với các khung cửa kính lớn, thiên về cảnh quan xanh màu lá | granddesign.com.vn'),
-(12, 'PRICETABLE', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>T&ecirc;n</td>\r\n			<td>Gi&aacute; (USD)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>H&agrave; Trọng Đại</td>\r\n			<td>100.000k</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Nguyễn Văn Dương</td>\r\n			<td>1.000k</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n');
+(12, 'PRICETABLE', '<table border="1" cellpadding="1" cellspacing="1" style="width:500px">\r\n	<tbody>\r\n		<tr>\r\n			<td>T&ecirc;n</td>\r\n			<td>Gi&aacute; (USD)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>H&agrave; Trọng Đại</td>\r\n			<td>100.000k</td>\r\n		</tr>\r\n		<tr>\r\n			<td>Nguyễn Văn Dương</td>\r\n			<td>1.000k</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n'),
+(13, 'SLOGAN', 'SLOGAN'),
+(14, 'MISSIONANDVISION', '<p>MISSIONANDVISION UPDATED</p>\r\n'),
+(15, 'REGULATION', '<p>REGULATION UPDATED</p>\r\n'),
+(16, 'PROCESSFLOW', '<p>PROCESSFLOW UPDATED</p>\r\n');
 
 -- --------------------------------------------------------
 

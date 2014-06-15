@@ -7,5 +7,6 @@
         <p>Bảng Giá</p>
         <p><a href="{$smarty.const.HOST_ADMIN}/info" class="label_sub_menu">Thông tin nhân viên</a></p>
    		<p><a href="{$smarty.const.HOST_ADMIN}/footer" class="label_sub_menu">Thông tin Footer</a></p>
-    </div>
+   		<p><a href="{$smarty.const.HOST_ADMIN}/configside" class="label_sub_menu">Thông tin Website</a></p>
+</div>
 {include file='common/footer.tpl'}
