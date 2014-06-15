@@ -1,10 +1,10 @@
 <?php
-class News extends AbstractModel{
+class News extends AbstractModel {
 
     public $tableName = "ktv_news" ;
     
     public function getAllNews(){
-        $strQuery = 'SELECT n.id, n.title, n.summary, n.content, n.visible, n.creationDate FROM '.$this->tableName.' AS n';
+        $strQuery = 'SELECT n.id, n.title, n.summary, n.image,n.content, n.visible, n.creationDate, creationDate FROM '.$this->tableName.' AS n';
         return parent::getAll($strQuery);
     }
 

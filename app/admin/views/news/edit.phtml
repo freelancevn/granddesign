@@ -9,17 +9,22 @@
 	</tr>
 	<tr class="login">
 		<td width="20%">Tiêu đề:<span class="alert">*</span></td>
-		<td width="870%"><input type="text" id="txt_title" name="txt_title" class="input" maxlength="255" value="{$arrDetail.title}" />
+		<td width="80%"><input type="text" id="txt_title" name="txt_title" class="input" maxlength="255" value="{$arrDetail.title}" />
 		</td>
 	</tr>
 	<tr class="login">
 		<td width="20%">Tóm tắt:<span class="alert">*</span></td>
-		<td width="870%"><input type="text" id="txt_summary" name="txt_summary" class="input" maxlength="255" value="{$arrDetail.summary}" />
+		<td width="80%"><input type="text" id="txt_summary" name="txt_summary" class="input" maxlength="255" value="{$arrDetail.summary}" />
+		</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Hình đại diện:<span class="alert">*</span></td>
+		<td width="80%"><input type="text" id="txt_image" name="txt_image" class="input" maxlength="255" value="{$arrDetail.image}" />
 		</td>
 	</tr>
 	<tr class="login">
 		<td width="20%">Nội dung:<span class="alert">*</span></td>
-		<td width="870%">
+		<td width="80%">
 			<textarea id="txt_content" name="txt_content" style="width:95%;">{$arrDetail.content}</textarea>
 		{literal}
 		<script type="text/javascript">			
@@ -29,6 +34,11 @@
 			});
 		</script>
 		{/literal}
+		</td>
+	</tr>
+	<tr class="login">
+		<td width="20%">Lượt xem:<span class="alert">*</span></td>
+		<td width="80%"><input type="text" id="txt_view_count" name="txt_view_count" class="input" maxlength="255" value="{$arrDetail.view_count}" />
 		</td>
 	</tr>
 	<tr class="login">

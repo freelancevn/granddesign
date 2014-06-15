@@ -1,48 +1,17 @@
 {include file='common/header.phtml'}
-
-<div class="container">
-	
-		{foreach key=i item=row from=$arrList}
-			<td width="15%" valign="top">	 
-					{$row.summary}
-			</td>
-		{/foreach}
-		<!-- <div id="newMain">
-		
-			<div class="nw1 nh2 newsImage">
-				<img src="{$smarty.const.IMAGES}news/mh370.jpg" />			
+<div id="main" class="container">
+	{foreach key=i item=row from=$arrList}
+		<div class="w2news h1 black">
+			<img src="{$row.image}" />
+			<div class="newscontent">
+				{$row.summary}
 			</div>
-			
-			<div class="nw2 nh1 black newsTitle">
-				<a href="{$smarty.const.HOST}newsdetail">Malaysia bác tin MH370 xuất hiện ở Maldives</a>
-			</div>
-			
-			<div class="nw2 nh1 newsDate">
-				<strong>Thứ bảy, 22/3/2014 10:47 GMT+7</strong>
-			</div>
-			
-			<div class="nw2 nh3 newsSum">
-				Bộ trưởng Quốc phòng Malaysia hôm nay cho biết Maldives xác nhận thông tin về việc người dân thấy phi cơ lớn nghi là MH370 xuất hiện trong không phận quốc đảo này là không chính xác.
-			</div>		
-		</div>	
-		
-		<div id="newMain" >
-			<div class="nw1 nh2 newsImage">
-				<img src="{$smarty.const.IMAGES}news/vatthe.jpg" />			
-			</div>
-			
-			<div class="nw2 nh1 black newsTitle">
-				<strong>Radar Mỹ phát hiện vật thể 'cỡ lớn' dưới biển</strong>
-			</div>
-			
-			<div class="nw2 nh1 newsDate">
-				<strong>Thứ bảy, 22/3/2014 10:47 GMT+7</strong>
-			</div>
-			
-			<div class="nw2 nh3 newsSum">
-				Radar trên một máy bay trinh sát Mỹ phát hiện một thứ "cỡ lớn" dưới mặt nước phía nam Ấn Độ Dương, sau khi vệ tinh chụp được những vật thể có thể là mảnh vỡ của chuyến bay MH370 mất tích. 
-			</div>	
-		</div> -->
+			<label>
+				<h2>{$row.title}</h2>
+				<a href="{$smarty.const.HOST}readnews?pid={$row.id}">Ngày đăng: {$row.creationDate}</a>
+			</label>
+	</div>
+	{/foreach}
 </div>
-
+{include file='common/panel.phtml'}
 {include file='common/footer.phtml'}

@@ -352,7 +352,7 @@
 	height: 180px
 }
 
-#main .w2,#main .twitter {
+#main .w2 {
 	width: 458px
 }
 
@@ -363,6 +363,27 @@
 .w2 .wrapper {
 	width: 398px
 }
+
+#main .w2news {
+	border-style: 2px;
+    width: 458px;
+}
+
+#main .w2news>img {
+    width: 229px;
+	float: left;
+}
+
+#main .w2news> .newscontent {
+	float: left;
+    width: 229px;
+	min-height:229px;
+}
+
+.w2news .wrapper {
+    width: 398px
+}
+
 
 #main .w3 {
 	width: 689px

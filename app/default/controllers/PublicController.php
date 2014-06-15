@@ -72,7 +72,8 @@ class PublicController extends Zend_Controller_Action
 	
 	public function newsAction() {
 		
-		include_once ('common/header.php');		
+		include_once ('common/header.php');	
+		include_once('common/panel.php');
 		$objNews = new News();		
 		$arrList = $objNews->getListNewsAdmin(0, 10);
 		$this->view->arrList = $arrList ['result'];
