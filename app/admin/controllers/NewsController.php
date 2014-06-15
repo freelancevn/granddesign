@@ -1,5 +1,5 @@
 <?php
-class NewsController extends AbstractController{
+class NewsController extends AbstractController {
 
     function indexAction(){
         $objRequest = $this->_request;
@@ -23,7 +23,8 @@ class NewsController extends AbstractController{
         $title = $objRequest->getParam('txt_title', "");
         $summary = $objRequest->getParam('txt_summary', "");
         $content = $objRequest->getParam('txt_content', "");
-        $img = $objRequest->getParam('txt_img',"");
+        $img = $objRequest->getParam('txt_image',"");
+        $view_count = $objRequest->getParam('txt_view_count', "");
         $creationDate = $objRequest->getParam('txt_creationDate', null);
         if ($creationDate == null) {
             $now = new DateTime();
@@ -41,7 +42,8 @@ class NewsController extends AbstractController{
                         'content' => $content,
                         'creationDate' => $creationDate,
                         'visible' => $check,
-        				'image' =>$img
+        				'image' =>$img,
+        				'view_count' => $view_count
         );
         $objNews->insert($arrData);
         $this->_redirect(HOST_ADMIN . '/news');
@@ -60,7 +62,9 @@ class NewsController extends AbstractController{
         $id = $objRequest->getParam('txtId', 1);
         $title = $objRequest->getParam('txt_title', "");
         $summary = $objRequest->getParam('txt_summary', "");
+        $image = $objRequest->getParam('txt_image', "");
         $content = $objRequest->getParam('txt_content', "");
+        $view_count = $objRequest->getParam('txt_view_count', "");
         $ava = $objRequest->getParam('checkAvailable', null);
         $check = 0;
         if ($ava != null) {
@@ -74,7 +78,9 @@ class NewsController extends AbstractController{
                         'summary' => $summary,
                         'content' => $content,
                         'creationDate' => $creationDate,
-                        'visible' => $check 
+        				'image' => $image,
+                        'visible' => $check,
+        				'view_count' => $view_count
         );
         $strWhere = 'id=' . $id;
         $objNews->update($arrData, $strWhere);
