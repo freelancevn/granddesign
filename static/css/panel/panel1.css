@@ -1,0 +1,34 @@
+a img {
+	border: none;
+	position: relative
+}
+
+img.recent_thumb {
+    padding: 1px;
+    width: 55px;
+    height: 55px;
+    border: 0;
+    float: right;
+    margin: 0 0 2px 5px;
+}
+
+.recent_posts_with_thumbs {
+    float: left;
+    width: 100%;
+    min-height: 70px;
+    font-size: 12px;
+}
+
+ul.recent_posts_with_thumbs li {
+    padding-bottom: 1px;
+    padding-top: 1px;
+    min-height: 65px;
+}
+
+.recent_posts_with_thumbs a {
+    text-decoration: none;
+}
+
+.recent_posts_with_thumbs strong {
+    font-size: 10px;
+}

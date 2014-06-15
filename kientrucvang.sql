@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 14, 2014 at 03:51 PM
+-- Generation Time: Jun 15, 2014 at 01:54 PM
 -- Server version: 5.5.23
 -- PHP Version: 5.4.23
 
@@ -251,31 +251,33 @@ CREATE TABLE IF NOT EXISTS `ktv_product` (
   `unbuilt_area` varchar(50) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `content` text NOT NULL,
+  `introduce` varchar(255) NOT NULL,
   `time_finish` varchar(100) DEFAULT NULL,
   `date_create` datetime DEFAULT NULL,
   `status` int(1) DEFAULT '1' COMMENT '0:delete',
   `sort` int(11) DEFAULT NULL,
   `view_count` int(11) DEFAULT '0' COMMENT '1:hot',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=99 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100 ;
 
 --
 -- Dumping data for table `ktv_product`
 --
 
-INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `time_finish`, `date_create`, `status`, `sort`, `view_count`) VALUES
-(87, 'Test1', 14, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
-(88, 'test2', 14, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', '3 months', '2014-05-27 04:15:25', 1, 21, 0),
-(89, 'test3', 14, 'mr.b', '50', 'HCM', '<p>Kh&ocirc;ng gian mở với nhiều c&acirc;y cối, tiểu cảnh xung quanh ng&ocirc;i nh&agrave;. Nội thất tinh tế, sang trọng với hầu hết c&aacute;c chi tiết từ da.</p>\r\n\r\n<p>M&agrave;u sơn chủ đạo l&agrave; m&agrave;u trắng, &aacute;nh s&aacute;ng v&agrave;ng dịu tạo kh&ocirc;ng gian mở.</p>\r\n\r\n<p>Tiết kiệm tối đa diện t&iacute;ch sử dụng, hệ thống tủ &acirc;m tường được bố tr&iacute; th&ocirc;ng minh</p>\r\n\r\n<p>Hệ thống điện, nước được thiết kế tự động h&oacute;a cao, độ bền cam kết từ 20 năm trở l&ecirc;n</p>\r\n\r\n<p>Bảo h&agrave;nh l&acirc;u d&agrave;i, 2 năm.</p>\r\n', '2 month', '2014-05-27 04:16:17', 1, 22, 1),
-(90, 'test4', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
-(91, 'test5', 3, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', '2 month', '2014-05-27 05:20:07', 1, 0, 1),
-(92, 'test7', 3, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', '3 months', '2014-05-27 05:20:33', 1, 0, 1),
-(93, 'Test8', 17, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:00', 1, 0, 11),
-(94, 'test9', 3, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
-(95, 'test10', 17, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
-(96, 'test11', 3, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
-(97, 'test12', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', '2 month', '2014-05-27 05:22:12', 1, 0, 0),
-(98, 'Nhà anh Chương quận 9', 14, 'Anh Chương', '100m2', 'Khu dân cư Thăng Long, Quận 9', '<p>It is really strange, since the pure SQL works. I&#39;ve tried going to the code of the Update() function, then I just say <code>exit($sql)</code> and I can see that the SQL is ok, it runs properly under phpMyAdmin, except when I let update() run.</p>\r\n', '3 tháng', '2014-06-14 11:51:45', 1, 0, 1);
+INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `unbuilt_area`, `address`, `content`, `introduce`, `time_finish`, `date_create`, `status`, `sort`, `view_count`) VALUES
+(87, 'Test1', 14, 'Mr.A', '200', 'HCM', '<p>This is a test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-26 06:12:19', 1, 11, 0),
+(88, 'test2', 14, 'mr.b', '50', 'abc', '<p>Testing contents</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng theo kiến trúc cổ điển Pháp. Không gian sáng mở với khoảng sân vườn rộng rãi', '3 months', '2014-05-27 04:15:25', 1, 21, 1),
+(89, 'test3', 14, 'mr.b', '50', 'HCM', '<p>Kh&ocirc;ng gian mở với nhiều c&acirc;y cối, tiểu cảnh xung quanh ng&ocirc;i nh&agrave;. Nội thất tinh tế, sang trọng với hầu hết c&aacute;c chi tiết từ da.</p>\r\n\r\n<p>M&agrave;u sơn chủ đạo l&agrave; m&agrave;u trắng, &aacute;nh s&aacute;ng v&agrave;ng dịu tạo kh&ocirc;ng gian mở.</p>\r\n\r\n<p>Tiết kiệm tối đa diện t&iacute;ch sử dụng, hệ thống tủ &acirc;m tường được bố tr&iacute; th&ocirc;ng minh</p>\r\n\r\n<p>Hệ thống điện, nước được thiết kế tự động h&oacute;a cao, độ bền cam kết từ 20 năm trở l&ecirc;n</p>\r\n\r\n<p>Bảo h&agrave;nh l&acirc;u d&agrave;i, 2 năm.</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 04:16:17', 1, 22, 2),
+(90, 'test4', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
+(91, 'test5', 3, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:20:07', 1, 0, 1),
+(92, 'test7', 3, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '3 months', '2014-05-27 05:20:33', 1, 0, 1),
+(93, 'Test8', 17, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:00', 1, 0, 11),
+(94, 'test9', 3, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
+(95, 'test10', 17, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
+(96, 'test11', 3, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
+(97, 'test12', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:22:12', 1, 0, 0),
+(98, 'Nhà anh Chương quận 9', 14, 'Anh Chương', '100m2', 'Khu dân cư Thăng Long, Quận 9', '<p>It is really strange, since the pure SQL works. I&#39;ve tried going to the code of the Update() function, then I just say <code>exit($sql)</code> and I can see that the SQL is ok, it runs properly under phpMyAdmin, except when I let update() run.</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '3 tháng', '2014-06-14 11:51:45', 1, 0, 1),
+(99, 'Nhà chị Quỳnh kiểu Ý', 5, 'Chị Quỳnh', '150m2', 'Dương Minh Châu, Tây Ninh', '<p>Nh&agrave; phong c&aacute;ch &Yacute;, nội thất sang trọng, s&acirc;n vườn rộng r&atilde;i, c&oacute; hồ bơi, tiểu cảnh...</p>\r\n', 'Nhà phong cách Ý, nội thất sang trọng, sân vườn rộng rãi, có hồ bơi, tiểu cảnh...', '5 tháng', '2014-06-15 13:46:36', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -290,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `ktv_product_image` (
   `description` varchar(255) DEFAULT NULL,
   `type` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
 
 --
 -- Dumping data for table `ktv_product_image`
@@ -334,7 +336,10 @@ INSERT INTO `ktv_product_image` (`id`, `fk_product`, `file_name`, `description`,
 (52, 89, 'd4/80/aa4c80d4.png', 'Nội Thất', 0),
 (54, 98, '10/a8/8aefa810.jpg', '', 11),
 (55, 98, 'f5/f4/8282f4f5.jpg', '', 21),
-(56, 98, '96/c7/d912c796.jpg', '', 22);
+(56, 98, '96/c7/d912c796.jpg', '', 22),
+(57, 99, '67/a5/9d24a567.jpg', '', 11),
+(58, 99, '00/fa/0d7bfa00.jpg', '', 21),
+(59, 99, '6a/fb/7512fb6a.jpg', '', 22);
 
 -- --------------------------------------------------------
 

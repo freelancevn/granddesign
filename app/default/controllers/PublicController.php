@@ -5,6 +5,7 @@ class PublicController extends Zend_Controller_Action
     public function indexAction()
     {
 		include_once('common/header.php');
+		include_once('common/panel.php');
 		$objProduct	= new Product();
 		$indexPicture = new Picture();
 		$this->view->sliderPics = $indexPicture->getListSliderPictures();
@@ -14,49 +15,6 @@ class PublicController extends Zend_Controller_Action
 		$this->view->otherProducts = $objProduct->getTopProductByDisplaySizeAndCategory(0, true);
     }
 	
-	public function shopnoithatAction()
-	{
-		include_once('common/header.php');
-		$objRequest = $this->_request;
-		$iShop			= $objRequest->getParam('id', 0);
-		$iProID			= $objRequest->getParam('proid', 0);
-		$objCategory	= new Category();
-		$objProduct		= new Product();
-		$arrCate		= array(1=>array('name'=>'Phòng Khách'), 2=>array('name'=>'Bếp & Phòng Ăn'), 3=>array('name'=>'Phòng Ngủ'), 4=>array('name'=>'Phòng Vệ Sinh'), 5=>array('name'=>'Đèn Nội Thất'));
-		$arrShop		= $objCategory->getAllCategory(1);
-		$strName		= '';
-		foreach($arrShop as $rRows)
-		{
-			if($rRows['cate_shop']==1) $arrCate[1]['list'][]	= $rRows;
-			if($rRows['cate_shop']==2) $arrCate[2]['list'][]	= $rRows;
-			if($rRows['cate_shop']==3) $arrCate[3]['list'][]	= $rRows;
-			if($rRows['cate_shop']==4) $arrCate[4]['list'][]	= $rRows;
-			if($rRows['cate_shop']==5) $arrCate[5]['list'][]	= $rRows;
-			if($iShop==$rRows['id'])
-			{
-				$strName=$rRows['category_name'];
-			}
-		}
-		$this->view->arrShop	= $arrCate;
-		$arrList		= $objProduct->getShopbyCate($iShop,$iProID);
-		if($iProID>0)
-		{
-			$arrDetailShop		= $objProduct->getDetailShop($iProID);
-			$this->view->iProID	= $iProID;
-			$this->view->arrDetailShop	= $arrDetailShop;
-		}
-		$this->view->arrList	= $arrList;
-		$this->view->strName	= $strName;
-		$this->view->iShop		= $iShop;
-	}
-	
-	public function xuongsanxuatAction()
-	{
-		include_once('common/header.php');
-		$objConfig	= new Config();
-		$arrConfig	= $objConfig->getConfig('FACTORY');
-		$this->view->arrConfig		= $arrConfig;
-	}
 	
 	public function aboutAction()
 	{
@@ -130,6 +88,7 @@ class PublicController extends Zend_Controller_Action
 	public function projectsAction()
 	{
 		include_once('common/header.php');
+		include_once('common/panel.php');
 		$catId = $this->_request->getParam('catId');
 		$productsArray = array();
 		if ($catId > 0) {

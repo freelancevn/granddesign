@@ -47,12 +47,13 @@ class ProductController extends Zend_Controller_Action
 		$sUnbuilt_Area		= $objRequest->getParam('txtUnbuilt_Area', '');
 		$sTime_Finish		= $objRequest->getParam('txtTime_Finish', '');
 		$sContent			= $objRequest->getParam('txtContent', '');
+		$sIntroduce			= $objRequest->getParam('txtIntroduce', '');
 		$iSort				= $objRequest->getParam('txt_sort', 1);
 		if($sName!='')
 		{
 			$objProduct			= new Product();
 			$arrData			= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'date_create'=>date('Y-m-d H:i:s'));
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'introduce'=>$sIntroduce, 'content'=>$sContent, 'sort'=>$iSort, 'date_create'=>date('Y-m-d H:i:s'));
 			$objProduct->insertProduct($arrData);
 		}		
 		$this->_redirect(HOST_ADMIN.'/product');
@@ -80,6 +81,7 @@ class ProductController extends Zend_Controller_Action
 		$sUnbuilt_Area = $objRequest->getParam ( 'txtUnbuilt_Area', '' );
 		$sTime_Finish = $objRequest->getParam ( 'txtTime_Finish', '' );
 		$sContent = $objRequest->getParam ( 'txtContent', '' );
+		$sIntroduce = $objRequest->getParam ( 'txtIntroduce', '' );
 		$iSort = $objRequest->getParam ( 'txt_sort', 1 );
 		$intID = $objRequest->getParam ( 'txtId', 0 );
 		$view_count = $objRequest->getParam ( 'txt_viewCount', 0 );
@@ -87,7 +89,7 @@ class ProductController extends Zend_Controller_Action
 		{
 			$objProduct		= new Product();
 			$arrData		= array('fk_category'=>$iCategory, 'product_name'=>$sName, 'investors'=>$sInvestors, 'address'=>$sAddress, 
-			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'content'=>$sContent, 'sort'=>$iSort, 'view_count'=>$view_count);
+			'unbuilt_area'=>$sUnbuilt_Area, 'time_finish'=>$sTime_Finish, 'introduce'=>$sIntroduce, 'content'=>$sContent, 'sort'=>$iSort, 'view_count'=>$view_count);
 			$strWhere		= 'id=' . $intID;
 			$objProduct->updateProduct($arrData, $strWhere);
 		}

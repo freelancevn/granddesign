@@ -109,17 +109,23 @@ class Product
 		$topOne = $this->db->fetchRow( $query );
 		
 		if (isset($topOne['id'])) {
-			$topId = $topId . $topOne ['id'] . ',';
+			$topId = $topId . $topOne ['id'];
 			array_push ( $productsByCategory, $topOne);
 		}
 		
 		$query = 'select p.id as id, p.product_name as productName, i.file_name as image, i.type as imgType from `ktv_product` as p, `ktv_product_image` as i where p.fk_category=' . $catId . ' and i.fk_product=p.id and i.type=21 order by p.`view_count` desc limit 1, 2';
 		$topTwoThree = $this->db->fetchAll ( $query );
 		if (isset($topTwoThree[0]['id'])) {
+			if ($topId != '(') {
+				$topId = $topId . ',';
+			}
 			array_push ( $productsByCategory, $topTwoThree [0]);
-			$topId = $topId . $topTwoThree[0]['id'] . ',';
+			$topId = $topId . $topTwoThree[0]['id'];
 		}
 		if (isset($topTwoThree[1]['id'])) {
+			if ($topId != '(') {
+				$topId = $topId . ',';
+			}
 			array_push ( $productsByCategory, $topTwoThree [1]);
 			$topId = $topId . $topTwoThree[1]['id'];
 		}
@@ -136,7 +142,7 @@ class Product
 	}
 	
 	public function getBestProjects() {
-		$query = 'select p.id, p.product_name, p.view_count, i.file_name from ktv_product as p, ktv_product_image as i where i.fk_product=p.id and i.type=22 order by p.view_count desc limit 0,2';
+		$query = 'select p.id, p.product_name, (if(length(p.introduce)>95, concat(substring(p.introduce,1,95), "..."), p.introduce)) as introduce, p.view_count, i.file_name from ktv_product as p, ktv_product_image as i where i.fk_product=p.id and i.type=22 order by p.view_count desc limit 0,9';
 		$bestProjects = $this->db->query($query);
 		return $bestProjects;
 	}

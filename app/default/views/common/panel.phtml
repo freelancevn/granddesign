@@ -1,8 +1,25 @@
 <div class="rightbar">
 	<div class="rightbar_block">
-		<h3 class="rightbar_block_title">Dự Án Nổi Bật</h3>
-		<!-- {$smarty.const.HOST}upload_thumb/product/-->
-		<div class="rightbar_block_content"></div>
+		<h3 class='rightbar_block_title'>Dự Án Nổi Bật</h2>
+		<div class='widget-content'>
+		<div id="sai">
+		<ul class="recent_posts_with_thumbs" style="position: absolute; margin: 0px; padding: 0px;">
+			{foreach key=i item=project from=$bestProjects}
+			    <li style="height: 78px;" class="clearfix">
+			    	<a href="{$smarty.const.HOST}projectdesign?pid={$project.id}" target="_top">
+				        <img class="recent_thumb" src="{$smarty.const.HOST}upload_thumb/product/{$project.file_name}">
+			    	</a>
+			        <b>
+			            <a href="{$smarty.const.HOST}projectdesign?pid={$project.id}" target="_top">{$project.product_name}</a>
+			        </b>
+			        <br>
+			            <i>{$project.introduce}</i>
+			        <br>
+			     </li>
+			{/foreach}
+			</ul>
+		</div>
+</div>
 	</div>
 	<div class="rightbar_block">
 		<h3 class="rightbar_block_title">Tin Mới</h3>
