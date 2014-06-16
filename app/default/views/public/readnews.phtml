@@ -1,0 +1,17 @@
+{include file='common/header.phtml'}
+<div id="main" class="container">
+	<div class="newscontent">
+		<br>
+		<center><h2>{$newsInfo.title}</h2></center>
+		<br>
+			<h6>Ngày Đăng: {$newsInfo.creationDate}</h6>
+		<br>
+			<strong>{$newsInfo.summary}</strong>
+		<br>
+			{$newsInfo.content}
+		<br>
+	</div>
+	<br>
+</div>
+{include file='common/panel.phtml'}
+{include file='common/footer.phtml'}

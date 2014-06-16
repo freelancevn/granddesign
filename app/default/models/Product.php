@@ -142,7 +142,7 @@ class Product
 	}
 	
 	public function getBestProjects() {
-		$query = 'select p.id, p.product_name, (if(length(p.introduce)>95, concat(substring(p.introduce,1,95), "..."), p.introduce)) as introduce, p.view_count, i.file_name from ktv_product as p, ktv_product_image as i where i.fk_product=p.id and i.type=22 order by p.view_count desc limit 0,9';
+		$query = 'select p.id, (if(length(p.product_name)>50, concat(substring(p.product_name,1,50), "..."), p.product_name)) as product_name, (if(length(p.introduce)>95, concat(substring(p.introduce,1,95), "..."), p.introduce)) as introduce, p.view_count, i.file_name from ktv_product as p, ktv_product_image as i where i.fk_product=p.id and i.type=22 order by p.view_count desc limit 0,9';
 		$bestProjects = $this->db->query($query);
 		return $bestProjects;
 	}

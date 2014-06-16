@@ -16,4 +16,14 @@ $(document).ready(function() {
 		height : 0,
 		direction : 'up'
 	});
+	
+	$('#sai1').vTicker({
+		speed : 500,
+		pause : 3000,
+		showItems : 5,
+		animation : 'fade',
+		mousePause : false,
+		height : 0,
+		direction : 'up'
+	});
 });

@@ -120,8 +120,18 @@ class PublicController extends Zend_Controller_Action
 		}
 	}
 	
-	public function newsdetailAction() {
-	
+	public function readnewsAction() {
+		include_once('common/header.php');
+		include_once('common/panel.php');
+		$news = new News();
+		$newsId = $this->_request->getParam('newsId');
+		if (isset($newsId)) {
+			$news->updateNewsViewCount($newsId, 0);
+			$newsInfo = $news->getNewsById($newsId);
+			$this->view->newsInfo = $newsInfo;
+		} else {
+			$this->_redirect(HOST . 'news');
+		}
 	}
 
 }
