@@ -191,3 +191,15 @@ div {
 	background:#fff;
 	color:#F00;
 }
+/*
+ * Table
+ */
+.admintable {
+	border: 1px solid red;
+	width:100%;
+}
+
+.admintable {
+	border: thin;
+	width:100%;
+}
