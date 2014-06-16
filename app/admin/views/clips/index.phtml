@@ -11,12 +11,12 @@
 		<td colspan="2">
 			<table cellpadding="2" cellspacing="1" class="admintable">
         		<tr class="label_title">
-          			<td align="center" width="3%" valign="top">
+          			<td align="center" width="5%" valign="top">
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
-          			<td align="center" valign="top">Mô tả</td>
-                    <td align="center" valign="top">Mã clip</td>	
-                    <td align="center" valign="top">Hiển thị</td>
+          			<td align="center" valign="top" width="15%">Mô tả</td>
+                    <td align="center" valign="top" width="75%">Mã clip</td>	
+                    <td align="center" valign="top" width="5%">Hiển thị</td>
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -27,7 +27,7 @@
 					<td width="15%" valign="top">	 
 					&nbsp;<a href="{$smarty.const.HOST_ADMIN}/clips/edit?id={$row.id}" class="ahref">{$row.description|stripslashes}</a>
 					</td>
-					<td width="50%" valign="top">
+					<td width="75%" valign="top">
 							{$row.embed}
 					</td>
                     <td width="5%" valign="top">

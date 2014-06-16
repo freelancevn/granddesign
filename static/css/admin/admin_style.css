@@ -195,11 +195,10 @@ div {
  * Table
  */
 .admintable {
-	border: 1px solid red;
-	width:100%;
-}
-
-.admintable {
 	border: thin;
 	width:100%;
+}
+.menubar {
+	text-align:left;
+	vertical-align:top;
 }
