@@ -19,9 +19,6 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("recruitment") != -1) {
 			$url = "http://granddesign.local/admin/recruitment";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else if($aaa.indexOf("fengshui") != -1) {
-			$url = "http://granddesign.local/admin/fengshui";
-			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else if($aaa.indexOf("blogs") != -1 || $aaa.indexOf("clips") != -1) {
 			$url = "http://granddesign.local/admin/clipblog";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);

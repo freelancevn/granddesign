@@ -11,16 +11,17 @@
 		<td colspan="2">
 			<table cellpadding="2" cellspacing="1" class="admintable">
         		<tr class="label_title">
-          			<td align="center" width="3%" valign="top">
+          			<td align="center" width="5%" valign="top">
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
-          			<td align="center" valign="top">Tiêu đề</td>
-                    <td align="center" valign="top">Tóm tắt</td>	
-					<td align="center" valign="top">Nội dung</td>
-					<td align="center" valign="top">Hình Ảnh </td>
-                    <td align="center" valign="top">Ngày đăng</td>
-                    <td align="center" valign="top">Lượt Xem</td>							
-                    <td align="center" valign="top">Hiển thị</td>
+                    <td align="center" valign="top" width="5%">Loại tin</td>
+          			<td align="center" valign="top" width="10%">Tiêu đề</td>
+                    <td align="center" valign="top" width="10%">Tóm tắt</td>	
+					<td align="center" valign="top" width="30%">Nội dung</td>
+					<td align="center" valign="top" width="20%">Hình Ảnh </td>
+                    <td align="center" valign="top" width="10%">Ngày đăng</td>
+                    <td align="center" valign="top" width="5%">Lượt Xem</td>							
+                    <td align="center" valign="top" width="5%">Hiển thị</td>
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -28,22 +29,22 @@
 					<td width="5%" align="center" valign="top">
 						<input type="checkbox" name="txtCheckBoxId[]" value="{$row.id}" id="idCheck"/>
 					</td>
-					<td width="15%" valign="top">	 
+					<td width="5%" valign="top">{if $row.newstype==1} Tin Tức {else } Phong Thủy {/if}</td>
+					<td width="10%" valign="top">	 
 					&nbsp;<a href="{$smarty.const.HOST_ADMIN}/news/edit?id={$row.id}" class="ahref">{$row.title|stripslashes}</a>
 					</td>
-                    <td width="15%" valign="top">{$row.summary}	</td>
-					<td width="50%" valign="top" height="200px">{$row.content}</td>
-					<td width="50%" valign="top"><img src="{$row.image}" width="100px" height="100px""></td>
+                    <td width="10%" valign="top">{$row.summary}	</td>
+					<td width="30%" valign="top" height="200px">{$row.content}</td>
+					<td width="20%" valign="top"><img src="{$row.image}" width="100px" height="100px""></td>
 					<td width="10%" valign="top">{$row.creationDate}</td>
-					<td width="10%" valign="top">{$row.view_count}</td>
-                    <td width="5%" valign="top">
+					<td width="5%" valign="top">{$row.view_count}</td>
+                    <td width="5%" align="center" valign="top">
                     	{if $row.visible == 1}
 							<input type="checkbox" name="checkVisible" id="checkVisible" checked disabled="disabled"/>
 				    	{else}
 				    		<input type="checkbox" name="checkVisible" id="checkVisible" disabled="disabled"/>
 				    	{/if}
 					</td>
-					
 				</tr>
 				{/foreach}
 				{else}

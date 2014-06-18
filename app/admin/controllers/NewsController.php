@@ -35,9 +35,11 @@ class NewsController extends AbstractController {
         if ($ava != null) {
             $check = 1;
         }
+        $type=$objRequest->getParam('type', 1);
         $objNews = new News();
         $arrData = array (
                         'title' => $title,
+                        'newstype' => $type,
                         'summary' => $summary,
                         'content' => $content,
                         'creationDate' => $creationDate,
@@ -61,6 +63,7 @@ class NewsController extends AbstractController {
         $objRequest = $this->_request;
         $id = $objRequest->getParam('txtId', 1);
         $title = $objRequest->getParam('txt_title', "");
+        $type = $objRequest->getParam('type', 1);
         $summary = $objRequest->getParam('txt_summary', "");
         $image = $objRequest->getParam('txt_image', "");
         $content = $objRequest->getParam('txt_content', "");
@@ -75,6 +78,7 @@ class NewsController extends AbstractController {
         $objNews = new News();
         $arrData = array (
                         'title' => $title,
+                        'newstype' => $type,
                         'summary' => $summary,
                         'content' => $content,
                         'creationDate' => $creationDate,

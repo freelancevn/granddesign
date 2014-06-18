@@ -7,6 +7,15 @@
 	<tr class="label_title">
 		<td colspan="2">Cập nhật Tin Tức</td>
 	</tr>
+    <tr class="login">
+		<td width="20%">Looại Tin:<span class="alert">*</span></td>
+		<td width="80%">
+		    <select name="type">
+					<option value="1">Tin Tức</option>
+					<option value="2" {if $arrDetail.newstype==2} selected="selected" {/if}>Phong Thủy</option>
+			</select>
+		</td>
+	</tr>
 	<tr class="login">
 		<td width="20%">Tiêu đề:<span class="alert">*</span></td>
 		<td width="80%"><input type="text" id="txt_title" name="txt_title" class="input" maxlength="255" value="{$arrDetail.title}" />

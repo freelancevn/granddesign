@@ -21,9 +21,6 @@
     	    <a class="" href="{$smarty.const.HOST_ADMIN}/news" title="News">Tin Tức</a>
         </li>
         <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/fengshui" title="#Fengshui">Phong Thủy</a>
-        </li>
-        <li>
         	<a class="" href="#tab5">Vật Liệu Gỗ</a>
         </li>
         <li>
@@ -43,7 +40,7 @@
             <a class="" href="{$smarty.const.HOST_ADMIN}/picview" title="#Picview">Hình Trang Chủ</a>
         </li>
         <li>
-            <a class="" href="{$smarty.const.HOST_ADMIN}/general" title="general">Các nội dung khác</a>
+            <a class="" href="{$smarty.const.HOST_ADMIN}/general/about" title="general">Các nội dung khác</a>
         </li>
        {if $AppUI->id>0}
         <li>
