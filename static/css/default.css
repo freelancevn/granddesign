@@ -45,54 +45,6 @@ caption,th {
 	padding: 0 0px
 }
 
-.rightbar {
-    float: left;
-    display: inline;
-    width: 265px;
-	height: auto;
-	margin-top: 15px;
-    padding: 0 0px;
-	overflow: hidder;
-}
-
-.rightbar_block {
-	background: non repeat scroll 0 0 #FFFFFF;
-	clear: both;
-	display: block;
-	position: relative;
-	border: 1px solid #E2E2E2;
-	margin-bottom: 10px;
-	min-height: 450px;
-}
-
-.rightbar_block_title {
-	background: repeat-x scroll center bottom #5F5F5F;
-	color: #FFFFFF;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: 5px;
-	display: block;
-	font-size: 16px;
-	margin-bottom: 15px;
-	outline: medium none;
-}
-
-.rightbar_block_content {
-	border:thin;
-    display: block;
-    font-size: 16px;
-	height:150px;
-	width: 100%;
-}
-
-.right_block_cat h3 {
-	line-height: 35px;
-	font-weight: normal;
-}
-
-.rightbar_block_nav {
-}
-
 .designcontainer {
     display: inline;
     padding: 0 20px

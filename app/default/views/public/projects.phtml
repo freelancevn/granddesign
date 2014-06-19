@@ -7,7 +7,7 @@
 		<img src="{$smarty.const.HOST}upload/product/{$topOne.image}" />
 		<label>
 		<h2>{$topOne.productName}</h2>
-		<a	href="{$smarty.const.HOST}projectdesign?pid={$topOne.id}" title="{$topOne.productName}">detail &raquo;</a>
+		<a	href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $topOne.productName, $topOne.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$topOne.productName}">detail &raquo;</a>
 		</label>
 	</div>
 
@@ -15,7 +15,7 @@
 		<img src="{$smarty.const.HOST}upload/product/{$topTwo.image}" />
 		<label>
 		<h2>{$topTwo.productName}</h2>
-		<a	href="{$smarty.const.HOST}projectdesign?pid={$topTwo.id}" title="{$topTwo.productName}">detail &raquo;</a>
+		<a	href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $topTwo.productName, $topTwo.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$topTwo.productName}">detail &raquo;</a>
 		</label>
 	</div>
 
@@ -23,7 +23,7 @@
 		<img src="{$smarty.const.HOST}upload/product/{$topThree.image}" />
 		<label>
 		<h2>{$topThree.productName}</h2>
-		<a	href="{$smarty.const.HOST}projectdesign?pid={$topThree.id}" title="{$topThree.productName}">detail &raquo;</a>
+		<a	href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $topThree.productName, $topThree.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$topThree.productName}">detail &raquo;</a>
 		</label>
 	</div>
 
@@ -32,7 +32,7 @@
 		<div class="w1 h1 black">
 		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
 			<h2>{$product.productName}</h2>
-			<a href="{$smarty.const.HOST}projectdesign?pid={$product.id}" title="{$product.productName}">detail &raquo;</a>
+			<a	href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $product.productName, $product.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$product.productName}">detail &raquo;</a>
 		</label>
 	</div>	
 	{/if}
@@ -40,7 +40,7 @@
 		<div class="w2 h1 black">
 		<img src="{$smarty.const.HOST}/upload/product/{$product.image}" /> <label>
 			<h2>{$product.productName}{$product.imgType}</h2>
-			<a href="{$smarty.const.HOST}projectdesign?pid={$product.id}" title="{$product.productName}">detail &raquo;</a>
+			<a	href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $product.productName, $product.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$product.productName}">detail &raquo;</a>
 		</label>
 	</div>
 	{/if}

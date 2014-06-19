@@ -43,7 +43,7 @@
 		<div id="page" class="clearfix">
 			<div id="header" class="container">
 				<h1 id="companyLogo">
-					<a href="{$smarty.const.HOST}"><img src="{$smarty.const.IMAGES}logo.png" alt="Grand Design" /></a>
+					<a href="{$smarty.const.HOST}" title="GrandDesignSaiGon Trang chủ website công ty tư vấn, thi công thiết kế nội ngoại thất chuyên nghiệp"><img src="{$smarty.const.IMAGES}logo.png" alt=""GrandDesignSaiGon Trang chủ website công ty tư vấn, thi công thiết kế nội ngoại thất chuyên nghiệp"" /></a>
 				</h1>
 				<div id="header_actions">
 					<a href={$headerPic.link}><img src="{$smarty.const.HOST}data/upload/{$headerPic.imgname}"/></a>
@@ -52,8 +52,11 @@
 			<div id="navigation" class="container">
 				<a id="navigation_content" name="navigation_content"></a>
 				<ul id="main_navigation_level_1">
-					<li id="nav_homepage" class="level_1 first"><a class="level_1"
-						href="{$smarty.const.HOST}">Trang Chủ</a></li>
+					<li id="nav_homepage" class="level_1 first">
+					   <a href="{$smarty.const.HOST}" title="GrandDesignSaiGon Trang chủ website công ty tư vấn, thi công thiết kế nội ngoại thất chuyên nghiệp">
+					       <img src="{$smarty.const.IMAGES}home/home_icon_45_40.png" alt="GrandDesignSaiGon Trang chủ website công ty tư vấn, thi công thiết kế nội ngoại thất chuyên nghiệp" />
+					   </a>
+					</li>
 					<li id="nav_introduce" class="level_1"><a class="level_1" href="#">Giới
 							Thiệu</a>
 						<ul class="main_navigation_level_2 level_2_children_1">
@@ -68,7 +71,7 @@
 							<li id="nav_introduce_overview_" class="level_2 last"><a
 								class="level_2" href="#">Bảng Giá</a></li>
 						</ul></li>
-					<li id="nav_news" class="level_1"><a class="level_1" href="{$smarty.const.HOST}news">Tin
+					<li id="nav_news" class="level_1"><a class="level_1" href="{$smarty.const.HOST}tin-tuc/">Tin
 							Tức</a></li>
 					<li id="nav_project" class="level_1"><a class="level_1" href="#">Dự
 							Án</a>
@@ -79,7 +82,9 @@
 								<ul class="main_navigation_level_3">
 									{foreach key=i item=type from=$projectTypes}
 										<li id="nav_project_interior_aparment" class="level_3 first">
-											<a class="level_3" href="{$smarty.const.HOST}projects?catId={$type.id}">{$type.category_name}</a>
+											<a class="level_3" 
+											     href="{$utils->buildProjectCategorySEOLink($smarty.const.HOST, $type.category_name, $type.id)}" title="Các thiết kế nội thất cho {$type.category_name}">
+											{$type.category_name} </a>
 										</li>
 									{/foreach}
 								</ul>

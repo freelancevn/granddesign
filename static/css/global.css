@@ -136,12 +136,8 @@ div#main {
 
 div#footer {
 	border-top: 1px solid #666;
-	padding: 23px 0 26px;
-	margin: 0 20px
-}
-
-.ie6 div#footer {
-	margin-right: -3px
+	padding: 20px 0px 10px 0px;
+	margin-left: 80px;
 }
 
 .section_cont {

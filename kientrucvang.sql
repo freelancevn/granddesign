@@ -282,12 +282,12 @@ INSERT INTO `ktv_product` (`id`, `product_name`, `fk_category`, `investors`, `un
 (90, 'test4', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:19:47', 1, 0, 0),
 (91, 'test5', 3, 'mr.b', '50', 'HCM', '<p>Test 6</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:20:07', 1, 0, 1),
 (92, 'test7', 3, 'Mr.A', '50', 'HN', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '3 months', '2014-05-27 05:20:33', 1, 0, 1),
-(93, 'Test8', 17, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:00', 1, 0, 11),
+(93, 'Test8', 17, 'Mr.C', '50', 'BP', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:00', 1, 0, 14),
 (94, 'test9', 3, 'Mr.D', '50', 'HN', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:18', 1, 0, 0),
 (95, 'test10', 17, 'Mr.D', '200', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:40', 1, 0, 0),
 (96, 'test11', 3, 'Mr.D', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:21:57', 1, 0, 0),
 (97, 'test12', 17, 'mr.b', '50', 'HCM', '<p>Test content</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '2 month', '2014-05-27 05:22:12', 1, 0, 0),
-(98, 'Nhà anh Chương quận 9', 14, 'Anh Chương', '100m2', 'Khu dân cư Thăng Long, Quận 9', '<p>It is really strange, since the pure SQL works. I&#39;ve tried going to the code of the Update() function, then I just say <code>exit($sql)</code> and I can see that the SQL is ok, it runs properly under phpMyAdmin, except when I let update() run.</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '3 tháng', '2014-06-14 11:51:45', 1, 0, 1),
+(98, 'Nhà anh Chương quận 9', 14, 'Anh Chương', '100m2', 'Khu dân cư Thăng Long, Quận 9', '<p>It is really strange, since the pure SQL works. I&#39;ve tried going to the code of the Update() function, then I just say <code>exit($sql)</code> and I can see that the SQL is ok, it runs properly under phpMyAdmin, except when I let update() run.</p>\r\n', 'Thi công bởi GrandDesignSaiGon trong 2 tháng', '3 tháng', '2014-06-14 11:51:45', 1, 0, 4),
 (99, 'Nhà chị Quỳnh kiểu Ý', 5, 'Chị Quỳnh', '150m2', 'Dương Minh Châu, Tây Ninh', '<p>Nh&agrave; phong c&aacute;ch &Yacute;, nội thất sang trọng, s&acirc;n vườn rộng r&atilde;i, c&oacute; hồ bơi, tiểu cảnh...</p>\r\n', 'Nhà phong cách Ý, nội thất sang trọng, sân vườn rộng rãi, có hồ bơi, tiểu cảnh...', '5 tháng', '2014-06-15 13:46:36', 1, 0, 1);
 
 -- --------------------------------------------------------

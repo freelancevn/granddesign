@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('#sai').vTicker({
 		speed : 500,
 		pause : 3000,
-		showItems : 5,
+		showItems : 6,
 		animation : 'fade',
 		mousePause : false,
 		height : 0,

@@ -2,13 +2,13 @@
 <div id="main" class="container">
 	{foreach key=i item=row from=$arrList}
 		<div class="w2news h1 black">
-			<img src="{$row.image}" />
+			<img src="{$row.image}" alt="{$row.title}"/>
 			<div class="newscontent">
 				{$row.summary}
 			</div>
 			<label>
 				<h2>{$row.title}</h2>
-				<a href="{$smarty.const.HOST}readnews?newsId={$row.id}">Ngày đăng: {$row.creationDate}</a>
+				<a href="{$utils->buildNewsSEOLink($smarty.const.HOST, $row.title, $row.id)}" title="{$row.title}">Ngày đăng: {$row.creationDate}</a>
 			</label>
 	</div>
 	{/foreach}

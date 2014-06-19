@@ -1,50 +1,54 @@
 <div class="rightbar">
 	<div class="rightbar_block">
-		<h3 class='rightbar_block_title'>Dự Án Nổi Bật</h3>
-		<div class='widget-content'>
-		<div id="sai">
-		<ul class="recent_posts_with_thumbs" style="position: absolute; margin: 0px; padding: 0px;">
-			{foreach key=i item=project from=$bestProjects}
-			    <li style="height: 78px;" class="clearfix">
-			    	<a href="{$smarty.const.HOST}projectdesign?pid={$project.id}" target="_top">
-				        <img class="recent_thumb" src="{$smarty.const.HOST}upload_thumb/product/{$project.file_name}">
-			    	</a>
-			        <b>
-			            <a href="{$smarty.const.HOST}projectdesign?pid={$project.id}" target="_top">{$project.product_name}</a>
-			        </b>
-			        <br>
-			            <i>{$project.introduce}</i>
-			        <br>
-			     </li>
-			{/foreach}
-		</ul>
+		<div class='rightbar_block_title'>
+			<img src="{$smarty.const.IMAGES}panel/panel_icon.png" name="panel_icon" id="panel_icon">
+			<h3 class="rightbar_block_title title">Dự Án Nổi Bật</h3>
 		</div>
+		<div class='rightbar_block_content'>
+			<div id="sai">
+				<ul class="recent_posts_with_thumbs">
+					{foreach key=i item=project from=$bestProjects}
+					<li><a href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $project.product_name, $project.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$project.product_name}" target="_top"> 
+						<img class="recent_thumb"
+							alt="Thiết kế nội ngoại thất $project.product_name"
+							src="{$smarty.const.HOST}upload_thumb/product/{$project.file_name}"
+						>
+					</a> <b> <a href="{$utils->buildProjectDesignSEOLink($smarty.const.HOST, $project.product_name, $project.id)}" title="Chi tiết thiết kế nội ngoại thất dự án {$project.product_name}" target="_top">{$project.product_name}</a>
+					</b> <br> <i>{$project.introduce}</i> <br></li>
+					{/foreach}
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="rightbar_block">
-		<h3 class="rightbar_block_title">Tin Mới</h3>
-		<div class='widget-content'>
-		<div id="sai1">
-		<ul class="recent_posts_with_thumbs" style="position: absolute; margin: 0px; padding: 0px;">
-			{foreach key=i item=news from=$hotNewsAndGeomacyEntries}
-			    <li style="height: 78px;" class="clearfix">
-			    	<a href="{$smarty.const.HOST}readnews?pid={$news.id}" target="_top">
-				        <img class="recent_thumb" src="{$news.image}">
-			    	</a>
-			        <b>
-			            <a href="{$smarty.const.HOST}readnews?newsId={$news.id}" target="_top">{$news.title}</a>
-			        </b>
-			        <br>
-			            <i>{$news.summary}</i>
-			        <br>
-			     </li>
-			{/foreach}
-			</ul>
+		<div class='rightbar_block_title'>
+			<img src="{$smarty.const.IMAGES}panel/panel_icon.png" name="panel_icon" id="panel_icon">
+			<h3 class="rightbar_block_title title">Tin Mới</h3>
+		</div>
+		<div class='rightbar_block_content'>
+			<div id="sai1"">
+				<ul class="recent_posts_with_thumbs">
+					{foreach key=i item=news from=$hotNewsAndGeomacyEntries}
+					<li><a href="{$smarty.const.HOST}readnews?pid={$news.id}" target="_top"> <img class="recent_thumb" src="{$news.image}" alt="{$news.title}">
+					</a> <b> <a href="{$smarty.const.HOST}readnews?newsId={$news.id}" target="_top">{$news.title}</a>
+					</b> <br> <i>{$news.summary}</i> <br></li>
+					{/foreach}
+				</ul>
+			</div>
 		</div>
 	</div>
-	</div>
 	<div class="rightbar_block">
-		<h3 class="rightbar_block_title">Thống kê</h3>
+		<div class='rightbar_block_title'>
+			<img src="{$smarty.const.IMAGES}panel/panel_icon.png" name="panel_icon" id="panel_icon">
+			<h3 class="rightbar_block_title title">Mạng Xã Hội</h3>
+		</div>
+		<div class='rightbar_block_content'>
+			<iframe
+				src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FFacebookDevelopers&amp;width=245&amp;height=400&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=false&amp;appId=178739935539014"
+				scrolling="no" frameborder="0" style="overflow: hidden; width: 100%; height: 100%;" allowTransparency="true">
+				</iframe>
+		</div>
 	</div>
+</div>
 </div>
 </div>

@@ -1,7 +1,7 @@
 <?php
 class PublicController extends Zend_Controller_Action
 {
-
+	
     public function indexAction()
     {
 		include_once('common/header.php');
@@ -90,7 +90,9 @@ class PublicController extends Zend_Controller_Action
 	{
 		include_once('common/header.php');
 		include_once('common/panel.php');
-		$catId = $this->_request->getParam('catId');
+		$requestURI = $_SERVER['REQUEST_URI'];
+		$groupParam = Utils::decodeProjectCategorySEOLink($requestURI);
+		$catId = $groupParam[2];
 		$productsArray = array();
 		if ($catId > 0) {
 			$objProduct	= new Product();
@@ -100,7 +102,7 @@ class PublicController extends Zend_Controller_Action
 			$this->view->topThree = $projectsByCat[2];
 			$this->view->otherProjects = $projectsByCat[3];
 		} else {
-			$this->redirect(HOST);
+			$this->_redirect(HOST);
 		}
 	}
 	
@@ -108,7 +110,9 @@ class PublicController extends Zend_Controller_Action
 	{
 		include_once('common/header.php');
 		$objRequest = $this->_request;
-		$projectId	= $objRequest->getParam('pid', 0);
+		$requestURI = $_SERVER['REQUEST_URI'];
+		$groupParam = Utils::decodeProjectDesignSEOLink($requestURI);
+		$projectId = $groupParam[2];
 		if($projectId > 0)
 		{
 			$objProduct	= new Product();
@@ -124,13 +128,15 @@ class PublicController extends Zend_Controller_Action
 		include_once('common/header.php');
 		include_once('common/panel.php');
 		$news = new News();
-		$newsId = $this->_request->getParam('newsId');
+		$requestURI = $_SERVER['REQUEST_URI'];
+		$groupParam = Utils::decodeNewsSEOLink($requestURI);
+		$newsId = $groupParam[2];
 		if (isset($newsId)) {
 			$news->updateNewsViewCount($newsId, 0);
 			$newsInfo = $news->getNewsById($newsId);
 			$this->view->newsInfo = $newsInfo;
 		} else {
-			$this->_redirect(HOST . 'news');
+			$this->_redirect(HOST . 'tin-tuc/');
 		}
 	}
 

@@ -2,20 +2,6 @@
 <div id="main" class="designcontainer">
 </div>
 <div id="wrapperslide">
-<!-- 
-	<div id="bigPic">
-		{foreach key=i item=image from=$productImages}
-			<img src="{$smarty.const.HOST}/upload/product/{$image.file_name}" title="{$image.description}"/>
-		{/foreach}
-	</div>
-	<ul id="thumbs">
-		{foreach key=i item=image from=$productImages}
-			<li {if $i+1==1}class='active'{/if} rel="{$i+1}">
-				<img src="{$smarty.const.HOST}/upload_thumb/product/{$image.file_name}"/>
-			</li>
-		{/foreach}
-	</ul>
- -->
  	<!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1190px;
@@ -34,8 +20,7 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1190px; height: 450px; overflow: hidden;">
         	{foreach key=i item=image from=$productImages}
-				<img src="{$smarty.const.HOST}/upload/product/{$image.file_name}" title="{$image.description}"/>
-				 <div>
+			<div>
                 <img u="image" src="{$smarty.const.HOST}/upload/product/{$image.file_name}" title="{$image.description}" />
                 <img u="thumb" src="{$smarty.const.HOST}/upload_thumb/product/{$image.file_name}" />
             </div>
@@ -87,5 +72,6 @@
 	<br>
 	<h4>Thông tin dự án: {$productDetails.content}</h4>
 	<br>
+</div>
 </div>
 {include file='common/footer.phtml'}

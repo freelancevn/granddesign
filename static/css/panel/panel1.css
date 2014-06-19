@@ -1,3 +1,59 @@
+.rightbar {
+    float: left;
+    display: inline;
+    width: 265px;
+    height: auto;
+    margin-top: 15px;
+    padding: 0 0px;
+    overflow: hidder;
+}
+
+.rightbar_block {
+    background-color: #E5EAEE;
+    clear: both;
+    display: block;
+    position: relative;
+    border: 2px solid #E2E2E2;
+	border-radius: 5px;
+    margin-bottom: 5px;
+	margin-left: 2px;
+    height: 440px;
+}
+
+.rightbar_block_title {
+    background-image: -moz-linear-gradient(center top , #FFFFFF 0.5pt, #E5EAEE 80%);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.rightbar_block_title > img {
+	float:left;
+	padding-right: 10px;
+}
+
+.rightbar_block_title title {
+	float:left;
+    margin-top: 5px;
+}
+
+.rightbar_block_content {
+    border:thin;
+    display: block;
+    font-size: 16px;
+	padding-left: 2px;
+    height:100%;
+    width: 100%;
+}
+
+.right_block_cat h3 {
+    line-height: 35px;
+    font-weight: bold;
+}
+
 a img {
 	border: none;
 	position: relative
@@ -7,26 +63,26 @@ img.recent_thumb {
     padding: 1px;
     width: 55px;
     height: 55px;
-    border: 0;
-    float: right;
+    float: left;
     margin: 0 0 2px 5px;
 }
 
 .recent_posts_with_thumbs {
-    float: left;
+    float: right;
     width: 100%;
     min-height: 70px;
     font-size: 12px;
+	padding-bottom: 5px;
+    padding-top: 5px;
+	position: absolute;
 }
 
 ul.recent_posts_with_thumbs li {
-    padding-bottom: 1px;
-    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+	padding-left: 1px;
+	border-bottom: 1px #E2E2E2 dashed;
     min-height: 65px;
-}
-
-.recent_posts_with_thumbs a {
-    text-decoration: none;
 }
 
 .recent_posts_with_thumbs strong {

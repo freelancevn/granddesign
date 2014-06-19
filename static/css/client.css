@@ -436,121 +436,6 @@ h1#account_general_heading span { color: #FFFFFF; float: left; font-size: 2em; p
 /* end - Outdoor subcategory styling */
 
 
-
-
-/* Christmas subcategory styling */
-
-.subcategory-MAINimage-holder8 {
-    background: none repeat scroll 0 0 #d72b35;
-    border: 0 none;
-    float: left;
-	width:750px;
-    height: 121px;
-	margin-bottom:10px;
-}
-
-.subcategory-Headline-holder8 {
-    background: none repeat scroll 0 0 #d72b35;
-    border: 0 none;
-    float: left;
-	width:240px;
-    height: 96px;
-}
-
-.subcategory-Headline-holder8 h1 {
-
-	font-family: 'DINHabitatBold';
-	font-size: 28px;
-	line-height: 30px;
-	color: #ffffff;
-	padding-left:20px;
-	padding-top:15px;
-
-}
-
-.subcategory-Copy-holder8 {
-    background: none repeat scroll 0 0 #d72b35;
-    border: 0 none;
-    float: left;
-	width:480px;
-    height: 96px;
-}
-
-.subcategory-Copy-holder8 p {
-
-	font-family: 'DINHabitatReg';
-	font-size: 16px;
-	line-height: 18px;
-	color: #ffffff;
-	padding-left:10px;
-	padding-top:15px;
-
-}
-
-/* end - Christmas subcategory styling */
-
-
-
-
-
-
-
-/* Clearance subcategory styling */
-
-.subcategory-MAINimage-holder9 {
-    background: none repeat scroll 0 0 #EE2719;
-    border: 0 none;
-    float: left;
-	width:750px;
-    height: 121px;
-	margin-bottom:10px;
-}
-
-.subcategory-Headline-holder9 {
-    background: none repeat scroll 0 0 #EE2719;
-    border: 0 none;
-    float: left;
-	width:240px;
-    height: 96px;
-}
-
-.subcategory-Headline-holder9 h1 {
-
-	font-family: 'DINHabitatBold';
-	font-size: 28px;
-	line-height: 30px;
-	color: #ffffff;
-	padding-left:20px;
-	padding-top:15px;
-
-}
-
-.subcategory-Copy-holder9 {
-    background: none repeat scroll 0 0 #EE2719;
-    border: 0 none;
-    float: left;
-	width:480px;
-    height: 96px;
-}
-
-.subcategory-Copy-holder9 p {
-
-	font-family: 'DINHabitatReg';
-	font-size: 16px;
-	line-height: 18px;
-	color: #ffffff;
-	padding-left:10px;
-	padding-top:15px;
-
-}
-
-/* end - Clearance subcategory styling */
-
-
-
-
-
-
 .js div#product_relations_tabs_content div.tab {height: 1% !important;} 
 
 #store_finder_search {
@@ -561,13 +446,6 @@ h1#account_general_heading span { color: #FFFFFF; float: left; font-size: 2em; p
 display: none; 
 } 
 
-.js div#store_finder_search {
-	display: none;
-}
-
-div#store_finder_select {
-	border-top: 1px solid #CCCCCC
-}
 
 .ie7 ul#apply_filter li.filter_group ul li 
 {
@@ -579,25 +457,6 @@ div#store_finder_select {
 	padding-left:10px;
 	float:left;
 }
-
-#productsList p.product_price span.was_price {line-height:23px;}
-
-/* hide newsletter sign up in my account */
-.account #footerSectionRight #footer_enews_form, 
-.account #footerSectionRight .header {
-	display:none;
-}
-
-.heritage h1#banner-1 { background:#000 url(../images/banners/heritage_920x150.jpg) no-repeat; height:496px;}
-.delivery h1#banner-1 { background:#000 url(../images/banners/delivery_920x150.jpg) no-repeat; height:295px;}
-
-div#product_info p#dimensions {margin-bottom:8px;} 
-/* end */
-
-
-.bestsellerProductInfo strong {
-font-size: 1.20em;
-} 
 
 ul#category_grid li{height:185px}
 

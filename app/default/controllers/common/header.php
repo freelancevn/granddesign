@@ -16,4 +16,7 @@
 	
 	$picture = new Picture();
 	$this->view->headerPic = $picture->getHeaderPicture();
+	
+	$utils = new Utils();
+	$this->view->utils = $utils;
 ?>
