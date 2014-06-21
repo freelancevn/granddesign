@@ -7,10 +7,7 @@ $(document).ready(function(){
 	// If no match is found, use the first link as the initial active tab.
 	$links.filter(function(){
 		$aaa = location.href;
-		if ($aaa.indexOf("contact") != -1) {
-			$url = "http://granddesign.local/admin/contact";
-			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else if($aaa.indexOf("promotion") != -1) {
+		if($aaa.indexOf("promotion") != -1) {
 			$url = "http://granddesign.local/admin/promotion";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else if($aaa.indexOf("news") != -1) {
@@ -25,8 +22,8 @@ $(document).ready(function(){
 		} else if($aaa.indexOf("product") != -1 || $aaa.indexOf("category") != -1) {
 			$url = "http://granddesign.local/admin/productgroup";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
-		} else if($aaa.indexOf("/general") != -1 || $aaa.indexOf("category") != -1) {
-			$url = "http://granddesign.local/admin/general";
+		} else if($aaa.indexOf("general") != -1) {
+			$url = "http://granddesign.local/admin/general/about";
 			$active = $($links.filter('[href="'+$url+'"]')[0] || $links[0]);
 		} else {
 			$active = $($links.filter('[href="'+location.href+'"]')[0] || $links[0]);

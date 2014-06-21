@@ -10,38 +10,38 @@
 			<td colspan="2">
 				<table cellpadding="2" cellspacing="1">
 					<tr class="label_title">
-						<td align="center" width="3%" valign="top"><input type="checkbox"
+						<td align="center" width="5%" valign="top"><input type="checkbox"
 							name="checkAll" value=""
 							onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"
 							width="1px" height="1px" /></td>
-						<td align="center" valign="top">Tên công trình</td>
-						<td align="center" valign="top">Tên category</td>
-						<td align="center" valign="top">Khách hàng</td>
-						<td align="center" valign="top">Địa chỉ</td>
-						<td align="center" valign="top">Diện tích</td>
-						<td align="center" valign="top">Thời gian</td>
-						<td align="center" valign="top">Hình ảnh</td>
-						<td align="center" valign="top">Vị trí</td>
-						<td align="center" valign="top">Lượt xem</td>
+						<td align="center" valign="top" width="15%">Tên công trình</td>
+						<td align="center" valign="top" width="10%">Tên category</td>
+						<td align="center" valign="top" width="10%">Khách hàng</td>
+						<td align="center" valign="top" width="15%">Địa chỉ</td>
+						<td align="center" valign="top" width="10%">Diện tích</td>
+						<td align="center" valign="top" width="5%">Thời gian</td>
+						<td align="center" valign="top" width="20%">Hình ảnh</td>
+						<td align="center" valign="top" width="5%">Vị trí</td>
+						<td align="center" valign="top" width="5%">Lượt xem</td>
 					</tr>
 					{foreach key=i item=row from=$arrList}
 					<tr class="{cycle values="content_odd,content_even"}">
-						<td width="3%" align="center" valign="top"><input type="checkbox"
+						<td width="5%" align="center" valign="top"><input type="checkbox"
 							name="txtCheckBoxId[]" value="{$row.id}" id="idCheck" /></td>
-						<td width="35%" valign="top">&nbsp;<a
+						<td width="15%" valign="top">&nbsp;<a
 							href="{$smarty.const.HOST_ADMIN}/product/edit?id={$row.id}"
 							class="ahref">{$row.product_name}</a>
 						</td>
-						<td valign="top" width="10%">{$row.category_name}</td>
-						<td width="15%" valign="top">{$row.investors}</td>
+						<td width="10%" valign="top">{$row.category_name}</td>
+						<td width="10%" valign="top">{$row.investors}</td>
 						<td width="15%" valign="top">{$row.address}</td>
-						<td width="25%" valign="top">{$row.unbuilt_area}</td>
-						<td width="25%" valign="top">{$row.time_finish}</td>
-						<td valign="top"><a
+						<td width="10%" valign="top">{$row.unbuilt_area}</td>
+						<td width="5%" valign="top">{$row.time_finish}</td>
+						<td width="20%" valign="top"><a
 							href="{$smarty.const.HOST_ADMIN}/product/images?id={$row.id}"
 							class="ahref">Hình ảnh ({$row.countImages})</a></td>
 						<td width="5%" valign="top">{$row.sort}</td>
-						<td width="5%" valign="top">{$row.view_count}</td>
+						<td width="5%" valign="top" align="right">{$row.view_count}</td>
 					</tr>
 					{/foreach}
 

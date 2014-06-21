@@ -28,11 +28,7 @@
         </li>      
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/recruitment" title="Recruitment">Tuyển Dụng</a>
-        </li>        
-        <li>
-        	<a class="" href="{$smarty.const.HOST_ADMIN}/contact" title="Contacts">Liên Hệ</a>
-        </li>
-        
+        </li>   
         <li>
         	<a class="" href="{$smarty.const.HOST_ADMIN}/promotion" title="Promotions">Khuyến Mãi</a>
         </li>
@@ -40,7 +36,7 @@
             <a class="" href="{$smarty.const.HOST_ADMIN}/picview" title="#Picview">Hình Trang Chủ</a>
         </li>
         <li>
-            <a class="" href="{$smarty.const.HOST_ADMIN}/general/about" title="general">Các nội dung khác</a>
+            <a class="" href="{$smarty.const.HOST_ADMIN}/general/about" title="#General">Các nội dung khác</a>
         </li>
        {if $AppUI->id>0}
         <li>
