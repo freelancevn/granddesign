@@ -2,10 +2,10 @@
 
 <form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/news">
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
-
     <tr>
-		<td align="center" class="lable_list">Tin Tức</td>
-		<td align="right"></td>
+    </tr>
+    <tr class="label_title">
+		<td colspan="2">Tin Tức</td>
     </tr>
 	<tr>
 		<td colspan="2">
@@ -35,7 +35,7 @@
 					</td>
                     <td width="10%" valign="top">{$row.summary}	</td>
 					<td width="30%" valign="top" height="200px">{$row.content}</td>
-					<td width="20%" valign="top"><img src="{$row.image}" width="100px" height="100px""></td>
+					<td width="20%" valign="top"><img src="{$row.image}" width="100px" height="100px"/></td>
 					<td width="10%" valign="top">{$row.creationDate}</td>
 					<td width="5%" valign="top">{$row.view_count}</td>
                     <td width="5%" align="center" valign="top">

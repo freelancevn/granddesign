@@ -4,8 +4,7 @@
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
 
     <tr>
-		<td align="center" class="lable_list">Tuyển Dụng</td>
-		<td align="right"></td>
+		<td colspan="2" align="left">Tuyển Dụng</td>
     </tr>
 	<tr>
 		<td colspan="2">
@@ -14,12 +13,12 @@
           			<td align="center" width="3%" valign="top">
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
-          			<td align="center" valign="top">Vị trí tuyển dụng</td>
-                    <td align="center" valign="top">Mô tả sơ lược</td>	
-					<td align="center" valign="top">Nội dung tuyển dụng</td>
-                    <td align="center" valign="top">Ngày đăng</td>
-                    <td align="center" valign="top">Hạn nộp hồ sơ</td>
-                    <td align="center" valign="top">Cho phép hiển thị</td>
+          			<td align="center">Vị trí tuyển dụng</td>
+                    <td align="center">Mô tả sơ lược</td>	
+					<td align="center">Nội dung tuyển dụng</td>
+                    <td align="center">Ngày đăng</td>
+                    <td align="center">Hạn nộp hồ sơ</td>
+                    <td align="center">Hiển thị</td>
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -42,12 +41,8 @@
 					<td width="7%" valign="top">
 							{$row.deadline}
 					</td>
-                    <td width="7%" valign="top">
-                    {if $row.visible == 1}
-							<input type="checkbox" name="checkVisible" id="checkVisible" checked disabled="disabled"/>
-				    {else}
-				    		<input type="checkbox" name="checkVisible" id="checkVisible" disabled="disabled"/>
-				    {/if}
+                    <td width="7%" valign="top" align="center">
+							<input type="checkbox" name="checkVisible" id="checkVisible" {if $row.visible == 1}checked{/if} disabled="disabled"/>
 					</td>
 					
 				</tr>

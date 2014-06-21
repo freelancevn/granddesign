@@ -2,9 +2,8 @@
 <form name="frmMissionAndVision" id="frmMissionAndVision" action="{$smarty.const.HOST_ADMIN}/general/missionandvision" method="post">
 <input type="hidden" name="btSave" value="save"/>
 <table width="100%" border="0" cellpadding="3" cellspacing="1">
-	 <tr>
-		<td align="center" class="lable_list">Tầm Nhìn - Sứ Mệnh</td>
-		<td align="right"></td>
+	 <tr class="label_title">
+		<td colspan="2">Tầm Nhìn - Sứ Mệnh</td>
     </tr>
 	{if $smarty.get.errid > 0 || $smarty.session.newsid > 0}
 	<tr class="login">

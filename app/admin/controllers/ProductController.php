@@ -20,7 +20,7 @@ class ProductController extends Zend_Controller_Action
 		if(count($objRequest->getParam('txtCheckBoxId',array())) >0 ){				
 			$objProduct->deleteData($objRequest->getParam('txtCheckBoxId',array()));
 		}
-		$intLimit						= 10;
+		$intLimit						= 20;
 		$intTotal						= 0;
 		$intOffset						= ($intPage - 1) * $intLimit;
 		$arrList						= $objProduct->getListProductAdmin($intOffset,$intLimit);

@@ -2,9 +2,8 @@
 <form name="frmRegulation" id="frmRegulation" action="{$smarty.const.HOST_ADMIN}/general/regulation" method="post">
 <input type="hidden" name="btSave" value="save"/>
 <table width="100%" border="0" cellpadding="3" cellspacing="1">
-	 <tr>
-		<td align="center" class="lable_list">Nội Quy Công Ty</td>
-		<td align="right"></td>
+	 <tr class="label_title">
+		<td colspan="2">Nội Quy Công Ty</td>
     </tr>
 	{if $smarty.get.errid > 0 || $smarty.session.newsid > 0}
 	<tr class="login">

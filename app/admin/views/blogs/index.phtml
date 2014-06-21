@@ -29,12 +29,8 @@
 					<td width="50%" valign="top">
 							{$row.link}
 					</td>
-                    <td width="5%" valign="top">
-                    {if $row.visible == 1}
-							<input type="checkbox" name="checkVisible" id="checkVisible" checked disabled="disabled"/>
-				    {else}
-				    		<input type="checkbox" name="checkVisible" id="checkVisible" disabled="disabled"/>
-				    {/if}
+                    <td width="5%" valign="top" align="center">
+						<input type="checkbox" name="checkVisible" id="checkVisible" {if $row.visible == 1} checked {/if} disabled="disabled"/>
 					</td>
 					
 				</tr>

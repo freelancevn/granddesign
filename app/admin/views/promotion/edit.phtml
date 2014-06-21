@@ -34,12 +34,9 @@
 	<tr class="login">
 		<td width="30%">Cho phép hiển thị:</td>
 		<td width="70%" align="left">
-			{if $arrDetail.available == 1}
-				<input type="checkbox" name="checkAvailable" id="availableCheck" checked/>
-			{else}
-				<input type="checkbox" name="checkAvailable" id="availableCheck"/>
-			{/if} 
-		</td>
+				<input type="checkbox" name="checkAvailable" id="availableCheck" {if $arrDetail.available == 1} checked {/if}/>
+        </td>
+              
 	</tr>
 	<tr class="login">
 		<td colspan="2" align="center"> 							

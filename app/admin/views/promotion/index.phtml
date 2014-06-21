@@ -3,9 +3,8 @@
 <form name="frmNews" method="post" action="{$smarty.const.HOST_ADMIN}/promotion">
 <table width="100%" border="0" cellpadding="1" cellspacing="1">
 
-    <tr>
-		<td align="center" class="lable_list">Danh sách Khyến Mãi</td>
-		<td align="right"></td>
+    <tr class="label_title">
+		<td colspan="2">Các Khyến Mãi</td>
     </tr>
 	<tr>
 		<td colspan="2">
@@ -14,10 +13,10 @@
           			<td align="center" width="3%" valign="top">
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
-          			<td align="center" valign="top">Tên Khuyến Mãi</td>
-                    <td align="center" valign="top">Nội dung Khuyến Mãi</td>	
-					<td align="center" valign="top">Thứ tự</td>
-                    <td align="center" valign="top">Hiển thị</td>							
+          			<td align="center">Tên Khuyến Mãi</td>
+                    <td align="center">Nội dung Khuyến Mãi</td>	
+					<td align="center">Thứ tự</td>
+                    <td align="center">Hiển thị</td>							
         		</tr>
 				{if $arrList}
 				{foreach key=i item=row from=$arrList}		
@@ -30,17 +29,12 @@
                     <td width="42%" valign="top">	 
 					{$row.content}
 					</td>
-					<td width="5%" valign="top">
+					<td width="5%" valign="top" align="center">
 							{$row.order}
 					</td>
-                    <td width="5%" valign="top">
-                    {if $row.available == 1}
-							<input type="checkbox" name="checkAvailable" id="availableCheck" checked disabled="disabled"/>
-				    {else}
-				    		<input type="checkbox" name="checkAvailable" id="availableCheck" disabled="disabled"/>
-				    {/if}
+                    <td width="5%" valign="top" align="center">
+							<input type="checkbox" name="checkAvailable" id="availableCheck" {if $row.available ==1} checked {/if} disabled="disabled"/>
 					</td>
-					
 				</tr>
 				{/foreach}
 				{else}

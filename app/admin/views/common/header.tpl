@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="{$smarty.const.JS}listform.js"></script>
 		<script type="text/javascript" src="{$smarty.const.JS}ckeditor/ckeditor.js"></script>
         <script type="text/javascript" src="{$smarty.const.JS}/tab.js"></script>    
+                <script type="text/javascript" src="{$smarty.const.JS}/subtab.js"></script>
         <script type="text/javascript" src="{$smarty.const.JS}/datetimepicker.js"></script>  
    	</head>
     <body>
