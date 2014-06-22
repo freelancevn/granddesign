@@ -41,13 +41,17 @@
 			return $groupParam;
 		}
 		
-		public function buildNewsSEOLink($host, $newsTitle, $newsId) {
-			return $host. "tin-tuc/" . $this->convertToUnsignStringWithDash($newsTitle) . "-" . $newsId . ".html";
+		public function buildNewsSEOLink($host, $newsTitle, $newsId, $newstype) {
+		    $newstypeStr = "tin-tuc/";
+		    if ($newstype == 2) {
+		        $newstypeStr = "phong-thuy/";
+		    }
+			return $host. $newstypeStr . $this->convertToUnsignStringWithDash($newsTitle) . "-" . $newsId . ".html";
 		}
 		
-		public static function decodeNewsSEOLink($requestURI) {
+		public static function decodeNewsSEOLink($requestURI, $newstypeStr) {
 			$groupParam = array();
-			preg_match('/\/tin-tuc\/(.+)-([0-9]+)\.html$/', $requestURI, $groupParam);
+			preg_match('/\/'.$newstypeStr.'\/(.+)-([0-9]+)\.html$/', $requestURI, $groupParam);
 			return $groupParam;
 		}
 	}

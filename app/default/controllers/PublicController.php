@@ -69,17 +69,7 @@ class PublicController extends Zend_Controller_Action
 		$arrDetail		= $objService->getServiceAdmin($iDetailID);
 		$this->view->arrDetail	= $arrDetail;
 	}
-	
-	public function newsAction() {
-		
-		include_once ('common/header.php');	
-		include_once('common/panel.php');
-		$objNews = new News();		
-		$arrList = $objNews->getListNewsAdmin(0, 10);
-		$this->view->arrList = $arrList ['result'];
-		$this->view->intTotal = $arrList ['total'];		
-	}
-	
+
 	/*
 	 * Should:
 	 * + Return the project which has greatest number of view_count and its represent 2x2 image
@@ -124,12 +114,28 @@ class PublicController extends Zend_Controller_Action
 		}
 	}
 	
+/*
+* News (Tin tuc)
+*/
+	public function newsAction() {
+		include_once ('common/header.php');	
+		include_once('common/panel.php');
+		$objNews = new News();		
+		$arrList = $objNews->getListNewsAdmin(0, 10, 1);
+		$this->view->arrList = $arrList ['result'];
+		$this->view->intTotal = $arrList ['total'];		
+	}
+
 	public function readnewsAction() {
 		include_once('common/header.php');
 		include_once('common/panel.php');
 		$news = new News();
 		$requestURI = $_SERVER['REQUEST_URI'];
-		$groupParam = Utils::decodeNewsSEOLink($requestURI);
+		$newstypeStr = "tin-tuc";
+	    if (strpos($requestURI, 'phong-thuy') !== false) {
+            $newstypeStr = "phong-thuy";
+        }
+		$groupParam = Utils::decodeNewsSEOLink($requestURI, $newstypeStr);
 		$newsId = $groupParam[2];
 		if (isset($newsId)) {
 			$news->updateNewsViewCount($newsId, 0);
@@ -140,5 +146,16 @@ class PublicController extends Zend_Controller_Action
 		}
 	}
 
+/*
+* Fengshui (Phong Thuy)
+*/
+	public function fengshuiAction() {
+		include_once ('common/header.php');	
+		include_once('common/panel.php');
+		$objNews = new News();		
+		$arrList = $objNews->getListNewsAdmin(0, 10, 2);
+		$this->view->arrList = $arrList ['result'];
+		$this->view->intTotal = $arrList ['total'];		
+	}
 }
 

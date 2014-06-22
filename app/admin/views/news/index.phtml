@@ -15,9 +15,8 @@
 						<input type="checkbox" name="checkAll" value="" onClick="checkBoxAll(this.form, 'txtCheckBoxId[]', this.checked);"  width="1px" height="1px"/>
 					</td>
                     <td align="center" valign="top" width="5%">Loại tin</td>
-          			<td align="center" valign="top" width="10%">Tiêu đề</td>
-                    <td align="center" valign="top" width="10%">Tóm tắt</td>	
-					<td align="center" valign="top" width="30%">Nội dung</td>
+          			<td align="center" valign="top" width="20%">Tiêu đề</td>
+                    <td align="center" valign="top" width="30%">Tóm tắt</td>	
 					<td align="center" valign="top" width="20%">Hình Ảnh </td>
                     <td align="center" valign="top" width="10%">Ngày đăng</td>
                     <td align="center" valign="top" width="5%">Lượt Xem</td>							
@@ -30,11 +29,10 @@
 						<input type="checkbox" name="txtCheckBoxId[]" value="{$row.id}" id="idCheck"/>
 					</td>
 					<td width="5%" valign="top">{if $row.newstype==1} Tin Tức {else } Phong Thủy {/if}</td>
-					<td width="10%" valign="top">	 
+					<td width="20%" valign="top">	 
 					&nbsp;<a href="{$smarty.const.HOST_ADMIN}/news/edit?id={$row.id}" class="ahref">{$row.title|stripslashes}</a>
 					</td>
-                    <td width="10%" valign="top">{$row.summary}	</td>
-					<td width="30%" valign="top" height="200px">{$row.content}</td>
+                    <td width="30%" valign="top">{$row.summary}	</td>
 					<td width="20%" valign="top"><img src="{$row.image}" width="100px" height="100px"/></td>
 					<td width="10%" valign="top">{$row.creationDate}</td>
 					<td width="5%" valign="top">{$row.view_count}</td>

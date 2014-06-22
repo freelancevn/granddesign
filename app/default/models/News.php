@@ -20,8 +20,8 @@ class News extends AbstractModel
     	return $newInfo;
     }
 
-    public function getListNewsAdmin($intOffset, $intLimit){
-        $SQL = 'SELECT SQL_CALC_FOUND_ROWS * FROM '.$this->tableName.' AS n WHERE n.status=1';
+    public function getListNewsAdmin($intOffset, $intLimit, $newstype){
+        $SQL = 'SELECT SQL_CALC_FOUND_ROWS id, title, summary, creationDate, view_count, visible, creationDate, image, newstype FROM '.$this->tableName.' AS n WHERE n.status=1 and n.newstype='.$newstype;
         $SQL .= NhutFunction::getOrderBY('DATE(`creationDate`)', 'DESC', $intOffset, $intLimit);
         return parent::getListAdmin($intOffset, $intLimit, $SQL);
     }
